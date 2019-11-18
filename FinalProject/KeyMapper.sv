@@ -1,7 +1,7 @@
 module KeyMapper(
 
-input logic [7:0] keyboard_in
-output logic [23:0] note_out;
+input logic [7:0] keyboard_in,
+output logic [23:0] note_out
 
 );
 

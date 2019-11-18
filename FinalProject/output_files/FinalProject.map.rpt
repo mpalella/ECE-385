@@ -1,0 +1,1158 @@
+Analysis & Synthesis report for FinalProject
+Mon Nov 18 15:33:23 2019
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. State Machine - |Final_Project_top|audio_interface_plat:audio_transmit|audio_interface:A1|state
+ 10. State Machine - |Final_Project_top|controller:control|curr_state
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: vga_clk:vga_clk_instance|altpll:altpll_component
+ 16. altpll Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "audio_interface_plat:audio_transmit|audio_interface:A1"
+ 18. Port Connectivity Checks: "audio_interface_plat:audio_transmit"
+ 19. Port Connectivity Checks: "vga_clk:vga_clk_instance"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Nov 18 15:33:23 2019       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; FinalProject                                ;
+; Top-level Entity Name              ; Final_Project_top                           ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 4,648                                       ;
+;     Total combinational functions  ; 4,616                                       ;
+;     Dedicated logic registers      ; 139                                         ;
+; Total registers                    ; 139                                         ;
+; Total pins                         ; 33                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; Final_Project_top  ; FinalProject       ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+---------------------------------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                             ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+---------------------------------------+--------------------------------------------------------------------------+---------+
+; Synchronizers.sv                 ; yes             ; User SystemVerilog HDL File           ; C:/ECE_385/FinalProject/Synchronizers.sv                                 ;         ;
+; HexDriver.sv                     ; yes             ; User SystemVerilog HDL File           ; C:/ECE_385/FinalProject/HexDriver.sv                                     ;         ;
+; vga_clk.v                        ; yes             ; User Wizard-Generated File            ; C:/ECE_385/FinalProject/vga_clk.v                                        ;         ;
+; lookup.hex                       ; yes             ; User Hexadecimal (Intel-Format) File  ; C:/ECE_385/FinalProject/lookup.hex                                       ;         ;
+; audio_interface.vhd              ; yes             ; User VHDL File                        ; C:/ECE_385/FinalProject/audio_interface.vhd                              ;         ;
+; Final_Project_top.sv             ; yes             ; User SystemVerilog HDL File           ; C:/ECE_385/FinalProject/Final_Project_top.sv                             ;         ;
+; KeyMapper.sv                     ; yes             ; User SystemVerilog HDL File           ; C:/ECE_385/FinalProject/KeyMapper.sv                                     ;         ;
+; audio_interface_plat.v           ; yes             ; User Verilog HDL File                 ; C:/ECE_385/FinalProject/audio_interface_plat.v                           ;         ;
+; wavetable_synthesizer.sv         ; yes             ; User SystemVerilog HDL File           ; C:/ECE_385/FinalProject/wavetable_synthesizer.sv                         ;         ;
+; controller.sv                    ; yes             ; User SystemVerilog HDL File           ; C:/ECE_385/FinalProject/controller.sv                                    ;         ;
+; sample_freq_counter.sv           ; yes             ; User SystemVerilog HDL File           ; C:/ECE_385/FinalProject/sample_freq_counter.sv                           ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altpll.tdf        ;         ;
+; aglobal180.inc                   ; yes             ; Megafunction                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc    ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratixii_pll.inc ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/cycloneii_pll.inc ;         ;
+; db/vga_clk_altpll.v              ; yes             ; Auto-Generated Megafunction           ; C:/ECE_385/FinalProject/db/vga_clk_altpll.v                              ;         ;
++----------------------------------+-----------------+---------------------------------------+--------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                               ;
++---------------------------------------------+---------------------------------------------+
+; Resource                                    ; Usage                                       ;
++---------------------------------------------+---------------------------------------------+
+; Estimated Total logic elements              ; 4,648                                       ;
+;                                             ;                                             ;
+; Total combinational functions               ; 4616                                        ;
+; Logic element usage by number of LUT inputs ;                                             ;
+;     -- 4 input functions                    ; 4233                                        ;
+;     -- 3 input functions                    ; 289                                         ;
+;     -- <=2 input functions                  ; 94                                          ;
+;                                             ;                                             ;
+; Logic elements by mode                      ;                                             ;
+;     -- normal mode                          ; 4570                                        ;
+;     -- arithmetic mode                      ; 46                                          ;
+;                                             ;                                             ;
+; Total registers                             ; 139                                         ;
+;     -- Dedicated logic registers            ; 139                                         ;
+;     -- I/O registers                        ; 0                                           ;
+;                                             ;                                             ;
+; I/O pins                                    ; 33                                          ;
+;                                             ;                                             ;
+; Embedded Multiplier 9-bit elements          ; 0                                           ;
+;                                             ;                                             ;
+; Maximum fan-out node                        ; wavetable_synthesizer:sine_synth1|phase[19] ;
+; Maximum fan-out                             ; 1161                                        ;
+; Total fan-out                               ; 18514                                       ;
+; Average fan-out                             ; 3.84                                        ;
++---------------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                    ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                       ; Entity Name           ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+-----------------------+--------------+
+; |Final_Project_top                       ; 4616 (1)            ; 139 (1)                   ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |Final_Project_top                                                        ; Final_Project_top     ; work         ;
+;    |HexDriver:hex_inst_0|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|HexDriver:hex_inst_0                                   ; HexDriver             ; work         ;
+;    |HexDriver:hex_inst_1|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|HexDriver:hex_inst_1                                   ; HexDriver             ; work         ;
+;    |KeyMapper:Mapper1|                   ; 94 (94)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|KeyMapper:Mapper1                                      ; KeyMapper             ; work         ;
+;    |audio_interface_plat:audio_transmit| ; 63 (0)              ; 72 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|audio_interface_plat:audio_transmit                    ; audio_interface_plat  ; work         ;
+;       |audio_interface:A1|               ; 63 (63)             ; 72 (72)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|audio_interface_plat:audio_transmit|audio_interface:A1 ; audio_interface       ; work         ;
+;    |controller:control|                  ; 14 (14)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|controller:control                                     ; controller            ; work         ;
+;    |sample_freq_counter:sampleCLK|       ; 21 (21)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|sample_freq_counter:sampleCLK                          ; sample_freq_counter   ; work         ;
+;    |sync:butt_sync|                      ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|sync:butt_sync                                         ; sync                  ; work         ;
+;    |wavetable_synthesizer:sine_synth1|   ; 4408 (4408)         ; 44 (44)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|wavetable_synthesizer:sine_synth1                      ; wavetable_synthesizer ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                         ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                             ; IP Include File ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------+-----------------+
+; Altera ; ALTPLL       ; 15.0    ; N/A          ; N/A          ; |Final_Project_top|vga_clk:vga_clk_instance ; vga_clk.v       ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------+-----------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Final_Project_top|audio_interface_plat:audio_transmit|audio_interface:A1|state                                                                                                                                                                                                                                                                                                                   ;
++------------------+-------------+---------------+---------------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+------------------+
+; Name             ; state.b_end ; state.b_stop1 ; state.b_stop0 ; state.d_ack ; state.d7 ; state.d6 ; state.d5 ; state.d4 ; state.d3 ; state.d2 ; state.d1 ; state.d0 ; state.a_ack ; state.a7 ; state.a6 ; state.a5 ; state.a4 ; state.a3 ; state.a2 ; state.a1 ; state.a0 ; state.b_ack ; state.b7 ; state.b6 ; state.b5 ; state.b4 ; state.b3 ; state.b2 ; state.b1 ; state.b0 ; state.start ; state.initialize ;
++------------------+-------------+---------------+---------------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+------------------+
+; state.initialize ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0                ;
+; state.start      ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1           ; 1                ;
+; state.b0         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0           ; 1                ;
+; state.b1         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0           ; 1                ;
+; state.b2         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0           ; 1                ;
+; state.b3         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b4         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b5         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b6         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b7         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b_ack      ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a0         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a1         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a2         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a3         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a4         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a5         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a6         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a7         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.a_ack      ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d0         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d1         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d2         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d3         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d4         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d5         ; 0           ; 0             ; 0             ; 0           ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d6         ; 0           ; 0             ; 0             ; 0           ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d7         ; 0           ; 0             ; 0             ; 0           ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.d_ack      ; 0           ; 0             ; 0             ; 1           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b_stop0    ; 0           ; 0             ; 1             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b_stop1    ; 0           ; 1             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
+; state.b_end      ; 1           ; 0             ; 0             ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0           ; 1                ;
++------------------+-------------+---------------+---------------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+----------+----------+----------+----------+----------+----------+----------+----------+-------------+------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Final_Project_top|controller:control|curr_state                                                                                                      ;
++-----------------------+------------------+----------------+-----------------------+-----------------------+---------------------+-------------------+-----------------+
+; Name                  ; curr_state.RUN_1 ; curr_state.RUN ; curr_state.DAC_WAIT_2 ; curr_state.DAC_WAIT_1 ; curr_state.DAC_WAIT ; curr_state.WAIT_1 ; curr_state.WAIT ;
++-----------------------+------------------+----------------+-----------------------+-----------------------+---------------------+-------------------+-----------------+
+; curr_state.WAIT       ; 0                ; 0              ; 0                     ; 0                     ; 0                   ; 0                 ; 0               ;
+; curr_state.WAIT_1     ; 0                ; 0              ; 0                     ; 0                     ; 0                   ; 1                 ; 1               ;
+; curr_state.DAC_WAIT   ; 0                ; 0              ; 0                     ; 0                     ; 1                   ; 0                 ; 1               ;
+; curr_state.DAC_WAIT_1 ; 0                ; 0              ; 0                     ; 1                     ; 0                   ; 0                 ; 1               ;
+; curr_state.DAC_WAIT_2 ; 0                ; 0              ; 1                     ; 0                     ; 0                   ; 0                 ; 1               ;
+; curr_state.RUN        ; 0                ; 1              ; 0                     ; 0                     ; 0                   ; 0                 ; 1               ;
+; curr_state.RUN_1      ; 1                ; 0              ; 0                     ; 0                     ; 0                   ; 0                 ; 1               ;
++-----------------------+------------------+----------------+-----------------------+-----------------------+---------------------+-------------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                ;
++-------------------------------------------------------------------+-------------------------------------------------------------------------------+
+; Register name                                                     ; Reason for Removal                                                            ;
++-------------------------------------------------------------------+-------------------------------------------------------------------------------+
+; wavetable_synthesizer:sine_synth1|frequency[21..23]               ; Merged with wavetable_synthesizer:sine_synth1|frequency[20]                   ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[15] ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[31] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[14] ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[30] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[13] ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[29] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[12] ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[28] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[11] ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[27] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[10] ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[26] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[9]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[25] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[8]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[24] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[7]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[23] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[6]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[22] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[5]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[21] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[4]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[20] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[3]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[19] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[2]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[18] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[1]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[17] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[0]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[16] ;
+; wavetable_synthesizer:sine_synth1|frequency[20]                   ; Stuck at GND due to stuck port data_in                                        ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|flag1      ; Lost fanout                                                                   ;
+; controller:control|curr_state~2                                   ; Lost fanout                                                                   ;
+; controller:control|curr_state~3                                   ; Lost fanout                                                                   ;
+; controller:control|curr_state~4                                   ; Lost fanout                                                                   ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[4]  ; Lost fanout                                                                   ;
+; Total Number of Removed Registers = 25                            ;                                                                               ;
++-------------------------------------------------------------------+-------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 139   ;
+; Number of registers using Synchronous Clear  ; 39    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 72    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 94    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------+
+; Inverted Register Statistics                                               ;
++------------------------------------------------------------------+---------+
+; Inverted Register                                                ; Fan out ;
++------------------------------------------------------------------+---------+
+; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[1] ; 7       ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[0] ; 8       ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[3] ; 3       ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[2] ; 2       ;
+; Total number of inverted registers = 4                           ;         ;
++------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+; 3:1                ; 44 bits   ; 88 LEs        ; 44 LEs               ; 44 LEs                 ; Yes        ; |Final_Project_top|wavetable_synthesizer:sine_synth1|frequency[17]                  ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |Final_Project_top|sample_freq_counter:sampleCLK|count[0]                           ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Final_Project_top|audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[0] ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Final_Project_top|controller:control|curr_state                                    ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Final_Project_top|controller:control|curr_state                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga_clk:vga_clk_instance|altpll:altpll_component ;
++-------------------------------+---------------------------+-----------------------------------+
+; Parameter Name                ; Value                     ; Type                              ;
++-------------------------------+---------------------------+-----------------------------------+
+; OPERATION_MODE                ; NORMAL                    ; Untyped                           ;
+; PLL_TYPE                      ; AUTO                      ; Untyped                           ;
+; LPM_HINT                      ; CBX_MODULE_PREFIX=vga_clk ; Untyped                           ;
+; QUALIFY_CONF_DONE             ; OFF                       ; Untyped                           ;
+; COMPENSATE_CLOCK              ; CLK0                      ; Untyped                           ;
+; SCAN_CHAIN                    ; LONG                      ; Untyped                           ;
+; PRIMARY_CLOCK                 ; INCLK0                    ; Untyped                           ;
+; INCLK0_INPUT_FREQUENCY        ; 20000                     ; Signed Integer                    ;
+; INCLK1_INPUT_FREQUENCY        ; 0                         ; Untyped                           ;
+; GATE_LOCK_SIGNAL              ; NO                        ; Untyped                           ;
+; GATE_LOCK_COUNTER             ; 0                         ; Untyped                           ;
+; LOCK_HIGH                     ; 1                         ; Untyped                           ;
+; LOCK_LOW                      ; 1                         ; Untyped                           ;
+; VALID_LOCK_MULTIPLIER         ; 1                         ; Untyped                           ;
+; INVALID_LOCK_MULTIPLIER       ; 5                         ; Untyped                           ;
+; SWITCH_OVER_ON_LOSSCLK        ; OFF                       ; Untyped                           ;
+; SWITCH_OVER_ON_GATED_LOCK     ; OFF                       ; Untyped                           ;
+; ENABLE_SWITCH_OVER_COUNTER    ; OFF                       ; Untyped                           ;
+; SKIP_VCO                      ; OFF                       ; Untyped                           ;
+; SWITCH_OVER_COUNTER           ; 0                         ; Untyped                           ;
+; SWITCH_OVER_TYPE              ; AUTO                      ; Untyped                           ;
+; FEEDBACK_SOURCE               ; EXTCLK0                   ; Untyped                           ;
+; BANDWIDTH                     ; 0                         ; Untyped                           ;
+; BANDWIDTH_TYPE                ; AUTO                      ; Untyped                           ;
+; SPREAD_FREQUENCY              ; 0                         ; Untyped                           ;
+; DOWN_SPREAD                   ; 0                         ; Untyped                           ;
+; SELF_RESET_ON_GATED_LOSS_LOCK ; OFF                       ; Untyped                           ;
+; SELF_RESET_ON_LOSS_LOCK       ; OFF                       ; Untyped                           ;
+; CLK9_MULTIPLY_BY              ; 0                         ; Untyped                           ;
+; CLK8_MULTIPLY_BY              ; 0                         ; Untyped                           ;
+; CLK7_MULTIPLY_BY              ; 0                         ; Untyped                           ;
+; CLK6_MULTIPLY_BY              ; 0                         ; Untyped                           ;
+; CLK5_MULTIPLY_BY              ; 1                         ; Untyped                           ;
+; CLK4_MULTIPLY_BY              ; 1                         ; Untyped                           ;
+; CLK3_MULTIPLY_BY              ; 1                         ; Untyped                           ;
+; CLK2_MULTIPLY_BY              ; 1                         ; Untyped                           ;
+; CLK1_MULTIPLY_BY              ; 1                         ; Untyped                           ;
+; CLK0_MULTIPLY_BY              ; 1                         ; Signed Integer                    ;
+; CLK9_DIVIDE_BY                ; 0                         ; Untyped                           ;
+; CLK8_DIVIDE_BY                ; 0                         ; Untyped                           ;
+; CLK7_DIVIDE_BY                ; 0                         ; Untyped                           ;
+; CLK6_DIVIDE_BY                ; 0                         ; Untyped                           ;
+; CLK5_DIVIDE_BY                ; 1                         ; Untyped                           ;
+; CLK4_DIVIDE_BY                ; 1                         ; Untyped                           ;
+; CLK3_DIVIDE_BY                ; 1                         ; Untyped                           ;
+; CLK2_DIVIDE_BY                ; 1                         ; Untyped                           ;
+; CLK1_DIVIDE_BY                ; 1                         ; Untyped                           ;
+; CLK0_DIVIDE_BY                ; 2                         ; Signed Integer                    ;
+; CLK9_PHASE_SHIFT              ; 0                         ; Untyped                           ;
+; CLK8_PHASE_SHIFT              ; 0                         ; Untyped                           ;
+; CLK7_PHASE_SHIFT              ; 0                         ; Untyped                           ;
+; CLK6_PHASE_SHIFT              ; 0                         ; Untyped                           ;
+; CLK5_PHASE_SHIFT              ; 0                         ; Untyped                           ;
+; CLK4_PHASE_SHIFT              ; 0                         ; Untyped                           ;
+; CLK3_PHASE_SHIFT              ; 0                         ; Untyped                           ;
+; CLK2_PHASE_SHIFT              ; 0                         ; Untyped                           ;
+; CLK1_PHASE_SHIFT              ; 0                         ; Untyped                           ;
+; CLK0_PHASE_SHIFT              ; 0                         ; Untyped                           ;
+; CLK5_TIME_DELAY               ; 0                         ; Untyped                           ;
+; CLK4_TIME_DELAY               ; 0                         ; Untyped                           ;
+; CLK3_TIME_DELAY               ; 0                         ; Untyped                           ;
+; CLK2_TIME_DELAY               ; 0                         ; Untyped                           ;
+; CLK1_TIME_DELAY               ; 0                         ; Untyped                           ;
+; CLK0_TIME_DELAY               ; 0                         ; Untyped                           ;
+; CLK9_DUTY_CYCLE               ; 50                        ; Untyped                           ;
+; CLK8_DUTY_CYCLE               ; 50                        ; Untyped                           ;
+; CLK7_DUTY_CYCLE               ; 50                        ; Untyped                           ;
+; CLK6_DUTY_CYCLE               ; 50                        ; Untyped                           ;
+; CLK5_DUTY_CYCLE               ; 50                        ; Untyped                           ;
+; CLK4_DUTY_CYCLE               ; 50                        ; Untyped                           ;
+; CLK3_DUTY_CYCLE               ; 50                        ; Untyped                           ;
+; CLK2_DUTY_CYCLE               ; 50                        ; Untyped                           ;
+; CLK1_DUTY_CYCLE               ; 50                        ; Untyped                           ;
+; CLK0_DUTY_CYCLE               ; 50                        ; Signed Integer                    ;
+; CLK9_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                           ;
+; CLK8_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                           ;
+; CLK7_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                           ;
+; CLK6_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                           ;
+; CLK5_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                           ;
+; CLK4_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                           ;
+; CLK3_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                           ;
+; CLK2_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                           ;
+; CLK1_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                           ;
+; CLK0_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                           ;
+; CLK9_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                           ;
+; CLK8_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                           ;
+; CLK7_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                           ;
+; CLK6_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                           ;
+; CLK5_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                           ;
+; CLK4_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                           ;
+; CLK3_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                           ;
+; CLK2_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                           ;
+; CLK1_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                           ;
+; CLK0_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                           ;
+; LOCK_WINDOW_UI                ;  0.05                     ; Untyped                           ;
+; LOCK_WINDOW_UI_BITS           ; UNUSED                    ; Untyped                           ;
+; VCO_RANGE_DETECTOR_LOW_BITS   ; UNUSED                    ; Untyped                           ;
+; VCO_RANGE_DETECTOR_HIGH_BITS  ; UNUSED                    ; Untyped                           ;
+; DPA_MULTIPLY_BY               ; 0                         ; Untyped                           ;
+; DPA_DIVIDE_BY                 ; 1                         ; Untyped                           ;
+; DPA_DIVIDER                   ; 0                         ; Untyped                           ;
+; EXTCLK3_MULTIPLY_BY           ; 1                         ; Untyped                           ;
+; EXTCLK2_MULTIPLY_BY           ; 1                         ; Untyped                           ;
+; EXTCLK1_MULTIPLY_BY           ; 1                         ; Untyped                           ;
+; EXTCLK0_MULTIPLY_BY           ; 1                         ; Untyped                           ;
+; EXTCLK3_DIVIDE_BY             ; 1                         ; Untyped                           ;
+; EXTCLK2_DIVIDE_BY             ; 1                         ; Untyped                           ;
+; EXTCLK1_DIVIDE_BY             ; 1                         ; Untyped                           ;
+; EXTCLK0_DIVIDE_BY             ; 1                         ; Untyped                           ;
+; EXTCLK3_PHASE_SHIFT           ; 0                         ; Untyped                           ;
+; EXTCLK2_PHASE_SHIFT           ; 0                         ; Untyped                           ;
+; EXTCLK1_PHASE_SHIFT           ; 0                         ; Untyped                           ;
+; EXTCLK0_PHASE_SHIFT           ; 0                         ; Untyped                           ;
+; EXTCLK3_TIME_DELAY            ; 0                         ; Untyped                           ;
+; EXTCLK2_TIME_DELAY            ; 0                         ; Untyped                           ;
+; EXTCLK1_TIME_DELAY            ; 0                         ; Untyped                           ;
+; EXTCLK0_TIME_DELAY            ; 0                         ; Untyped                           ;
+; EXTCLK3_DUTY_CYCLE            ; 50                        ; Untyped                           ;
+; EXTCLK2_DUTY_CYCLE            ; 50                        ; Untyped                           ;
+; EXTCLK1_DUTY_CYCLE            ; 50                        ; Untyped                           ;
+; EXTCLK0_DUTY_CYCLE            ; 50                        ; Untyped                           ;
+; VCO_MULTIPLY_BY               ; 0                         ; Untyped                           ;
+; VCO_DIVIDE_BY                 ; 0                         ; Untyped                           ;
+; SCLKOUT0_PHASE_SHIFT          ; 0                         ; Untyped                           ;
+; SCLKOUT1_PHASE_SHIFT          ; 0                         ; Untyped                           ;
+; VCO_MIN                       ; 0                         ; Untyped                           ;
+; VCO_MAX                       ; 0                         ; Untyped                           ;
+; VCO_CENTER                    ; 0                         ; Untyped                           ;
+; PFD_MIN                       ; 0                         ; Untyped                           ;
+; PFD_MAX                       ; 0                         ; Untyped                           ;
+; M_INITIAL                     ; 0                         ; Untyped                           ;
+; M                             ; 0                         ; Untyped                           ;
+; N                             ; 1                         ; Untyped                           ;
+; M2                            ; 1                         ; Untyped                           ;
+; N2                            ; 1                         ; Untyped                           ;
+; SS                            ; 1                         ; Untyped                           ;
+; C0_HIGH                       ; 0                         ; Untyped                           ;
+; C1_HIGH                       ; 0                         ; Untyped                           ;
+; C2_HIGH                       ; 0                         ; Untyped                           ;
+; C3_HIGH                       ; 0                         ; Untyped                           ;
+; C4_HIGH                       ; 0                         ; Untyped                           ;
+; C5_HIGH                       ; 0                         ; Untyped                           ;
+; C6_HIGH                       ; 0                         ; Untyped                           ;
+; C7_HIGH                       ; 0                         ; Untyped                           ;
+; C8_HIGH                       ; 0                         ; Untyped                           ;
+; C9_HIGH                       ; 0                         ; Untyped                           ;
+; C0_LOW                        ; 0                         ; Untyped                           ;
+; C1_LOW                        ; 0                         ; Untyped                           ;
+; C2_LOW                        ; 0                         ; Untyped                           ;
+; C3_LOW                        ; 0                         ; Untyped                           ;
+; C4_LOW                        ; 0                         ; Untyped                           ;
+; C5_LOW                        ; 0                         ; Untyped                           ;
+; C6_LOW                        ; 0                         ; Untyped                           ;
+; C7_LOW                        ; 0                         ; Untyped                           ;
+; C8_LOW                        ; 0                         ; Untyped                           ;
+; C9_LOW                        ; 0                         ; Untyped                           ;
+; C0_INITIAL                    ; 0                         ; Untyped                           ;
+; C1_INITIAL                    ; 0                         ; Untyped                           ;
+; C2_INITIAL                    ; 0                         ; Untyped                           ;
+; C3_INITIAL                    ; 0                         ; Untyped                           ;
+; C4_INITIAL                    ; 0                         ; Untyped                           ;
+; C5_INITIAL                    ; 0                         ; Untyped                           ;
+; C6_INITIAL                    ; 0                         ; Untyped                           ;
+; C7_INITIAL                    ; 0                         ; Untyped                           ;
+; C8_INITIAL                    ; 0                         ; Untyped                           ;
+; C9_INITIAL                    ; 0                         ; Untyped                           ;
+; C0_MODE                       ; BYPASS                    ; Untyped                           ;
+; C1_MODE                       ; BYPASS                    ; Untyped                           ;
+; C2_MODE                       ; BYPASS                    ; Untyped                           ;
+; C3_MODE                       ; BYPASS                    ; Untyped                           ;
+; C4_MODE                       ; BYPASS                    ; Untyped                           ;
+; C5_MODE                       ; BYPASS                    ; Untyped                           ;
+; C6_MODE                       ; BYPASS                    ; Untyped                           ;
+; C7_MODE                       ; BYPASS                    ; Untyped                           ;
+; C8_MODE                       ; BYPASS                    ; Untyped                           ;
+; C9_MODE                       ; BYPASS                    ; Untyped                           ;
+; C0_PH                         ; 0                         ; Untyped                           ;
+; C1_PH                         ; 0                         ; Untyped                           ;
+; C2_PH                         ; 0                         ; Untyped                           ;
+; C3_PH                         ; 0                         ; Untyped                           ;
+; C4_PH                         ; 0                         ; Untyped                           ;
+; C5_PH                         ; 0                         ; Untyped                           ;
+; C6_PH                         ; 0                         ; Untyped                           ;
+; C7_PH                         ; 0                         ; Untyped                           ;
+; C8_PH                         ; 0                         ; Untyped                           ;
+; C9_PH                         ; 0                         ; Untyped                           ;
+; L0_HIGH                       ; 1                         ; Untyped                           ;
+; L1_HIGH                       ; 1                         ; Untyped                           ;
+; G0_HIGH                       ; 1                         ; Untyped                           ;
+; G1_HIGH                       ; 1                         ; Untyped                           ;
+; G2_HIGH                       ; 1                         ; Untyped                           ;
+; G3_HIGH                       ; 1                         ; Untyped                           ;
+; E0_HIGH                       ; 1                         ; Untyped                           ;
+; E1_HIGH                       ; 1                         ; Untyped                           ;
+; E2_HIGH                       ; 1                         ; Untyped                           ;
+; E3_HIGH                       ; 1                         ; Untyped                           ;
+; L0_LOW                        ; 1                         ; Untyped                           ;
+; L1_LOW                        ; 1                         ; Untyped                           ;
+; G0_LOW                        ; 1                         ; Untyped                           ;
+; G1_LOW                        ; 1                         ; Untyped                           ;
+; G2_LOW                        ; 1                         ; Untyped                           ;
+; G3_LOW                        ; 1                         ; Untyped                           ;
+; E0_LOW                        ; 1                         ; Untyped                           ;
+; E1_LOW                        ; 1                         ; Untyped                           ;
+; E2_LOW                        ; 1                         ; Untyped                           ;
+; E3_LOW                        ; 1                         ; Untyped                           ;
+; L0_INITIAL                    ; 1                         ; Untyped                           ;
+; L1_INITIAL                    ; 1                         ; Untyped                           ;
+; G0_INITIAL                    ; 1                         ; Untyped                           ;
+; G1_INITIAL                    ; 1                         ; Untyped                           ;
+; G2_INITIAL                    ; 1                         ; Untyped                           ;
+; G3_INITIAL                    ; 1                         ; Untyped                           ;
+; E0_INITIAL                    ; 1                         ; Untyped                           ;
+; E1_INITIAL                    ; 1                         ; Untyped                           ;
+; E2_INITIAL                    ; 1                         ; Untyped                           ;
+; E3_INITIAL                    ; 1                         ; Untyped                           ;
+; L0_MODE                       ; BYPASS                    ; Untyped                           ;
+; L1_MODE                       ; BYPASS                    ; Untyped                           ;
+; G0_MODE                       ; BYPASS                    ; Untyped                           ;
+; G1_MODE                       ; BYPASS                    ; Untyped                           ;
+; G2_MODE                       ; BYPASS                    ; Untyped                           ;
+; G3_MODE                       ; BYPASS                    ; Untyped                           ;
+; E0_MODE                       ; BYPASS                    ; Untyped                           ;
+; E1_MODE                       ; BYPASS                    ; Untyped                           ;
+; E2_MODE                       ; BYPASS                    ; Untyped                           ;
+; E3_MODE                       ; BYPASS                    ; Untyped                           ;
+; L0_PH                         ; 0                         ; Untyped                           ;
+; L1_PH                         ; 0                         ; Untyped                           ;
+; G0_PH                         ; 0                         ; Untyped                           ;
+; G1_PH                         ; 0                         ; Untyped                           ;
+; G2_PH                         ; 0                         ; Untyped                           ;
+; G3_PH                         ; 0                         ; Untyped                           ;
+; E0_PH                         ; 0                         ; Untyped                           ;
+; E1_PH                         ; 0                         ; Untyped                           ;
+; E2_PH                         ; 0                         ; Untyped                           ;
+; E3_PH                         ; 0                         ; Untyped                           ;
+; M_PH                          ; 0                         ; Untyped                           ;
+; C1_USE_CASC_IN                ; OFF                       ; Untyped                           ;
+; C2_USE_CASC_IN                ; OFF                       ; Untyped                           ;
+; C3_USE_CASC_IN                ; OFF                       ; Untyped                           ;
+; C4_USE_CASC_IN                ; OFF                       ; Untyped                           ;
+; C5_USE_CASC_IN                ; OFF                       ; Untyped                           ;
+; C6_USE_CASC_IN                ; OFF                       ; Untyped                           ;
+; C7_USE_CASC_IN                ; OFF                       ; Untyped                           ;
+; C8_USE_CASC_IN                ; OFF                       ; Untyped                           ;
+; C9_USE_CASC_IN                ; OFF                       ; Untyped                           ;
+; CLK0_COUNTER                  ; G0                        ; Untyped                           ;
+; CLK1_COUNTER                  ; G0                        ; Untyped                           ;
+; CLK2_COUNTER                  ; G0                        ; Untyped                           ;
+; CLK3_COUNTER                  ; G0                        ; Untyped                           ;
+; CLK4_COUNTER                  ; G0                        ; Untyped                           ;
+; CLK5_COUNTER                  ; G0                        ; Untyped                           ;
+; CLK6_COUNTER                  ; E0                        ; Untyped                           ;
+; CLK7_COUNTER                  ; E1                        ; Untyped                           ;
+; CLK8_COUNTER                  ; E2                        ; Untyped                           ;
+; CLK9_COUNTER                  ; E3                        ; Untyped                           ;
+; L0_TIME_DELAY                 ; 0                         ; Untyped                           ;
+; L1_TIME_DELAY                 ; 0                         ; Untyped                           ;
+; G0_TIME_DELAY                 ; 0                         ; Untyped                           ;
+; G1_TIME_DELAY                 ; 0                         ; Untyped                           ;
+; G2_TIME_DELAY                 ; 0                         ; Untyped                           ;
+; G3_TIME_DELAY                 ; 0                         ; Untyped                           ;
+; E0_TIME_DELAY                 ; 0                         ; Untyped                           ;
+; E1_TIME_DELAY                 ; 0                         ; Untyped                           ;
+; E2_TIME_DELAY                 ; 0                         ; Untyped                           ;
+; E3_TIME_DELAY                 ; 0                         ; Untyped                           ;
+; M_TIME_DELAY                  ; 0                         ; Untyped                           ;
+; N_TIME_DELAY                  ; 0                         ; Untyped                           ;
+; EXTCLK3_COUNTER               ; E3                        ; Untyped                           ;
+; EXTCLK2_COUNTER               ; E2                        ; Untyped                           ;
+; EXTCLK1_COUNTER               ; E1                        ; Untyped                           ;
+; EXTCLK0_COUNTER               ; E0                        ; Untyped                           ;
+; ENABLE0_COUNTER               ; L0                        ; Untyped                           ;
+; ENABLE1_COUNTER               ; L0                        ; Untyped                           ;
+; CHARGE_PUMP_CURRENT           ; 2                         ; Untyped                           ;
+; LOOP_FILTER_R                 ;  1.000000                 ; Untyped                           ;
+; LOOP_FILTER_C                 ; 5                         ; Untyped                           ;
+; CHARGE_PUMP_CURRENT_BITS      ; 9999                      ; Untyped                           ;
+; LOOP_FILTER_R_BITS            ; 9999                      ; Untyped                           ;
+; LOOP_FILTER_C_BITS            ; 9999                      ; Untyped                           ;
+; VCO_POST_SCALE                ; 0                         ; Untyped                           ;
+; CLK2_OUTPUT_FREQUENCY         ; 0                         ; Untyped                           ;
+; CLK1_OUTPUT_FREQUENCY         ; 0                         ; Untyped                           ;
+; CLK0_OUTPUT_FREQUENCY         ; 0                         ; Untyped                           ;
+; INTENDED_DEVICE_FAMILY        ; Cyclone IV E              ; Untyped                           ;
+; PORT_CLKENA0                  ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLKENA1                  ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLKENA2                  ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLKENA3                  ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLKENA4                  ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLKENA5                  ; PORT_UNUSED               ; Untyped                           ;
+; PORT_EXTCLKENA0               ; PORT_CONNECTIVITY         ; Untyped                           ;
+; PORT_EXTCLKENA1               ; PORT_CONNECTIVITY         ; Untyped                           ;
+; PORT_EXTCLKENA2               ; PORT_CONNECTIVITY         ; Untyped                           ;
+; PORT_EXTCLKENA3               ; PORT_CONNECTIVITY         ; Untyped                           ;
+; PORT_EXTCLK0                  ; PORT_UNUSED               ; Untyped                           ;
+; PORT_EXTCLK1                  ; PORT_UNUSED               ; Untyped                           ;
+; PORT_EXTCLK2                  ; PORT_UNUSED               ; Untyped                           ;
+; PORT_EXTCLK3                  ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLKBAD0                  ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLKBAD1                  ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLK0                     ; PORT_USED                 ; Untyped                           ;
+; PORT_CLK1                     ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLK2                     ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLK3                     ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLK4                     ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLK5                     ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLK6                     ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLK7                     ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLK8                     ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLK9                     ; PORT_UNUSED               ; Untyped                           ;
+; PORT_SCANDATA                 ; PORT_UNUSED               ; Untyped                           ;
+; PORT_SCANDATAOUT              ; PORT_UNUSED               ; Untyped                           ;
+; PORT_SCANDONE                 ; PORT_UNUSED               ; Untyped                           ;
+; PORT_SCLKOUT1                 ; PORT_CONNECTIVITY         ; Untyped                           ;
+; PORT_SCLKOUT0                 ; PORT_CONNECTIVITY         ; Untyped                           ;
+; PORT_ACTIVECLOCK              ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLKLOSS                  ; PORT_UNUSED               ; Untyped                           ;
+; PORT_INCLK1                   ; PORT_UNUSED               ; Untyped                           ;
+; PORT_INCLK0                   ; PORT_USED                 ; Untyped                           ;
+; PORT_FBIN                     ; PORT_UNUSED               ; Untyped                           ;
+; PORT_PLLENA                   ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CLKSWITCH                ; PORT_UNUSED               ; Untyped                           ;
+; PORT_ARESET                   ; PORT_UNUSED               ; Untyped                           ;
+; PORT_PFDENA                   ; PORT_UNUSED               ; Untyped                           ;
+; PORT_SCANCLK                  ; PORT_UNUSED               ; Untyped                           ;
+; PORT_SCANACLR                 ; PORT_UNUSED               ; Untyped                           ;
+; PORT_SCANREAD                 ; PORT_UNUSED               ; Untyped                           ;
+; PORT_SCANWRITE                ; PORT_UNUSED               ; Untyped                           ;
+; PORT_ENABLE0                  ; PORT_CONNECTIVITY         ; Untyped                           ;
+; PORT_ENABLE1                  ; PORT_CONNECTIVITY         ; Untyped                           ;
+; PORT_LOCKED                   ; PORT_UNUSED               ; Untyped                           ;
+; PORT_CONFIGUPDATE             ; PORT_UNUSED               ; Untyped                           ;
+; PORT_FBOUT                    ; PORT_CONNECTIVITY         ; Untyped                           ;
+; PORT_PHASEDONE                ; PORT_UNUSED               ; Untyped                           ;
+; PORT_PHASESTEP                ; PORT_UNUSED               ; Untyped                           ;
+; PORT_PHASEUPDOWN              ; PORT_UNUSED               ; Untyped                           ;
+; PORT_SCANCLKENA               ; PORT_UNUSED               ; Untyped                           ;
+; PORT_PHASECOUNTERSELECT       ; PORT_UNUSED               ; Untyped                           ;
+; PORT_VCOOVERRANGE             ; PORT_CONNECTIVITY         ; Untyped                           ;
+; PORT_VCOUNDERRANGE            ; PORT_CONNECTIVITY         ; Untyped                           ;
+; M_TEST_SOURCE                 ; 5                         ; Untyped                           ;
+; C0_TEST_SOURCE                ; 5                         ; Untyped                           ;
+; C1_TEST_SOURCE                ; 5                         ; Untyped                           ;
+; C2_TEST_SOURCE                ; 5                         ; Untyped                           ;
+; C3_TEST_SOURCE                ; 5                         ; Untyped                           ;
+; C4_TEST_SOURCE                ; 5                         ; Untyped                           ;
+; C5_TEST_SOURCE                ; 5                         ; Untyped                           ;
+; C6_TEST_SOURCE                ; 5                         ; Untyped                           ;
+; C7_TEST_SOURCE                ; 5                         ; Untyped                           ;
+; C8_TEST_SOURCE                ; 5                         ; Untyped                           ;
+; C9_TEST_SOURCE                ; 5                         ; Untyped                           ;
+; CBXI_PARAMETER                ; vga_clk_altpll            ; Untyped                           ;
+; VCO_FREQUENCY_CONTROL         ; AUTO                      ; Untyped                           ;
+; VCO_PHASE_SHIFT_STEP          ; 0                         ; Untyped                           ;
+; WIDTH_CLOCK                   ; 5                         ; Signed Integer                    ;
+; WIDTH_PHASECOUNTERSELECT      ; 4                         ; Untyped                           ;
+; USING_FBMIMICBIDIR_PORT       ; OFF                       ; Untyped                           ;
+; DEVICE_FAMILY                 ; Cyclone IV E              ; Untyped                           ;
+; SCAN_CHAIN_MIF_FILE           ; UNUSED                    ; Untyped                           ;
+; SIM_GATE_LOCK_DEVICE_BEHAVIOR ; OFF                       ; Untyped                           ;
+; AUTO_CARRY_CHAINS             ; ON                        ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS          ; OFF                       ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS           ; ON                        ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS        ; OFF                       ; IGNORE_CASCADE                    ;
++-------------------------------+---------------------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; altpll Parameter Settings by Entity Instance                                     ;
++-------------------------------+--------------------------------------------------+
+; Name                          ; Value                                            ;
++-------------------------------+--------------------------------------------------+
+; Number of entity instances    ; 1                                                ;
+; Entity Instance               ; vga_clk:vga_clk_instance|altpll:altpll_component ;
+;     -- OPERATION_MODE         ; NORMAL                                           ;
+;     -- PLL_TYPE               ; AUTO                                             ;
+;     -- PRIMARY_CLOCK          ; INCLK0                                           ;
+;     -- INCLK0_INPUT_FREQUENCY ; 20000                                            ;
+;     -- INCLK1_INPUT_FREQUENCY ; 0                                                ;
+;     -- VCO_MULTIPLY_BY        ; 0                                                ;
+;     -- VCO_DIVIDE_BY          ; 0                                                ;
++-------------------------------+--------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "audio_interface_plat:audio_transmit|audio_interface:A1"                                                                                             ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; adc_full    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; adcdata     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; aud_adcdat  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; aud_adclrck ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "audio_interface_plat:audio_transmit"                                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                  ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; data_over ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga_clk:vga_clk_instance"                                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; c0   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 33                          ;
+; cycloneiii_ff         ; 139                         ;
+;     CLR               ; 22                          ;
+;     ENA               ; 20                          ;
+;     ENA CLR           ; 50                          ;
+;     ENA SCLR          ; 24                          ;
+;     SCLR              ; 15                          ;
+;     plain             ; 8                           ;
+; cycloneiii_io_obuf    ; 1                           ;
+; cycloneiii_lcell_comb ; 4618                        ;
+;     arith             ; 46                          ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 21                          ;
+;     normal            ; 4572                        ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 61                          ;
+;         3 data inputs ; 268                         ;
+;         4 data inputs ; 4233                        ;
+;                       ;                             ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 7.70                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:47     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Mon Nov 18 15:32:22 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProject
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 3 design units, including 3 entities, in source file synchronizers.sv
+    Info (12023): Found entity 1: sync File: C:/ECE_385/FinalProject/Synchronizers.sv Line: 4
+    Info (12023): Found entity 2: sync_r0 File: C:/ECE_385/FinalProject/Synchronizers.sv Line: 18
+    Info (12023): Found entity 3: sync_r1 File: C:/ECE_385/FinalProject/Synchronizers.sv Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/nios_system.v
+    Info (12023): Found entity 1: nios_system File: C:/ECE_385/FinalProject/nios_system/synthesis/nios_system.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/altera_reset_controller.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/altera_reset_synchronizer.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_irq_mapper.sv
+    Info (12023): Found entity 1: nios_system_irq_mapper File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_irq_mapper.sv Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0.v
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0 File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter.v
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_avalon_st_adapter File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0 File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
+    Info (12023): Found entity 1: altera_avalon_st_handshake_clock_crosser File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_avalon_st_clock_crosser.v
+    Info (12023): Found entity 1: altera_avalon_st_clock_crosser File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/altera_avalon_st_clock_crosser.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_base File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/altera_avalon_st_pipeline_base.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_std_synchronizer_nocut.v
+    Info (12023): Found entity 1: altera_std_synchronizer_nocut File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/altera_std_synchronizer_nocut.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_mux_001.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_rsp_mux_001 File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_mux_001.sv Line: 51
+Info (12021): Found 2 design units, including 2 entities, in source file nios_system/synthesis/submodules/altera_merlin_arbitrator.sv
+    Info (12023): Found entity 1: altera_merlin_arbitrator File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv Line: 103
+    Info (12023): Found entity 2: altera_merlin_arb_adder File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv Line: 228
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_mux.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_rsp_mux File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux_001.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_rsp_demux_001 File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux_001.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_rsp_demux File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux_001.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_cmd_mux_001 File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux_001.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_cmd_mux File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_demux_001.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_cmd_demux_001 File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_demux_001.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_demux.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_cmd_demux File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_demux.sv Line: 43
+Info (12021): Found 2 design units, including 2 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_003.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_router_003_default_decode File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_003.sv Line: 45
+    Info (12023): Found entity 2: nios_system_mm_interconnect_0_router_003 File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_003.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_002.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_router_002_default_decode File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_002.sv Line: 45
+    Info (12023): Found entity 2: nios_system_mm_interconnect_0_router_002 File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_002.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_001.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_router_001_default_decode File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_001.sv Line: 45
+    Info (12023): Found entity 2: nios_system_mm_interconnect_0_router_001 File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_001.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router.sv
+    Info (12023): Found entity 1: nios_system_mm_interconnect_0_router_default_decode File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router.sv Line: 45
+    Info (12023): Found entity 2: nios_system_mm_interconnect_0_router File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router.sv Line: 84
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/altera_avalon_sc_fifo.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_slave_agent.sv
+    Info (12023): Found entity 1: altera_merlin_slave_agent File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/altera_merlin_slave_agent.sv Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_master_agent.sv
+    Info (12023): Found entity 1: altera_merlin_master_agent File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/altera_merlin_master_agent.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_slave_translator.sv
+    Info (12023): Found entity 1: altera_merlin_slave_translator File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/altera_merlin_slave_translator.sv Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/altera_merlin_master_translator.sv Line: 32
+Info (12021): Found 4 design units, including 4 entities, in source file nios_system/synthesis/submodules/nios_system_sdram_pll.v
+    Info (12023): Found entity 1: nios_system_sdram_pll_dffpipe_l2c File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_sdram_pll.v Line: 37
+    Info (12023): Found entity 2: nios_system_sdram_pll_stdsync_sv6 File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_sdram_pll.v Line: 98
+    Info (12023): Found entity 3: nios_system_sdram_pll_altpll_lqa2 File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_sdram_pll.v Line: 130
+    Info (12023): Found entity 4: nios_system_sdram_pll File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_sdram_pll.v Line: 217
+Info (12021): Found 2 design units, including 2 entities, in source file nios_system/synthesis/submodules/nios_system_sdram.v
+    Info (12023): Found entity 1: nios_system_sdram_input_efifo_module File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_sdram.v Line: 21
+    Info (12023): Found entity 2: nios_system_sdram File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_sdram.v Line: 159
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_otg_hpi_data.v
+    Info (12023): Found entity 1: nios_system_otg_hpi_data File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_otg_hpi_data.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_otg_hpi_cs.v
+    Info (12023): Found entity 1: nios_system_otg_hpi_cs File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_otg_hpi_cs.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_otg_hpi_addr.v
+    Info (12023): Found entity 1: nios_system_otg_hpi_addr File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_otg_hpi_addr.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_onchip_memory2_0.v
+    Info (12023): Found entity 1: nios_system_onchip_memory2_0 File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_onchip_memory2_0.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_nios2_gen2_0.v
+    Info (12023): Found entity 1: nios_system_nios2_gen2_0 File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0.v Line: 9
+Info (12021): Found 21 design units, including 21 entities, in source file nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v
+    Info (12023): Found entity 1: nios_system_nios2_gen2_0_cpu_register_bank_a_module File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 21
+    Info (12023): Found entity 2: nios_system_nios2_gen2_0_cpu_register_bank_b_module File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 87
+    Info (12023): Found entity 3: nios_system_nios2_gen2_0_cpu_nios2_oci_debug File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 153
+    Info (12023): Found entity 4: nios_system_nios2_gen2_0_cpu_nios2_oci_break File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 295
+    Info (12023): Found entity 5: nios_system_nios2_gen2_0_cpu_nios2_oci_xbrk File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 588
+    Info (12023): Found entity 6: nios_system_nios2_gen2_0_cpu_nios2_oci_dbrk File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 795
+    Info (12023): Found entity 7: nios_system_nios2_gen2_0_cpu_nios2_oci_itrace File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 982
+    Info (12023): Found entity 8: nios_system_nios2_gen2_0_cpu_nios2_oci_td_mode File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 1115
+    Info (12023): Found entity 9: nios_system_nios2_gen2_0_cpu_nios2_oci_dtrace File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 1183
+    Info (12023): Found entity 10: nios_system_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 1265
+    Info (12023): Found entity 11: nios_system_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 1337
+    Info (12023): Found entity 12: nios_system_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 1380
+    Info (12023): Found entity 13: nios_system_nios2_gen2_0_cpu_nios2_oci_fifo File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 1427
+    Info (12023): Found entity 14: nios_system_nios2_gen2_0_cpu_nios2_oci_pib File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 1913
+    Info (12023): Found entity 15: nios_system_nios2_gen2_0_cpu_nios2_oci_im File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 1936
+    Info (12023): Found entity 16: nios_system_nios2_gen2_0_cpu_nios2_performance_monitors File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 2006
+    Info (12023): Found entity 17: nios_system_nios2_gen2_0_cpu_nios2_avalon_reg File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 2023
+    Info (12023): Found entity 18: nios_system_nios2_gen2_0_cpu_ociram_sp_ram_module File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 2116
+    Info (12023): Found entity 19: nios_system_nios2_gen2_0_cpu_nios2_ocimem File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 2181
+    Info (12023): Found entity 20: nios_system_nios2_gen2_0_cpu_nios2_oci File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 2362
+    Info (12023): Found entity 21: nios_system_nios2_gen2_0_cpu File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v Line: 2834
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_debug_slave_sysclk.v
+    Info (12023): Found entity 1: nios_system_nios2_gen2_0_cpu_debug_slave_sysclk File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_debug_slave_sysclk.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_debug_slave_tck.v
+    Info (12023): Found entity 1: nios_system_nios2_gen2_0_cpu_debug_slave_tck File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_debug_slave_tck.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_debug_slave_wrapper.v
+    Info (12023): Found entity 1: nios_system_nios2_gen2_0_cpu_debug_slave_wrapper File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_debug_slave_wrapper.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_test_bench.v
+    Info (12023): Found entity 1: nios_system_nios2_gen2_0_cpu_test_bench File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_test_bench.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_system/synthesis/submodules/nios_system_keyboard.v
+    Info (12023): Found entity 1: nios_system_keyboard File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_keyboard.v Line: 21
+Info (12021): Found 5 design units, including 5 entities, in source file nios_system/synthesis/submodules/nios_system_jtag_uart_0.v
+    Info (12023): Found entity 1: nios_system_jtag_uart_0_sim_scfifo_w File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_jtag_uart_0.v Line: 21
+    Info (12023): Found entity 2: nios_system_jtag_uart_0_scfifo_w File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_jtag_uart_0.v Line: 78
+    Info (12023): Found entity 3: nios_system_jtag_uart_0_sim_scfifo_r File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_jtag_uart_0.v Line: 164
+    Info (12023): Found entity 4: nios_system_jtag_uart_0_scfifo_r File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_jtag_uart_0.v Line: 243
+    Info (12023): Found entity 5: nios_system_jtag_uart_0 File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_jtag_uart_0.v Line: 331
+Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
+    Info (12023): Found entity 1: HexDriver File: C:/ECE_385/FinalProject/HexDriver.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.sv
+    Info (12023): Found entity 1: VGA_controller File: C:/ECE_385/FinalProject/VGA_controller.sv Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file vga_clk.v
+    Info (12023): Found entity 1: vga_clk File: C:/ECE_385/FinalProject/vga_clk.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file hpi_io_intf.sv
+    Info (12023): Found entity 1: hpi_io_intf File: C:/ECE_385/FinalProject/hpi_io_intf.sv Line: 2
+Info (12021): Found 2 design units, including 1 entities, in source file audio_interface.vhd
+    Info (12022): Found design unit 1: audio_interface-Behavorial File: C:/ECE_385/FinalProject/audio_interface.vhd Line: 40
+    Info (12023): Found entity 1: audio_interface File: C:/ECE_385/FinalProject/audio_interface.vhd Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file final_project_top.sv
+    Info (12023): Found entity 1: Final_Project_top File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file keymapper.sv
+    Info (12023): Found entity 1: KeyMapper File: C:/ECE_385/FinalProject/KeyMapper.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file audio_interface_plat.v
+    Info (12023): Found entity 1: audio_interface_plat File: C:/ECE_385/FinalProject/audio_interface_plat.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file wavetable_synthesizer.sv
+    Info (12023): Found entity 1: wavetable_synthesizer File: C:/ECE_385/FinalProject/wavetable_synthesizer.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controller.sv
+    Info (12023): Found entity 1: controller File: C:/ECE_385/FinalProject/controller.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
+    Info (12023): Found entity 1: testbench File: C:/ECE_385/FinalProject/testbench.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sample_freq_counter.sv
+    Info (12023): Found entity 1: sample_freq_counter File: C:/ECE_385/FinalProject/sample_freq_counter.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Final_Project_top.sv(110): created implicit net for "VGA_CLK" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 110
+Warning (10037): Verilog HDL or VHDL warning at nios_system_sdram.v(318): conditional expression evaluates to a constant File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_sdram.v Line: 318
+Warning (10037): Verilog HDL or VHDL warning at nios_system_sdram.v(328): conditional expression evaluates to a constant File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_sdram.v Line: 328
+Warning (10037): Verilog HDL or VHDL warning at nios_system_sdram.v(338): conditional expression evaluates to a constant File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_sdram.v Line: 338
+Warning (10037): Verilog HDL or VHDL warning at nios_system_sdram.v(682): conditional expression evaluates to a constant File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_sdram.v Line: 682
+Info (12127): Elaborating entity "Final_Project_top" for the top level hierarchy
+Info (12128): Elaborating entity "vga_clk" for hierarchy "vga_clk:vga_clk_instance" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 110
+Info (12128): Elaborating entity "altpll" for hierarchy "vga_clk:vga_clk_instance|altpll:altpll_component" File: C:/ECE_385/FinalProject/vga_clk.v Line: 91
+Info (12130): Elaborated megafunction instantiation "vga_clk:vga_clk_instance|altpll:altpll_component" File: C:/ECE_385/FinalProject/vga_clk.v Line: 91
+Info (12133): Instantiated megafunction "vga_clk:vga_clk_instance|altpll:altpll_component" with the following parameter: File: C:/ECE_385/FinalProject/vga_clk.v Line: 91
+    Info (12134): Parameter "bandwidth_type" = "AUTO"
+    Info (12134): Parameter "clk0_divide_by" = "2"
+    Info (12134): Parameter "clk0_duty_cycle" = "50"
+    Info (12134): Parameter "clk0_multiply_by" = "1"
+    Info (12134): Parameter "clk0_phase_shift" = "0"
+    Info (12134): Parameter "compensate_clock" = "CLK0"
+    Info (12134): Parameter "inclk0_input_frequency" = "20000"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "CBX_MODULE_PREFIX=vga_clk"
+    Info (12134): Parameter "lpm_type" = "altpll"
+    Info (12134): Parameter "operation_mode" = "NORMAL"
+    Info (12134): Parameter "pll_type" = "AUTO"
+    Info (12134): Parameter "port_activeclock" = "PORT_UNUSED"
+    Info (12134): Parameter "port_areset" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkbad0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkbad1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkloss" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkswitch" = "PORT_UNUSED"
+    Info (12134): Parameter "port_configupdate" = "PORT_UNUSED"
+    Info (12134): Parameter "port_fbin" = "PORT_UNUSED"
+    Info (12134): Parameter "port_inclk0" = "PORT_USED"
+    Info (12134): Parameter "port_inclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_locked" = "PORT_UNUSED"
+    Info (12134): Parameter "port_pfdena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasecounterselect" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasedone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasestep" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phaseupdown" = "PORT_UNUSED"
+    Info (12134): Parameter "port_pllena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanaclr" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclk" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclkena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandata" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandataout" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanread" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanwrite" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk0" = "PORT_USED"
+    Info (12134): Parameter "port_clk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
+    Info (12134): Parameter "width_clock" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/vga_clk_altpll.v
+    Info (12023): Found entity 1: vga_clk_altpll File: C:/ECE_385/FinalProject/db/vga_clk_altpll.v Line: 29
+Info (12128): Elaborating entity "vga_clk_altpll" for hierarchy "vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altpll.tdf Line: 897
+Info (12128): Elaborating entity "controller" for hierarchy "controller:control" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 112
+Info (12128): Elaborating entity "audio_interface_plat" for hierarchy "audio_interface_plat:audio_transmit" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 114
+Info (12128): Elaborating entity "audio_interface" for hierarchy "audio_interface_plat:audio_transmit|audio_interface:A1" File: C:/ECE_385/FinalProject/audio_interface_plat.v Line: 31
+Info (12128): Elaborating entity "wavetable_synthesizer" for hierarchy "wavetable_synthesizer:sine_synth1" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 116
+Warning (10030): Net "sin_table.data_a" at wavetable_synthesizer.sv(10) has no driver or initial value, using a default initial value '0' File: C:/ECE_385/FinalProject/wavetable_synthesizer.sv Line: 10
+Warning (10030): Net "sin_table.waddr_a" at wavetable_synthesizer.sv(10) has no driver or initial value, using a default initial value '0' File: C:/ECE_385/FinalProject/wavetable_synthesizer.sv Line: 10
+Warning (10030): Net "sin_table.we_a" at wavetable_synthesizer.sv(10) has no driver or initial value, using a default initial value '0' File: C:/ECE_385/FinalProject/wavetable_synthesizer.sv Line: 10
+Info (12128): Elaborating entity "KeyMapper" for hierarchy "KeyMapper:Mapper1" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 118
+Info (12128): Elaborating entity "sample_freq_counter" for hierarchy "sample_freq_counter:sampleCLK" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 120
+Info (12128): Elaborating entity "sync" for hierarchy "sync:butt_sync" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 122
+Info (12128): Elaborating entity "HexDriver" for hierarchy "HexDriver:hex_inst_0" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 126
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following PLL node(s):
+        Warning (14320): Synthesized away node "vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll:auto_generated|wire_pll1_clk[0]" File: C:/ECE_385/FinalProject/db/vga_clk_altpll.v Line: 77
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[1] will power up to High File: C:/ECE_385/FinalProject/audio_interface.vhd Line: 102
+    Critical Warning (18010): Register audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[0] will power up to High File: C:/ECE_385/FinalProject/audio_interface.vhd Line: 102
+    Critical Warning (18010): Register audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[3] will power up to High File: C:/ECE_385/FinalProject/audio_interface.vhd Line: 102
+    Critical Warning (18010): Register audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[2] will power up to High File: C:/ECE_385/FinalProject/audio_interface.vhd Line: 102
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored 23 assignments for entity "altera_avalon_sc_fifo" -- entity does not exist in design
+Warning (20013): Ignored 23 assignments for entity "altera_avalon_st_handshake_clock_crosser" -- entity does not exist in design
+Warning (20013): Ignored 64 assignments for entity "altera_merlin_master_agent" -- entity does not exist in design
+Warning (20013): Ignored 55 assignments for entity "altera_merlin_master_translator" -- entity does not exist in design
+Warning (20013): Ignored 53 assignments for entity "altera_merlin_slave_agent" -- entity does not exist in design
+Warning (20013): Ignored 68 assignments for entity "altera_merlin_slave_translator" -- entity does not exist in design
+Warning (20013): Ignored 35 assignments for entity "altera_reset_controller" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "nios_system" -- entity does not exist in design
+Warning (20013): Ignored 14 assignments for entity "nios_system_irq_mapper" -- entity does not exist in design
+Warning (20013): Ignored 24 assignments for entity "nios_system_jtag_uart_0" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "nios_system_keyboard" -- entity does not exist in design
+Warning (20013): Ignored 12 assignments for entity "nios_system_mm_interconnect_0" -- entity does not exist in design
+Warning (20013): Ignored 32 assignments for entity "nios_system_mm_interconnect_0_avalon_st_adapter" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "nios_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "nios_system_mm_interconnect_0_cmd_demux" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "nios_system_mm_interconnect_0_cmd_demux_001" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "nios_system_mm_interconnect_0_cmd_mux" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "nios_system_mm_interconnect_0_cmd_mux_001" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "nios_system_mm_interconnect_0_router" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "nios_system_mm_interconnect_0_router_001" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "nios_system_mm_interconnect_0_router_002" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "nios_system_mm_interconnect_0_router_003" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "nios_system_mm_interconnect_0_rsp_demux" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "nios_system_mm_interconnect_0_rsp_demux_001" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "nios_system_mm_interconnect_0_rsp_mux" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "nios_system_mm_interconnect_0_rsp_mux_001" -- entity does not exist in design
+Warning (20013): Ignored 149 assignments for entity "nios_system_nios2_gen2_0" -- entity does not exist in design
+Warning (20013): Ignored 179 assignments for entity "nios_system_nios2_gen2_0_cpu" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "nios_system_onchip_memory2_0" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "nios_system_otg_hpi_addr" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "nios_system_otg_hpi_cs" -- entity does not exist in design
+Warning (20013): Ignored 25 assignments for entity "nios_system_otg_hpi_data" -- entity does not exist in design
+Warning (20013): Ignored 34 assignments for entity "nios_system_sdram" -- entity does not exist in design
+Warning (20013): Ignored 78 assignments for entity "nios_system_sdram_pll" -- entity does not exist in design
+Info (144001): Generated suppressed messages file C:/ECE_385/FinalProject/output_files/FinalProject.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 2
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 2
+Info (21057): Implemented 4685 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 4652 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
+    Info: Peak virtual memory: 4857 megabytes
+    Info: Processing ended: Mon Nov 18 15:33:23 2019
+    Info: Elapsed time: 00:01:01
+    Info: Total CPU time (on all processors): 00:01:12
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/ECE_385/FinalProject/output_files/FinalProject.map.smsg.
+
+
