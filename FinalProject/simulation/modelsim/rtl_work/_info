@@ -24,9 +24,9 @@ Vh4KWXm]@KiN4?SS0aD:4m1
 !s100 fHRiK2aWB8l8n1ZJGC_2C1
 Z9 OV;C;10.5b;63
 31
-Z10 !s110 1574112826
+Z10 !s110 1574114746
 !i10b 1
-Z11 !s108 1574112826.000000
+Z11 !s108 1574114746.000000
 Z12 !s90 -reportprogress|300|-93|-work|work|C:/ECE_385/FinalProject/audio_interface.vhd|
 Z13 !s107 C:/ECE_385/FinalProject/audio_interface.vhd|
 !i113 1
@@ -54,7 +54,7 @@ R13
 R14
 R15
 vaudio_interface_plat
-Z16 !s110 1574112825
+Z16 !s110 1574114744
 !i10b 1
 !s100 :mVeIRKzdJ_R8m9_2jZMV2
 I5JYzP3R]PkhW8HZV9gc2G1
@@ -68,7 +68,7 @@ Z18 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z19 !s108 1574112825.000000
+Z19 !s108 1574114744.000000
 !s107 C:/ECE_385/FinalProject/audio_interface_plat.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE_385/FinalProject|C:/ECE_385/FinalProject/audio_interface_plat.v|
 !i113 1
@@ -77,7 +77,7 @@ Z21 !s92 -vlog01compat -work work +incdir+C:/ECE_385/FinalProject
 Z22 tCvgOpt 0
 vcontroller
 Z23 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-R10
+Z24 !s110 1574114745
 !i10b 1
 !s100 l]BPX2[CTzbb5ShcME?Y41
 IH4nKI;j2L:a::cCWmjgKb2
@@ -93,16 +93,16 @@ R18
 r1
 !s85 0
 31
-R11
+Z25 !s108 1574114745.000000
 !s107 C:/ECE_385/FinalProject/controller.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject|C:/ECE_385/FinalProject/controller.sv|
 !i113 1
-Z24 o-sv -work work
-Z25 !s92 -sv -work work +incdir+C:/ECE_385/FinalProject
+Z26 o-sv -work work
+Z27 !s92 -sv -work work +incdir+C:/ECE_385/FinalProject
 R22
 vFinal_Project_top
 R23
-R10
+R24
 !i10b 1
 !s100 7L_;5g^Ii4O2MDhB;bReK3
 I`a[l5L8K71ZFflhSS1LW50
@@ -118,17 +118,17 @@ R18
 r1
 !s85 0
 31
-R11
+R25
 !s107 C:/ECE_385/FinalProject/Final_Project_top.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject|C:/ECE_385/FinalProject/Final_Project_top.sv|
 !i113 1
-R24
-R25
+R26
+R27
 R22
 n@final_@project_top
 vHexDriver
 R23
-R16
+R24
 !i10b 1
 !s100 hKBo4zbCRmY3[Ac9JZP;<0
 I8z>L9TB7L=Wf>PBZ5X<[o1
@@ -144,17 +144,17 @@ R18
 r1
 !s85 0
 31
-R19
+R25
 !s107 C:/ECE_385/FinalProject/HexDriver.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject|C:/ECE_385/FinalProject/HexDriver.sv|
 !i113 1
-R24
-R25
+R26
+R27
 R22
 n@hex@driver
 vKeyMapper
 R23
-R10
+R24
 !i10b 1
 !s100 b=A:W^X^YHhZ2Cdo6d@@C1
 I@6OhYP4RRQSMO0dhXjCGN3
@@ -170,17 +170,17 @@ R18
 r1
 !s85 0
 31
-R11
+R25
 !s107 C:/ECE_385/FinalProject/KeyMapper.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject|C:/ECE_385/FinalProject/KeyMapper.sv|
 !i113 1
-R24
-R25
+R26
+R27
 R22
 n@key@mapper
 vsample_freq_counter
 R23
-R10
+R24
 !i10b 1
 !s100 1LH2H_GhXFoO>m55Rd=ah3
 I]cD`ZCL6P`IWJT4PhY@IU2
@@ -196,99 +196,99 @@ R18
 r1
 !s85 0
 31
-R11
+R25
 !s107 C:/ECE_385/FinalProject/sample_freq_counter.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject|C:/ECE_385/FinalProject/sample_freq_counter.sv|
 !i113 1
-R24
-R25
+R26
+R27
 R22
 vsync
 R23
-R16
+R24
 !i10b 1
 !s100 2W5Vz0:F6ckE2`eJOTK5l1
 IPKI:[ePhO_=^hb^eJg[L<0
 R17
-Z26 !s105 Synchronizers_sv_unit
+Z28 !s105 Synchronizers_sv_unit
 S1
 R0
-Z27 w1473642984
-Z28 8C:/ECE_385/FinalProject/Synchronizers.sv
-Z29 FC:/ECE_385/FinalProject/Synchronizers.sv
+Z29 w1473642984
+Z30 8C:/ECE_385/FinalProject/Synchronizers.sv
+Z31 FC:/ECE_385/FinalProject/Synchronizers.sv
 L0 4
 R18
 r1
 !s85 0
 31
 R19
-Z30 !s107 C:/ECE_385/FinalProject/Synchronizers.sv|
-Z31 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject|C:/ECE_385/FinalProject/Synchronizers.sv|
+Z32 !s107 C:/ECE_385/FinalProject/Synchronizers.sv|
+Z33 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject|C:/ECE_385/FinalProject/Synchronizers.sv|
 !i113 1
-R24
-R25
+R26
+R27
 R22
 vsync_r0
 R23
-R16
+R24
 !i10b 1
 !s100 IGd9f_F;JNjVBLQ@DAnD10
 I79@`>Ba>fUMafV_[BFLj42
 R17
-R26
+R28
 S1
 R0
-R27
-R28
 R29
+R30
+R31
 L0 18
 R18
 r1
 !s85 0
 31
 R19
-R30
-R31
+R32
+R33
 !i113 1
-R24
-R25
+R26
+R27
 R22
 vsync_r1
 R23
-R16
+R24
 !i10b 1
 !s100 1CXiH1DYDbAUS69Ee2j060
 I8N7TY:<=o_b0DnG36?<NS3
 R17
-R26
+R28
 S1
 R0
-R27
-R28
 R29
+R30
+R31
 L0 39
 R18
 r1
 !s85 0
 31
 R19
-R30
-R31
+R32
+R33
 !i113 1
-R24
-R25
+R26
+R27
 R22
 vtestbench
 R23
-!s110 1574112827
+R10
 !i10b 1
-!s100 bMh7dgUIbmPHd>C>^lgGV2
-Ibc19mXlEnzLUQh>=bFdJ93
+!s100 ;=o?`Gc[z=F6<Pb2c:jE70
+IOEazb6S?Q6N<EIUn43l7E2
 R17
 !s105 testbench_sv_unit
 S1
 R0
-w1574103357
+w1574114669
 8C:/ECE_385/FinalProject/testbench.sv
 FC:/ECE_385/FinalProject/testbench.sv
 L0 1
@@ -296,12 +296,12 @@ R18
 r1
 !s85 0
 31
-!s108 1574112827.000000
+R11
 !s107 C:/ECE_385/FinalProject/testbench.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject|C:/ECE_385/FinalProject/testbench.sv|
 !i113 1
-R24
-R25
+R26
+R27
 R22
 vvga_clk
 R16
@@ -349,7 +349,7 @@ R20
 R22
 vwavetable_synthesizer
 R23
-R10
+R24
 !i10b 1
 !s100 <>;2OZTTD18k><N=3bVm_2
 Ic9PL[VE2FRl3FG<aOk2620
@@ -365,10 +365,10 @@ R18
 r1
 !s85 0
 31
-R11
+R25
 !s107 C:/ECE_385/FinalProject/wavetable_synthesizer.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject|C:/ECE_385/FinalProject/wavetable_synthesizer.sv|
 !i113 1
-R24
-R25
+R26
+R27
 R22

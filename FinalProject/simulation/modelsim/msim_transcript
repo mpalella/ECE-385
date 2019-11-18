@@ -12,37 +12,37 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/vga_clk.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:33:45 on Nov 18,2019
+# Start time: 16:05:44 on Nov 18,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE_385/FinalProject" C:/ECE_385/FinalProject/vga_clk.v 
 # -- Compiling module vga_clk
 # 
 # Top level modules:
 # 	vga_clk
-# End time: 15:33:45 on Nov 18,2019, Elapsed time: 0:00:00
+# End time: 16:05:44 on Nov 18,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/audio_interface_plat.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:33:45 on Nov 18,2019
+# Start time: 16:05:44 on Nov 18,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE_385/FinalProject" C:/ECE_385/FinalProject/audio_interface_plat.v 
 # -- Compiling module audio_interface_plat
 # 
 # Top level modules:
 # 	audio_interface_plat
-# End time: 15:33:45 on Nov 18,2019, Elapsed time: 0:00:00
+# End time: 16:05:44 on Nov 18,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/ECE_385/FinalProject/db {C:/ECE_385/FinalProject/db/vga_clk_altpll.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:33:45 on Nov 18,2019
+# Start time: 16:05:44 on Nov 18,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE_385/FinalProject/db" C:/ECE_385/FinalProject/db/vga_clk_altpll.v 
 # -- Compiling module vga_clk_altpll
 # 
 # Top level modules:
 # 	vga_clk_altpll
-# End time: 15:33:45 on Nov 18,2019, Elapsed time: 0:00:00
+# End time: 16:05:44 on Nov 18,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/Synchronizers.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:33:45 on Nov 18,2019
+# Start time: 16:05:44 on Nov 18,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject" C:/ECE_385/FinalProject/Synchronizers.sv 
 # -- Compiling module sync
 # -- Compiling module sync_r0
@@ -52,71 +52,71 @@
 # 	sync
 # 	sync_r0
 # 	sync_r1
-# End time: 15:33:45 on Nov 18,2019, Elapsed time: 0:00:00
+# End time: 16:05:45 on Nov 18,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/HexDriver.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:33:45 on Nov 18,2019
+# Start time: 16:05:45 on Nov 18,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject" C:/ECE_385/FinalProject/HexDriver.sv 
 # -- Compiling module HexDriver
 # 
 # Top level modules:
 # 	HexDriver
-# End time: 15:33:46 on Nov 18,2019, Elapsed time: 0:00:01
+# End time: 16:05:45 on Nov 18,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/Final_Project_top.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:33:46 on Nov 18,2019
+# Start time: 16:05:45 on Nov 18,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject" C:/ECE_385/FinalProject/Final_Project_top.sv 
 # -- Compiling module Final_Project_top
 # 
 # Top level modules:
 # 	Final_Project_top
-# End time: 15:33:46 on Nov 18,2019, Elapsed time: 0:00:00
+# End time: 16:05:45 on Nov 18,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/KeyMapper.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:33:46 on Nov 18,2019
+# Start time: 16:05:45 on Nov 18,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject" C:/ECE_385/FinalProject/KeyMapper.sv 
 # -- Compiling module KeyMapper
 # 
 # Top level modules:
 # 	KeyMapper
-# End time: 15:33:46 on Nov 18,2019, Elapsed time: 0:00:00
+# End time: 16:05:45 on Nov 18,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:33:46 on Nov 18,2019
+# Start time: 16:05:45 on Nov 18,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject" C:/ECE_385/FinalProject/controller.sv 
 # -- Compiling module controller
 # 
 # Top level modules:
 # 	controller
-# End time: 15:33:46 on Nov 18,2019, Elapsed time: 0:00:00
+# End time: 16:05:45 on Nov 18,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/sample_freq_counter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:33:46 on Nov 18,2019
+# Start time: 16:05:45 on Nov 18,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject" C:/ECE_385/FinalProject/sample_freq_counter.sv 
 # -- Compiling module sample_freq_counter
 # 
 # Top level modules:
 # 	sample_freq_counter
-# End time: 15:33:46 on Nov 18,2019, Elapsed time: 0:00:00
+# End time: 16:05:45 on Nov 18,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/wavetable_synthesizer.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:33:46 on Nov 18,2019
+# Start time: 16:05:45 on Nov 18,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject" C:/ECE_385/FinalProject/wavetable_synthesizer.sv 
 # -- Compiling module wavetable_synthesizer
 # 
 # Top level modules:
 # 	wavetable_synthesizer
-# End time: 15:33:46 on Nov 18,2019, Elapsed time: 0:00:00
+# End time: 16:05:46 on Nov 18,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/ECE_385/FinalProject/audio_interface.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:33:46 on Nov 18,2019
+# Start time: 16:05:46 on Nov 18,2019
 # vcom -reportprogress 300 -93 -work work C:/ECE_385/FinalProject/audio_interface.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -126,7 +126,7 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity audio_interface
 # -- Compiling architecture Behavorial of audio_interface
-# End time: 15:33:46 on Nov 18,2019, Elapsed time: 0:00:00
+# End time: 16:05:46 on Nov 18,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlib nios_system
 # ** Warning: (vlib-34) Library already exists at "nios_system".
@@ -137,21 +137,34 @@
 # 
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/testbench.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:33:47 on Nov 18,2019
+# Start time: 16:05:46 on Nov 18,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject" C:/ECE_385/FinalProject/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 15:33:47 on Nov 18,2019, Elapsed time: 0:00:00
+# End time: 16:05:46 on Nov 18,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L nios_system -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L nios_system -voptargs=""+acc"" testbench 
-# Start time: 15:33:47 on Nov 18,2019
+# Start time: 16:05:46 on Nov 18,2019
 # Loading sv_std.std
 # Loading work.testbench
-# Loading work.wavetable_synthesizer
+# Loading work.audio_interface_plat
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.audio_interface(behavorial)
+# ** Warning: (vsim-8822) C:/ECE_385/FinalProject/audio_interface_plat.v(13): [TFMPC] - Missing Verilog connection for formal VHDL port 'AUD_ADCDAT'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/codec_driver/A1 File: C:/ECE_385/FinalProject/audio_interface.vhd
+# ** Warning: (vsim-8822) C:/ECE_385/FinalProject/audio_interface_plat.v(13): [TFMPC] - Missing Verilog connection for formal VHDL port 'AUD_ADCLRCK'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/codec_driver/A1 File: C:/ECE_385/FinalProject/audio_interface.vhd
+# ** Warning: (vsim-3839) C:/ECE_385/FinalProject/testbench.sv(44): Variable '/testbench/AUD_MCLK', driven via a port connection, is multiply driven. See C:/ECE_385/FinalProject/testbench.sv(56).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: C:/ECE_385/FinalProject/testbench.sv
 # 
 # add wave *
 # view structure
@@ -159,7 +172,9 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 1  Instance: /testbench/codec_driver/A1
 # Break key hit
 # Simulation stop requested.
-# End time: 15:34:23 on Nov 18,2019, Elapsed time: 0:00:36
-# Errors: 0, Warnings: 0
+# End time: 16:06:51 on Nov 18,2019, Elapsed time: 0:01:05
+# Errors: 0, Warnings: 4
