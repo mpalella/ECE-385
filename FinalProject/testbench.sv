@@ -5,74 +5,74 @@ timeunit 10ns;	// Half clock cycle at 50 MHz
 timeprecision 1ns;
 
 //for top level
-//logic CLOCK_50 = 0;
-//logic AUD_BCLK = 0;
-//logic AUD_DACLRCK = 0;
-//logic [3:0] KEY;
-//logic [6:0]  HEX0, HEX1;
-//logic AUD_XCK, AUD_DACDAT, I2C_SDAT, I2C_SCLK;
-//logic [7:0] keycode;
-//
-//Final_Project_top plat(.*);
+logic CLOCK_50 = 0;
+logic AUD_BCLK = 0;
+logic AUD_DACLRCK = 0;
+logic [3:0] KEY;
+logic [6:0]  HEX0, HEX1;
+logic AUD_XCK, AUD_DACDAT, I2C_SDAT, I2C_SCLK;
+logic [7:0] keycode;
 
-//initial begin: CLOCK_INITIALIZATION
-//    CLOCK_50 = 0;
-//	 AUD_BCLK = 0;
-//	 AUD_DACLRCK = 0;
-//end 
-//
-//always begin : CLOCK_GENERATION
-//#1 CLOCK_50 = ~CLOCK_50;
-//end
-//
-//always begin : BCLK_GENERATE
-//#1042 AUD_BCLK = ~AUD_BCLK;
-//end
-//
-//always begin : LR_GENERATION
-//#8000 AUD_DACLRCK = ~AUD_DACLRCK;
-//end
+Final_Project_top plat(.*);
+
+initial begin: CLOCK_INITIALIZATION
+    CLOCK_50 = 0;
+	 AUD_BCLK = 0;
+	 AUD_DACLRCK = 0;
+end 
+
+always begin : CLOCK_GENERATION
+#1 CLOCK_50 = ~CLOCK_50;
+end
+
+always begin : BCLK_GENERATE
+#8 AUD_BCLK = ~AUD_BCLK;
+end
+
+always begin : LR_GENERATION
+#128 AUD_DACLRCK = ~AUD_DACLRCK;
+end
 
 
 
 
 
 //for Codec Driver
-logic Clk = 0;					//FPGA Clock
-logic AUD_DACLRCK = 0;		//Left Right Clock, which comes from DAC
-logic AUD_BCLK = 0;			//Bit Clock, which comes from DAC
-logic AUD_MCLK = 0;			//Master Clock that goes to DAC, sent from DAC
-
-logic Reset;               //Resets driver
-logic INIT;						//set init to high to start initialization process, will take several clock cycles to complete
-logic INIT_FINISH;			//output signal from driver that is set to 1, when init process is done
-logic I2C_SDAT;				//Serial Data for Codec I2C
-logic I2C_SCLK;				//I2C codec Clock
-logic data_over;				//is set high for a clock cycle when a single word has been transmitted to DAC
-logic AUD_DACDAT;				//Serial data output from driver to DAC
-logic [15:0] DATA;			//Data being inputted to left and right channel of DAC
-
-
-audio_interface_plat  codec_driver(.*);
-
-
-initial begin: CLOCK_INITIALIZATION
-    Clk = 0;
-	 AUD_BCLK = 0;
-	 AUD_DACLRCK = 0;
-end 
-
-always begin : CLOCK_GENERATION
-#1 Clk = ~Clk;
-end
-
-always begin : BCLK_GENERATE   //set bit clock to run 8 times slower than FPGA Clock
-#8 AUD_BCLK = ~AUD_BCLK;
-end
-
-always begin : LR_GENERATION  //set bit clock to run 128 times slower than FPGA Clock
-#128 AUD_DACLRCK = ~AUD_DACLRCK;
-end
+//logic Clk = 0;					//FPGA Clock
+//logic AUD_DACLRCK = 0;		//Left Right Clock, which comes from DAC
+//logic AUD_BCLK = 0;			//Bit Clock, which comes from DAC
+//logic AUD_MCLK = 0;			//Master Clock that goes to DAC, sent from DAC
+//
+//logic Reset;               //Resets driver
+//logic INIT;						//set init to high to start initialization process, will take several clock cycles to complete
+//logic INIT_FINISH;			//output signal from driver that is set to 1, when init process is done
+//logic I2C_SDAT;				//Serial Data for Codec I2C
+//logic I2C_SCLK;				//I2C codec Clock
+//logic data_over;				//is set high for a clock cycle when a single word has been transmitted to DAC
+//logic AUD_DACDAT;				//Serial data output from driver to DAC
+//logic [15:0] DATA;			//Data being inputted to left and right channel of DAC
+//
+//
+//audio_interface_plat  codec_driver(.*);
+//
+//
+//initial begin: CLOCK_INITIALIZATION
+//    Clk = 0;
+//	 AUD_BCLK = 0;
+//	 AUD_DACLRCK = 0;
+//end 
+//
+//always begin : CLOCK_GENERATION
+//#1 Clk = ~Clk;
+//end
+//
+//always begin : BCLK_GENERATE   //set bit clock to run 8 times slower than FPGA Clock
+//#8 AUD_BCLK = ~AUD_BCLK;
+//end
+//
+//always begin : LR_GENERATION  //set bit clock to run 128 times slower than FPGA Clock
+//#128 AUD_DACLRCK = ~AUD_DACLRCK;
+//end
 
 
 
@@ -100,18 +100,30 @@ end
 
 
 
+
 initial begin: TEST_VECTORS
+
+//for top level
+KEY = 4'b1111;
+
+
+#2 KEY[0] = 0;
+#2 KEY[0] = 1;
+
+#2 KEY[3] = 0;
+#2 KEY[3] = 1;
+
 //for Codec Driver
-Reset = 0;
-DATA = 16'b011011011011;
-
-
-#2 Reset = 1;
-#2 Reset = 0;
-
-
-//sets init to 1 to start codec initiliazation process
-#2 INIT = 1;
+//Reset = 0;
+//DATA = 16'b011011011011;
+//
+//
+//#2 Reset = 1;
+//#2 Reset = 0;
+//
+//
+////sets init to 1 to start codec initiliazation process
+//#2 INIT = 1;
 
 
 

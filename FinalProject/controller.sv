@@ -34,11 +34,8 @@ always_ff @ (posedge Clk)
 										next_state = WAIT_1;
 				WAIT_1  		: if(start == 0)
 										next_state = DAC_WAIT;
-										
-				DAC_WAIT		:  next_state = DAC_WAIT_1;
-				DAC_WAIT_1  :  next_state = DAC_WAIT_2;
 				
-				DAC_WAIT_2  : //if(init_finish == 1)
+				DAC_WAIT_2  : if(init_finish == 1)
 										next_state = RUN;
 				RUN      	: if(start == 1)
 										next_state = RUN_1;
@@ -63,7 +60,7 @@ always_ff @ (posedge Clk)
 					CS = 1'b0;
 				end
 				
-				DAC_WAIT, DAC_WAIT_1, DAC_WAIT_2: 
+				DAC_WAIT: 
 	         begin
                init = 1'b1;
 					CS = 1'b0;
@@ -71,7 +68,7 @@ always_ff @ (posedge Clk)
 				
 				RUN, RUN_1: 
 	         begin
-               init = 1'b0;
+               init = 1'b1;
 					CS = 1'b1;
 				end
 				

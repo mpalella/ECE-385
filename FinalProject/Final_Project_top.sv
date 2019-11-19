@@ -102,7 +102,7 @@ module Final_Project_top( input               CLOCK_50,
 //    );
 	 
 	 //synth logic variables
-	 logic init_done, init, chip_sel, sample_Clk, program_start, start;
+	 logic init_done, init, chip_sel, sample_Clk, program_start, start, data_over;
 	 logic [23:0] frequency;
 	 logic [15:0] data_out;
     
@@ -111,15 +111,15 @@ module Final_Project_top( input               CLOCK_50,
 	 
 	 controller 					control(.Clk(Clk), .Reset(Reset_h), .init_finish(start), .start(program_start), .init(init), .CS(chip_sel));
 	 
-	 audio_interface_plat      audio_transmit(.Clk(Clk), .Reset(Reset_h), .INIT(init), .DATA(data_out), .INIT_FINISH(start), .AUD_MCLK(AUD_XCK), .I2C_SDAT(I2C_SDAT), .I2C_SCLK(I2C_SCLK), .AUD_BCLK(AUD_BCLK), .AUD_DACLRCK(AUD_DACLRCK), .AUD_DACDAT(AUD_DACDAT));
+	 audio_interface_plat      audio_transmit(.Clk(Clk), .Reset(Reset_h), .INIT(init), .DATA(data_out), .INIT_FINISH(start), .AUD_MCLK(AUD_XCK), .I2C_SDAT(I2C_SDAT), .I2C_SCLK(I2C_SCLK), .AUD_BCLK(AUD_BCLK), .AUD_DACLRCK(AUD_DACLRCK), .AUD_DACDAT(AUD_DACDAT), .data_over(data_over));
 	 
 	 wavetable_synthesizer 		sine_synth1(.Clk(Clk), .Reset(Reset_h), .CS(chip_sel), .freq(frequency), .out(data_out), .sample_Clk(sample_Clk));
 	 
 	 KeyMapper   					Mapper1(.keyboard_in(keycode), .note_out(frequency));
-	 
-	 sample_freq_counter       sampleCLK(.Clk(Clk), .Reset(Reset_h), .freq_sample(sample_Clk));
     
 	 sync          				butt_sync(.Clk(Clk), .d(~KEY[3]), .q(program_start));
+	 
+	 pulse							Signal_Pulse(.Clk(Clk), .data(data_over), .out(sample_clock), .Reset(Reset_h));
 	 
 	 
     // Display keycode on hex display

@@ -117,10 +117,12 @@ Reset => curr_state.OUTPUTSELECT
 Reset => curr_state.OUTPUTSELECT
 Reset => curr_state.OUTPUTSELECT
 Reset => curr_state.OUTPUTSELECT
-Reset => curr_state.OUTPUTSELECT
-init_finish => ~NO_FANOUT~
-start => next_state.OUTPUTSELECT
-start => next_state.OUTPUTSELECT
+init_finish => next_state.OUTPUTSELECT
+init_finish => next_state.OUTPUTSELECT
+init_finish => next_state.OUTPUTSELECT
+init_finish => next_state.OUTPUTSELECT
+init_finish => next_state.OUTPUTSELECT
+init_finish => next_state.OUTPUTSELECT
 start => next_state.OUTPUTSELECT
 start => next_state.OUTPUTSELECT
 start => next_state.OUTPUTSELECT
@@ -651,42 +653,24 @@ note_out[22] <= <GND>
 note_out[23] <= <GND>
 
 
-|Final_Project_top|sample_freq_counter:sampleCLK
-Reset => count.OUTPUTSELECT
-Reset => count.OUTPUTSELECT
-Reset => count.OUTPUTSELECT
-Reset => count.OUTPUTSELECT
-Reset => count.OUTPUTSELECT
-Reset => count.OUTPUTSELECT
-Reset => count.OUTPUTSELECT
-Reset => count.OUTPUTSELECT
-Reset => count.OUTPUTSELECT
-Reset => count.OUTPUTSELECT
-Reset => count.OUTPUTSELECT
-Reset => count.OUTPUTSELECT
-Reset => count.OUTPUTSELECT
-Reset => freq_sample.OUTPUTSELECT
-Clk => freq_sample~reg0.CLK
-Clk => count[0].CLK
-Clk => count[1].CLK
-Clk => count[2].CLK
-Clk => count[3].CLK
-Clk => count[4].CLK
-Clk => count[5].CLK
-Clk => count[6].CLK
-Clk => count[7].CLK
-Clk => count[8].CLK
-Clk => count[9].CLK
-Clk => count[10].CLK
-Clk => count[11].CLK
-Clk => count[12].CLK
-freq_sample <= freq_sample~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |Final_Project_top|sync:butt_sync
 Clk => q~reg0.CLK
 d => q~reg0.DATAIN
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Final_Project_top|pulse:Signal_Pulse
+Clk => curr_state~1.DATAIN
+data => next_state.OUTPUTSELECT
+data => next_state.OUTPUTSELECT
+data => next_state.OUTPUTSELECT
+data => next_state.OUTPUTSELECT
+data => next_state.OUTPUTSELECT
+data => next_state.OUTPUTSELECT
+Reset => curr_state.OUTPUTSELECT
+Reset => curr_state.OUTPUTSELECT
+Reset => curr_state.OUTPUTSELECT
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Final_Project_top|HexDriver:hex_inst_0

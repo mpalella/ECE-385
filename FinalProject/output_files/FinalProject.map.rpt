@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProject
-Mon Nov 18 16:05:34 2019
+Mon Nov 18 20:00:58 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -14,21 +14,22 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |Final_Project_top|audio_interface_plat:audio_transmit|audio_interface:A1|state
- 10. State Machine - |Final_Project_top|controller:control|curr_state
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Parameter Settings for User Entity Instance: vga_clk:vga_clk_instance|altpll:altpll_component
- 16. altpll Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "audio_interface_plat:audio_transmit|audio_interface:A1"
- 18. Port Connectivity Checks: "audio_interface_plat:audio_transmit"
- 19. Port Connectivity Checks: "vga_clk:vga_clk_instance"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
- 23. Analysis & Synthesis Suppressed Messages
+  9. State Machine - |Final_Project_top|pulse:Signal_Pulse|curr_state
+ 10. State Machine - |Final_Project_top|audio_interface_plat:audio_transmit|audio_interface:A1|state
+ 11. State Machine - |Final_Project_top|controller:control|curr_state
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: vga_clk:vga_clk_instance|altpll:altpll_component
+ 17. altpll Parameter Settings by Entity Instance
+ 18. Port Connectivity Checks: "pulse:Signal_Pulse"
+ 19. Port Connectivity Checks: "audio_interface_plat:audio_transmit|audio_interface:A1"
+ 20. Port Connectivity Checks: "vga_clk:vga_clk_instance"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -54,15 +55,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 18 16:05:34 2019       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 18 20:00:58 2019       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; FinalProject                                ;
 ; Top-level Entity Name              ; Final_Project_top                           ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,648                                       ;
-;     Total combinational functions  ; 4,616                                       ;
-;     Dedicated logic registers      ; 139                                         ;
-; Total registers                    ; 139                                         ;
+; Total logic elements               ; 87                                          ;
+;     Total combinational functions  ; 59                                          ;
+;     Dedicated logic registers      ; 49                                          ;
+; Total registers                    ; 49                                          ;
 ; Total pins                         ; 33                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -171,8 +172,7 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -191,7 +191,7 @@ refer to the applicable agreement for further details.
 ; audio_interface_plat.v           ; yes             ; User Verilog HDL File                 ; C:/ECE_385/FinalProject/audio_interface_plat.v                           ;         ;
 ; wavetable_synthesizer.sv         ; yes             ; User SystemVerilog HDL File           ; C:/ECE_385/FinalProject/wavetable_synthesizer.sv                         ;         ;
 ; controller.sv                    ; yes             ; User SystemVerilog HDL File           ; C:/ECE_385/FinalProject/controller.sv                                    ;         ;
-; sample_freq_counter.sv           ; yes             ; User SystemVerilog HDL File           ; C:/ECE_385/FinalProject/sample_freq_counter.sv                           ;         ;
+; pulse.sv                         ; yes             ; User SystemVerilog HDL File           ; C:/ECE_385/FinalProject/pulse.sv                                         ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altpll.tdf        ;         ;
 ; aglobal180.inc                   ; yes             ; Megafunction                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc    ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
@@ -201,54 +201,49 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+---------------------------------------+--------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                               ;
-+---------------------------------------------+---------------------------------------------+
-; Resource                                    ; Usage                                       ;
-+---------------------------------------------+---------------------------------------------+
-; Estimated Total logic elements              ; 4,648                                       ;
-;                                             ;                                             ;
-; Total combinational functions               ; 4616                                        ;
-; Logic element usage by number of LUT inputs ;                                             ;
-;     -- 4 input functions                    ; 4233                                        ;
-;     -- 3 input functions                    ; 289                                         ;
-;     -- <=2 input functions                  ; 94                                          ;
-;                                             ;                                             ;
-; Logic elements by mode                      ;                                             ;
-;     -- normal mode                          ; 4570                                        ;
-;     -- arithmetic mode                      ; 46                                          ;
-;                                             ;                                             ;
-; Total registers                             ; 139                                         ;
-;     -- Dedicated logic registers            ; 139                                         ;
-;     -- I/O registers                        ; 0                                           ;
-;                                             ;                                             ;
-; I/O pins                                    ; 33                                          ;
-;                                             ;                                             ;
-; Embedded Multiplier 9-bit elements          ; 0                                           ;
-;                                             ;                                             ;
-; Maximum fan-out node                        ; wavetable_synthesizer:sine_synth1|phase[19] ;
-; Maximum fan-out                             ; 1161                                        ;
-; Total fan-out                               ; 18514                                       ;
-; Average fan-out                             ; 3.84                                        ;
-+---------------------------------------------+---------------------------------------------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 87      ;
+;                                             ;         ;
+; Total combinational functions               ; 59      ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 33      ;
+;     -- 3 input functions                    ; 9       ;
+;     -- <=2 input functions                  ; 17      ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 51      ;
+;     -- arithmetic mode                      ; 8       ;
+;                                             ;         ;
+; Total registers                             ; 49      ;
+;     -- Dedicated logic registers            ; 49      ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 33      ;
+;                                             ;         ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+;                                             ;         ;
+; Maximum fan-out node                        ; Reset_h ;
+; Maximum fan-out                             ; 45      ;
+; Total fan-out                               ; 416     ;
+; Average fan-out                             ; 2.39    ;
++---------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                    ;
-+------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+-----------------------+--------------+
-; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                       ; Entity Name           ; Library Name ;
-+------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+-----------------------+--------------+
-; |Final_Project_top                       ; 4616 (1)            ; 139 (1)                   ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |Final_Project_top                                                        ; Final_Project_top     ; work         ;
-;    |HexDriver:hex_inst_0|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|HexDriver:hex_inst_0                                   ; HexDriver             ; work         ;
-;    |HexDriver:hex_inst_1|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|HexDriver:hex_inst_1                                   ; HexDriver             ; work         ;
-;    |KeyMapper:Mapper1|                   ; 94 (94)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|KeyMapper:Mapper1                                      ; KeyMapper             ; work         ;
-;    |audio_interface_plat:audio_transmit| ; 63 (0)              ; 72 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|audio_interface_plat:audio_transmit                    ; audio_interface_plat  ; work         ;
-;       |audio_interface:A1|               ; 63 (63)             ; 72 (72)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|audio_interface_plat:audio_transmit|audio_interface:A1 ; audio_interface       ; work         ;
-;    |controller:control|                  ; 14 (14)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|controller:control                                     ; controller            ; work         ;
-;    |sample_freq_counter:sampleCLK|       ; 21 (21)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|sample_freq_counter:sampleCLK                          ; sample_freq_counter   ; work         ;
-;    |sync:butt_sync|                      ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|sync:butt_sync                                         ; sync                  ; work         ;
-;    |wavetable_synthesizer:sine_synth1|   ; 4408 (4408)         ; 44 (44)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|wavetable_synthesizer:sine_synth1                      ; wavetable_synthesizer ; work         ;
-+------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+-----------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                   ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                       ; Entity Name          ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+----------------------+--------------+
+; |Final_Project_top                       ; 59 (1)              ; 49 (1)                    ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |Final_Project_top                                                        ; Final_Project_top    ; work         ;
+;    |HexDriver:hex_inst_0|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|HexDriver:hex_inst_0                                   ; HexDriver            ; work         ;
+;    |HexDriver:hex_inst_1|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|HexDriver:hex_inst_1                                   ; HexDriver            ; work         ;
+;    |audio_interface_plat:audio_transmit| ; 44 (0)              ; 48 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|audio_interface_plat:audio_transmit                    ; audio_interface_plat ; work         ;
+;       |audio_interface:A1|               ; 44 (44)             ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final_Project_top|audio_interface_plat:audio_transmit|audio_interface:A1 ; audio_interface      ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -259,6 +254,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+---------------------------------------------+-----------------+
 ; Altera ; ALTPLL       ; 15.0    ; N/A          ; N/A          ; |Final_Project_top|vga_clk:vga_clk_instance ; vga_clk.v       ;
 +--------+--------------+---------+--------------+--------------+---------------------------------------------+-----------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------+
+; State Machine - |Final_Project_top|pulse:Signal_Pulse|curr_state     ;
++-----------------+-----------------+----------------+-----------------+
+; Name            ; curr_state.WAIT ; curr_state.LOW ; curr_state.HIGH ;
++-----------------+-----------------+----------------+-----------------+
+; curr_state.WAIT ; 0               ; 0              ; 0               ;
+; curr_state.HIGH ; 1               ; 0              ; 1               ;
+; curr_state.LOW  ; 1               ; 1              ; 0               ;
++-----------------+-----------------+----------------+-----------------+
 
 
 Encoding Type:  One-Hot
@@ -303,51 +310,97 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |Final_Project_top|controller:control|curr_state                                                                                                      ;
-+-----------------------+------------------+----------------+-----------------------+-----------------------+---------------------+-------------------+-----------------+
-; Name                  ; curr_state.RUN_1 ; curr_state.RUN ; curr_state.DAC_WAIT_2 ; curr_state.DAC_WAIT_1 ; curr_state.DAC_WAIT ; curr_state.WAIT_1 ; curr_state.WAIT ;
-+-----------------------+------------------+----------------+-----------------------+-----------------------+---------------------+-------------------+-----------------+
-; curr_state.WAIT       ; 0                ; 0              ; 0                     ; 0                     ; 0                   ; 0                 ; 0               ;
-; curr_state.WAIT_1     ; 0                ; 0              ; 0                     ; 0                     ; 0                   ; 1                 ; 1               ;
-; curr_state.DAC_WAIT   ; 0                ; 0              ; 0                     ; 0                     ; 1                   ; 0                 ; 1               ;
-; curr_state.DAC_WAIT_1 ; 0                ; 0              ; 0                     ; 1                     ; 0                   ; 0                 ; 1               ;
-; curr_state.DAC_WAIT_2 ; 0                ; 0              ; 1                     ; 0                     ; 0                   ; 0                 ; 1               ;
-; curr_state.RUN        ; 0                ; 1              ; 0                     ; 0                     ; 0                   ; 0                 ; 1               ;
-; curr_state.RUN_1      ; 1                ; 0              ; 0                     ; 0                     ; 0                   ; 0                 ; 1               ;
-+-----------------------+------------------+----------------+-----------------------+-----------------------+---------------------+-------------------+-----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Final_Project_top|controller:control|curr_state                                                                              ;
++-----------------------+------------------+----------------+-----------------------+---------------------+-------------------+-----------------+
+; Name                  ; curr_state.RUN_1 ; curr_state.RUN ; curr_state.DAC_WAIT_2 ; curr_state.DAC_WAIT ; curr_state.WAIT_1 ; curr_state.WAIT ;
++-----------------------+------------------+----------------+-----------------------+---------------------+-------------------+-----------------+
+; curr_state.WAIT       ; 0                ; 0              ; 0                     ; 0                   ; 0                 ; 0               ;
+; curr_state.WAIT_1     ; 0                ; 0              ; 0                     ; 0                   ; 1                 ; 1               ;
+; curr_state.DAC_WAIT   ; 0                ; 0              ; 0                     ; 1                   ; 0                 ; 1               ;
+; curr_state.DAC_WAIT_2 ; 0                ; 0              ; 1                     ; 0                   ; 0                 ; 1               ;
+; curr_state.RUN        ; 0                ; 1              ; 0                     ; 0                   ; 0                 ; 1               ;
+; curr_state.RUN_1      ; 1                ; 0              ; 0                     ; 0                   ; 0                 ; 1               ;
++-----------------------+------------------+----------------+-----------------------+---------------------+-------------------+-----------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                ;
-+-------------------------------------------------------------------+-------------------------------------------------------------------------------+
-; Register name                                                     ; Reason for Removal                                                            ;
-+-------------------------------------------------------------------+-------------------------------------------------------------------------------+
-; wavetable_synthesizer:sine_synth1|frequency[21..23]               ; Merged with wavetable_synthesizer:sine_synth1|frequency[20]                   ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[15] ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[31] ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[14] ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[30] ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[13] ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[29] ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[12] ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[28] ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[11] ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[27] ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[10] ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[26] ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[9]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[25] ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[8]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[24] ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[7]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[23] ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[6]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[22] ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[5]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[21] ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[4]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[20] ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[3]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[19] ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[2]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[18] ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[1]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[17] ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[0]  ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[16] ;
-; wavetable_synthesizer:sine_synth1|frequency[20]                   ; Stuck at GND due to stuck port data_in                                        ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|flag1      ; Lost fanout                                                                   ;
-; controller:control|curr_state~2                                   ; Lost fanout                                                                   ;
-; controller:control|curr_state~3                                   ; Lost fanout                                                                   ;
-; controller:control|curr_state~4                                   ; Lost fanout                                                                   ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[4]  ; Lost fanout                                                                   ;
-; Total Number of Removed Registers = 25                            ;                                                                               ;
-+-------------------------------------------------------------------+-------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                    ;
++-----------------------------------------------------------------------+-------------------------------------------------------------------------------+
+; Register name                                                         ; Reason for Removal                                                            ;
++-----------------------------------------------------------------------+-------------------------------------------------------------------------------+
+; wavetable_synthesizer:sine_synth1|phase[0..11]                        ; Lost fanout                                                                   ;
+; wavetable_synthesizer:sine_synth1|frequency[0..23]                    ; Lost fanout                                                                   ;
+; wavetable_synthesizer:sine_synth1|phase[12..23]                       ; Stuck at GND due to stuck port data_in                                        ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[15]     ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[31] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[14]     ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[30] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[13]     ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[29] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[12]     ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[28] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[11]     ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[27] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[10]     ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[26] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[9]      ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[25] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[8]      ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[24] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[7]      ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[23] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[6]      ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[22] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[5]      ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[21] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[4]      ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[20] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[3]      ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[19] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[2]      ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[18] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[1]      ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[17] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[0]      ; Merged with audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[16] ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[16..30] ; Stuck at GND due to stuck port data_in                                        ;
+; controller:control|curr_state~2                                       ; Lost fanout                                                                   ;
+; controller:control|curr_state~3                                       ; Lost fanout                                                                   ;
+; controller:control|curr_state~4                                       ; Lost fanout                                                                   ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|flag1          ; Lost fanout                                                                   ;
+; pulse:Signal_Pulse|curr_state.HIGH                                    ; Lost fanout                                                                   ;
+; pulse:Signal_Pulse|curr_state.LOW                                     ; Lost fanout                                                                   ;
+; pulse:Signal_Pulse|curr_state.WAIT                                    ; Lost fanout                                                                   ;
+; controller:control|curr_state.DAC_WAIT_2                              ; Stuck at GND due to stuck port data_in                                        ;
+; controller:control|curr_state.RUN                                     ; Stuck at GND due to stuck port data_in                                        ;
+; controller:control|curr_state.RUN_1                                   ; Stuck at GND due to stuck port data_in                                        ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[31]     ; Stuck at GND due to stuck port data_in                                        ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[0..3]   ; Lost fanout                                                                   ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|dack0          ; Lost fanout                                                                   ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|dack1          ; Lost fanout                                                                   ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[4]      ; Lost fanout                                                                   ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|bck0           ; Lost fanout                                                                   ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|bck1           ; Lost fanout                                                                   ;
+; controller:control|curr_state.DAC_WAIT                                ; Lost fanout                                                                   ;
+; controller:control|curr_state.WAIT_1                                  ; Lost fanout                                                                   ;
+; controller:control|curr_state.WAIT                                    ; Lost fanout                                                                   ;
+; sync:butt_sync|q                                                      ; Lost fanout                                                                   ;
+; Total Number of Removed Registers = 103                               ;                                                                               ;
++-----------------------------------------------------------------------+-------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                  ;
++-------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------+
+; Register name                                                     ; Reason for Removal        ; Registers Removed due to This Register                                       ;
++-------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------+
+; wavetable_synthesizer:sine_synth1|phase[12]                       ; Stuck at GND              ; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[23],           ;
+;                                                                   ; due to stuck port data_in ; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[22],           ;
+;                                                                   ;                           ; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[21],           ;
+;                                                                   ;                           ; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[20],           ;
+;                                                                   ;                           ; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[19],           ;
+;                                                                   ;                           ; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[18],           ;
+;                                                                   ;                           ; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[17],           ;
+;                                                                   ;                           ; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[16]            ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[30] ; Stuck at GND              ; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[3],            ;
+;                                                                   ; due to stuck port data_in ; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[2],            ;
+;                                                                   ;                           ; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[1],            ;
+;                                                                   ;                           ; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[0],            ;
+;                                                                   ;                           ; audio_interface_plat:audio_transmit|audio_interface:A1|dack0,                ;
+;                                                                   ;                           ; audio_interface_plat:audio_transmit|audio_interface:A1|dack1                 ;
+; controller:control|curr_state.DAC_WAIT_2                          ; Stuck at GND              ; controller:control|curr_state.RUN,                                           ;
+;                                                                   ; due to stuck port data_in ; audio_interface_plat:audio_transmit|audio_interface:A1|LRDATA[31],           ;
+;                                                                   ;                           ; controller:control|curr_state.WAIT                                           ;
+; controller:control|curr_state~2                                   ; Lost Fanouts              ; controller:control|curr_state.DAC_WAIT, controller:control|curr_state.WAIT_1 ;
+; audio_interface_plat:audio_transmit|audio_interface:A1|flag1      ; Lost Fanouts              ; audio_interface_plat:audio_transmit|audio_interface:A1|bck0,                 ;
+;                                                                   ;                           ; audio_interface_plat:audio_transmit|audio_interface:A1|bck1                  ;
+; controller:control|curr_state~3                                   ; Lost Fanouts              ; sync:butt_sync|q                                                             ;
++-------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -355,27 +408,14 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 139   ;
-; Number of registers using Synchronous Clear  ; 39    ;
+; Total registers                              ; 49    ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 72    ;
+; Number of registers using Asynchronous Clear ; 48    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 94    ;
+; Number of registers using Clock Enable       ; 30    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------------+
-; Inverted Register Statistics                                               ;
-+------------------------------------------------------------------+---------+
-; Inverted Register                                                ; Fan out ;
-+------------------------------------------------------------------+---------+
-; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[1] ; 7       ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[0] ; 8       ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[3] ; 3       ;
-; audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[2] ; 2       ;
-; Total number of inverted registers = 4                           ;         ;
-+------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -383,11 +423,10 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
-; 3:1                ; 44 bits   ; 88 LEs        ; 44 LEs               ; 44 LEs                 ; Yes        ; |Final_Project_top|wavetable_synthesizer:sine_synth1|frequency[17]                  ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |Final_Project_top|sample_freq_counter:sampleCLK|count[0]                           ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Final_Project_top|audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[0] ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Final_Project_top|controller:control|curr_state                                    ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Final_Project_top|controller:control|curr_state                                    ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Final_Project_top|audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[3] ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |Final_Project_top|controller:control|curr_state                                    ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |Final_Project_top|controller:control|curr_state                                    ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |Final_Project_top|controller:control|curr_state                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
 
 
@@ -782,6 +821,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+--------------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pulse:Signal_Pulse"                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "audio_interface_plat:audio_transmit|audio_interface:A1"                                                                                             ;
 +-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -792,15 +840,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; aud_adcdat  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 ; aud_adclrck ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 +-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "audio_interface_plat:audio_transmit"                                                                          ;
-+-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                  ;
-+-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; data_over ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -818,26 +857,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 33                          ;
-; cycloneiii_ff         ; 139                         ;
-;     CLR               ; 22                          ;
-;     ENA               ; 20                          ;
-;     ENA CLR           ; 50                          ;
-;     ENA SCLR          ; 24                          ;
-;     SCLR              ; 15                          ;
-;     plain             ; 8                           ;
+; cycloneiii_ff         ; 49                          ;
+;     CLR               ; 18                          ;
+;     ENA CLR           ; 30                          ;
+;     plain             ; 1                           ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 4618                        ;
-;     arith             ; 46                          ;
-;         2 data inputs ; 25                          ;
-;         3 data inputs ; 21                          ;
-;     normal            ; 4572                        ;
-;         1 data inputs ; 10                          ;
-;         2 data inputs ; 61                          ;
-;         3 data inputs ; 268                         ;
-;         4 data inputs ; 4233                        ;
+; cycloneiii_lcell_comb ; 62                          ;
+;     arith             ; 8                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 54                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 33                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 7.70                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.08                        ;
 +-----------------------+-----------------------------+
 
 
@@ -846,7 +883,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:47     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -856,7 +893,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 18 16:04:33 2019
+    Info: Processing started: Mon Nov 18 20:00:44 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1010,7 +1047,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file testben
     Info (12023): Found entity 1: testbench File: C:/ECE_385/FinalProject/testbench.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sample_freq_counter.sv
     Info (12023): Found entity 1: sample_freq_counter File: C:/ECE_385/FinalProject/sample_freq_counter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pulse.sv
+    Info (12023): Found entity 1: pulse File: C:/ECE_385/FinalProject/pulse.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at Final_Project_top.sv(110): created implicit net for "VGA_CLK" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 110
+Warning (10236): Verilog HDL Implicit Net warning at Final_Project_top.sv(122): created implicit net for "sample_clock" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 122
 Warning (10037): Verilog HDL or VHDL warning at nios_system_sdram.v(318): conditional expression evaluates to a constant File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_sdram.v Line: 318
 Warning (10037): Verilog HDL or VHDL warning at nios_system_sdram.v(328): conditional expression evaluates to a constant File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_sdram.v Line: 328
 Warning (10037): Verilog HDL or VHDL warning at nios_system_sdram.v(338): conditional expression evaluates to a constant File: C:/ECE_385/FinalProject/nios_system/synthesis/submodules/nios_system_sdram.v Line: 338
@@ -1078,6 +1118,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/vga_
     Info (12023): Found entity 1: vga_clk_altpll File: C:/ECE_385/FinalProject/db/vga_clk_altpll.v Line: 29
 Info (12128): Elaborating entity "vga_clk_altpll" for hierarchy "vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Info (12128): Elaborating entity "controller" for hierarchy "controller:control" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 112
+Info (10264): Verilog HDL Case Statement information at controller.sv(32): all case item expressions in this case statement are onehot File: C:/ECE_385/FinalProject/controller.sv Line: 32
+Info (10264): Verilog HDL Case Statement information at controller.sv(49): all case item expressions in this case statement are onehot File: C:/ECE_385/FinalProject/controller.sv Line: 49
 Info (12128): Elaborating entity "audio_interface_plat" for hierarchy "audio_interface_plat:audio_transmit" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 114
 Info (12128): Elaborating entity "audio_interface" for hierarchy "audio_interface_plat:audio_transmit|audio_interface:A1" File: C:/ECE_385/FinalProject/audio_interface_plat.v Line: 31
 Info (12128): Elaborating entity "wavetable_synthesizer" for hierarchy "wavetable_synthesizer:sine_synth1" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 116
@@ -1085,20 +1127,19 @@ Warning (10030): Net "sin_table.data_a" at wavetable_synthesizer.sv(10) has no d
 Warning (10030): Net "sin_table.waddr_a" at wavetable_synthesizer.sv(10) has no driver or initial value, using a default initial value '0' File: C:/ECE_385/FinalProject/wavetable_synthesizer.sv Line: 10
 Warning (10030): Net "sin_table.we_a" at wavetable_synthesizer.sv(10) has no driver or initial value, using a default initial value '0' File: C:/ECE_385/FinalProject/wavetable_synthesizer.sv Line: 10
 Info (12128): Elaborating entity "KeyMapper" for hierarchy "KeyMapper:Mapper1" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 118
-Info (12128): Elaborating entity "sample_freq_counter" for hierarchy "sample_freq_counter:sampleCLK" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 120
-Info (12128): Elaborating entity "sync" for hierarchy "sync:butt_sync" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 122
+Info (12128): Elaborating entity "sync" for hierarchy "sync:butt_sync" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 120
+Info (12128): Elaborating entity "pulse" for hierarchy "pulse:Signal_Pulse" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 122
 Info (12128): Elaborating entity "HexDriver" for hierarchy "HexDriver:hex_inst_0" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 126
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following PLL node(s):
         Warning (14320): Synthesized away node "vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll:auto_generated|wire_pll1_clk[0]" File: C:/ECE_385/FinalProject/db/vga_clk_altpll.v Line: 77
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "wavetable_synthesizer:sine_synth1|sin_table" is uninferred due to asynchronous read logic File: C:/ECE_385/FinalProject/wavetable_synthesizer.sv Line: 10
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "AUD_DACDAT" is stuck at GND File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 37
 Info (286030): Timing-Driven Synthesis is running
-Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[1] will power up to High File: C:/ECE_385/FinalProject/audio_interface.vhd Line: 102
-    Critical Warning (18010): Register audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[0] will power up to High File: C:/ECE_385/FinalProject/audio_interface.vhd Line: 102
-    Critical Warning (18010): Register audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[3] will power up to High File: C:/ECE_385/FinalProject/audio_interface.vhd Line: 102
-    Critical Warning (18010): Register audio_interface_plat:audio_transmit|audio_interface:A1|Bcount[2] will power up to High File: C:/ECE_385/FinalProject/audio_interface.vhd Line: 102
-Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (17049): 56 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 23 assignments for entity "altera_avalon_sc_fifo" -- entity does not exist in design
 Warning (20013): Ignored 23 assignments for entity "altera_avalon_st_handshake_clock_crosser" -- entity does not exist in design
 Warning (20013): Ignored 64 assignments for entity "altera_merlin_master_agent" -- entity does not exist in design
@@ -1136,18 +1177,21 @@ Warning (20013): Ignored 78 assignments for entity "nios_system_sdram_pll" -- en
 Info (144001): Generated suppressed messages file C:/ECE_385/FinalProject/output_files/FinalProject.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 2
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 2
-Info (21057): Implemented 4685 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "AUD_DACLRCK" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 35
+    Warning (15610): No output dependent on input pin "AUD_BCLK" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 34
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/ECE_385/FinalProject/Final_Project_top.sv Line: 2
+Info (21057): Implemented 123 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 4652 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
-    Info: Peak virtual memory: 4857 megabytes
-    Info: Processing ended: Mon Nov 18 16:05:34 2019
-    Info: Elapsed time: 00:01:01
-    Info: Total CPU time (on all processors): 00:01:12
+    Info (21061): Implemented 90 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 56 warnings
+    Info: Peak virtual memory: 4848 megabytes
+    Info: Processing ended: Mon Nov 18 20:00:58 2019
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+

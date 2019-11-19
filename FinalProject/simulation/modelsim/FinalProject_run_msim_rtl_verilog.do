@@ -13,7 +13,7 @@ vlog -sv -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/Hex
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/Final_Project_top.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/KeyMapper.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/controller.sv}
-vlog -sv -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/sample_freq_counter.sv}
+vlog -sv -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/pulse.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject {C:/ECE_385/FinalProject/wavetable_synthesizer.sv}
 vcom -93 -work work {C:/ECE_385/FinalProject/audio_interface.vhd}
 vlib nios_system
