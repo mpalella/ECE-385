@@ -105,6 +105,7 @@ initial begin: TEST_VECTORS
 
 //for top level
 KEY = 4'b1111;
+keycode = 256'd35;
 
 
 #2 KEY[0] = 0;

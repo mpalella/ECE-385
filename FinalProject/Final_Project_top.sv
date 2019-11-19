@@ -119,7 +119,7 @@ module Final_Project_top( input               CLOCK_50,
     
 	 sync          				butt_sync(.Clk(Clk), .d(~KEY[3]), .q(program_start));
 	 
-	 pulse							Signal_Pulse(.Clk(Clk), .data(data_over), .out(sample_clock), .Reset(Reset_h));
+	 pulse							Signal_Pulse(.Clk(Clk), .data(data_over), .out(sample_Clk), .Reset(Reset_h));
 	 
 	 
     // Display keycode on hex display

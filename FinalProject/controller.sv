@@ -10,11 +10,8 @@ enum logic [2:0] {
 WAIT,
 WAIT_1,
 DAC_WAIT,
-DAC_WAIT_1,
-DAC_WAIT_2,
 RUN,
-RUN_1 
-
+RUN_1
 }   curr_state, next_state;
 
 always_ff @ (posedge Clk)  
@@ -35,7 +32,7 @@ always_ff @ (posedge Clk)
 				WAIT_1  		: if(start == 0)
 										next_state = DAC_WAIT;
 				
-				DAC_WAIT_2  : if(init_finish == 1)
+				DAC_WAIT    : if(init_finish == 1)
 										next_state = RUN;
 				RUN      	: if(start == 1)
 										next_state = RUN_1;

@@ -25,11 +25,17 @@ begin
 		
 		else if(sample_Clk)
 		begin
-			//load value of frequency every clock cycle
+			//load freq val
 			frequency <= freq;
 		
 			//add frequency to phase every cycle
 			phase <= phase + frequency;
+		end
+		
+		else
+		begin
+			//load value of frequency every clock cycle
+			frequency <= freq;
 		end
 		
 end

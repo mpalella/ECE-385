@@ -41,10 +41,9 @@ state.b_stop1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
 state.b_end 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
 State Machine - |Final_Project_top|controller:control|curr_state
-Name curr_state.RUN_1 curr_state.RUN curr_state.DAC_WAIT_2 curr_state.DAC_WAIT curr_state.WAIT_1 curr_state.WAIT 
-curr_state.WAIT 0 0 0 0 0 0 
-curr_state.WAIT_1 0 0 0 0 1 1 
-curr_state.DAC_WAIT 0 0 0 1 0 1 
-curr_state.DAC_WAIT_2 0 0 1 0 0 1 
-curr_state.RUN 0 1 0 0 0 1 
-curr_state.RUN_1 1 0 0 0 0 1 
+Name curr_state.RUN curr_state.DAC_WAIT curr_state.WAIT_1 curr_state.WAIT curr_state.RUN_1 
+curr_state.WAIT 0 0 0 0 0 
+curr_state.WAIT_1 0 0 1 1 0 
+curr_state.DAC_WAIT 0 1 0 1 0 
+curr_state.RUN 1 0 0 1 0 
+curr_state.RUN_1 0 0 0 1 1 
