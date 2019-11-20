@@ -81,7 +81,7 @@ constant SCI_REG_ROM : rom_type := (
 constant SCI_DAT_ROM : rom_type := (
 	"00000000", -- Deactivate - R9
 	"00011111", -- ADC L/R Volume - R0 Old: "00011111"
-	"11110101", -- Headphone volume - R2 Old: "11111001" "11110001"
+	"11110001", -- Headphone volume - R2 Old: "11111001" "11110001"
 	"11010000", -- Select DAC - R4
 	"00000101", -- Turn off de-emphasis,  Off with HPF, unmute; DAC Old: "00010110" - R5
 	"01100000", -- Device power on, ADC/DAC power on - R6

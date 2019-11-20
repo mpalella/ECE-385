@@ -1,4 +1,4 @@
-## Generated SDC file "lab7.sdc"
+## Generated SDC file "lab8.sdc"
 
 ## Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
 ## Your use of Altera Corporation's design tools, logic functions 

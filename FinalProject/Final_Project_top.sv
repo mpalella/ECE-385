@@ -14,10 +14,10 @@ module Final_Project_top( input               CLOCK_50,
              inout  wire  [15:0] OTG_DATA,     //CY7C67200 Data bus 16 Bits
              output logic [1:0]  OTG_ADDR,     //CY7C67200 Address 2 Bits
              output logic        OTG_CS_N,     //CY7C67200 Chip Select
-                                 OTG_RD_N,     //CY7C67200 Write
-                                 OTG_WR_N,     //CY7C67200 Read
+                                 OTG_OE_N,     //CY7C67200 Write
+                                 OTG_WE_N,     //CY7C67200 Read
                                  OTG_RST_N,    //CY7C67200 Reset
-             input               OTG_INT,      //CY7C67200 Interrupt
+             input        [1:0]  OTG_INT,      //CY7C67200 Interrupt
              // SDRAM Interface for Nios II Software
              output logic [12:0] DRAM_ADDR,    //SDRAM Address 13 Bits
              inout  wire  [31:0] DRAM_DQ,      //SDRAM Data 32 Bits
@@ -71,8 +71,8 @@ module Final_Project_top( input               CLOCK_50,
                             // signals connected to EZ-OTG chip
                             .OTG_DATA(OTG_DATA),    
                             .OTG_ADDR(OTG_ADDR),    
-                            .OTG_RD_N(OTG_RD_N),    
-                            .OTG_WR_N(OTG_WR_N),    
+                            .OTG_RD_N(OTG_OE_N),    
+                            .OTG_WR_N(OTG_WE_N),    
                             .OTG_CS_N(OTG_CS_N),
                             .OTG_RST_N(OTG_RST_N)
     );
