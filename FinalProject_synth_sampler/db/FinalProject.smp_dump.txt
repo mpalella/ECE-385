@@ -1,0 +1,55 @@
+
+State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state
+Name curr_state.SEND_DONE curr_state.CHECK_NOTE_DONE curr_state.WAIT_SCLK_LOW curr_state.COUNT_INCREMENT curr_state.INCREMENT curr_state.WAIT_SCLK_HIGH curr_state.NOTE_DONE curr_state.WAIT_START 
+curr_state.WAIT_START 0 0 0 0 0 0 0 0 
+curr_state.NOTE_DONE 0 0 0 0 0 0 1 1 
+curr_state.WAIT_SCLK_HIGH 0 0 0 0 0 1 0 1 
+curr_state.INCREMENT 0 0 0 0 1 0 0 1 
+curr_state.COUNT_INCREMENT 0 0 0 1 0 0 0 1 
+curr_state.WAIT_SCLK_LOW 0 0 1 0 0 0 0 1 
+curr_state.CHECK_NOTE_DONE 0 1 0 0 0 0 0 1 
+curr_state.SEND_DONE 1 0 0 0 0 0 0 1 
+
+State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state
+Name curr_state.SEND_DONE curr_state.CHECK_NOTE_DONE curr_state.WAIT_SCLK_LOW curr_state.COUNT_INCREMENT curr_state.INCREMENT curr_state.WAIT_SCLK_HIGH curr_state.NOTE_DONE curr_state.WAIT_START 
+curr_state.WAIT_START 0 0 0 0 0 0 0 0 
+curr_state.NOTE_DONE 0 0 0 0 0 0 1 1 
+curr_state.WAIT_SCLK_HIGH 0 0 0 0 0 1 0 1 
+curr_state.INCREMENT 0 0 0 0 1 0 0 1 
+curr_state.COUNT_INCREMENT 0 0 0 1 0 0 0 1 
+curr_state.WAIT_SCLK_LOW 0 0 1 0 0 0 0 1 
+curr_state.CHECK_NOTE_DONE 0 1 0 0 0 0 0 1 
+curr_state.SEND_DONE 1 0 0 0 0 0 0 1 
+
+State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state
+Name curr_state.SEND_DONE curr_state.CHECK_NOTE_DONE curr_state.WAIT_SCLK_LOW curr_state.COUNT_INCREMENT curr_state.INCREMENT curr_state.WAIT_SCLK_HIGH curr_state.NOTE_DONE curr_state.WAIT_START 
+curr_state.WAIT_START 0 0 0 0 0 0 0 0 
+curr_state.NOTE_DONE 0 0 0 0 0 0 1 1 
+curr_state.WAIT_SCLK_HIGH 0 0 0 0 0 1 0 1 
+curr_state.INCREMENT 0 0 0 0 1 0 0 1 
+curr_state.COUNT_INCREMENT 0 0 0 1 0 0 0 1 
+curr_state.WAIT_SCLK_LOW 0 0 1 0 0 0 0 1 
+curr_state.CHECK_NOTE_DONE 0 1 0 0 0 0 0 1 
+curr_state.SEND_DONE 1 0 0 0 0 0 0 1 
+
+State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|incrementControl:CONTROL|curr_state
+Name curr_state.SEND_DONE curr_state.CHECK_NOTE_DONE curr_state.WAIT_SCLK_LOW curr_state.COUNT_INCREMENT curr_state.INCREMENT curr_state.WAIT_SCLK_HIGH curr_state.NOTE_DONE curr_state.WAIT_START 
+curr_state.WAIT_START 0 0 0 0 0 0 0 0 
+curr_state.NOTE_DONE 0 0 0 0 0 0 1 1 
+curr_state.WAIT_SCLK_HIGH 0 0 0 0 0 1 0 1 
+curr_state.INCREMENT 0 0 0 0 1 0 0 1 
+curr_state.COUNT_INCREMENT 0 0 0 1 0 0 0 1 
+curr_state.WAIT_SCLK_LOW 0 0 1 0 0 0 0 1 
+curr_state.CHECK_NOTE_DONE 0 1 0 0 0 0 0 1 
+curr_state.SEND_DONE 1 0 0 0 0 0 0 1 
+
+State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control|curr_state
+Name curr_state.STORE_MDR1 curr_state.RAM_WAIT1_2 curr_state.RAM_WAIT1_1 curr_state.LOAD_MAR1 curr_state.SANC1_WAIT curr_state.WAIT_SCLK_LOW curr_state.WAIT_SCLK_HIGH curr_state.WAIT_START 
+curr_state.WAIT_START 0 0 0 0 0 0 0 0 
+curr_state.WAIT_SCLK_HIGH 0 0 0 0 0 0 1 1 
+curr_state.WAIT_SCLK_LOW 0 0 0 0 0 1 0 1 
+curr_state.SANC1_WAIT 0 0 0 0 1 0 0 1 
+curr_state.LOAD_MAR1 0 0 0 1 0 0 0 1 
+curr_state.RAM_WAIT1_1 0 0 1 0 0 0 0 1 
+curr_state.RAM_WAIT1_2 0 1 0 0 0 0 0 1 
+curr_state.STORE_MDR1 1 0 0 0 0 0 0 1 
