@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="nios_system" kind="system" version="18.0" fabric="QSYS">
  <!-- Format version 18.0 614 (Future versions may contain additional information.) -->
- <!-- 2019.11.17.13:59:28 -->
+ <!-- 2019.12.08.13:37:03 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1574020747</value>
+  <value>1575833790</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -101,7 +101,7 @@
  </parameter>
  <parameter name="projectName">
   <type>java.lang.String</type>
-  <value>lab8.qpf</value>
+  <value>FinalProject.qpf</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -1309,7 +1309,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.DATA_WIDTH</name>
-   <value>8</value>
+   <value>32</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.DO_TEST_BENCH_WIRING</name>
@@ -1361,7 +1361,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.altr,gpio-bank-width</name>
-   <value>8</value>
+   <value>32</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.resetvalue</name>
@@ -1453,7 +1453,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="width">
    <type>int</type>
-   <value>8</value>
+   <value>32</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -2061,7 +2061,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>out_port</name>
     <direction>Output</direction>
-    <width>8</width>
+    <width>32</width>
     <role>export</role>
    </port>
   </interface>
@@ -22541,5 +22541,5 @@ parameters are a RESULT of the module parameters. -->
   <version>18.0</version>
  </plugin>
  <reportVersion>18.0 614</reportVersion>
- <uniqueIdentifier>A08CFDDC22EC0000016E7AF29EB8</uniqueIdentifier>
+ <uniqueIdentifier>A08CFDDC22EC0000016EE7037BDC</uniqueIdentifier>
 </EnsembleReport>

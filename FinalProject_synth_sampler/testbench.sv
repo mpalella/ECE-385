@@ -92,7 +92,7 @@ timeprecision 1ns;
 logic Clk = 0;
 logic init;
 logic [3:0] KEY;
-logic [7:0] keycode;
+logic [31:0] keycode;
 wire [15:0] Data;
 logic [19:0] A;
 
@@ -270,7 +270,7 @@ initial begin: TEST_VECTORS
 //testing sram communication
 init = 0;
 KEY = 4'b1111;
-keycode = 8'd2;
+keycode = {8'd2, 8'd3, 8'd4, 8'd5};
 
 
 #2 KEY[0] = 0;
@@ -279,8 +279,9 @@ keycode = 8'd2;
 #4 init = 1;
 #4 init = 0;
 
-#4 keycode = 8'd0;
-#4 keycode = 8'd2;
+#4 keycode = 32'd0;
+#4 keycode = {8'd5, 8'd0, 8'd0, 8'd2};
+#20 keycode = {8'd0, 8'd4, 8'd3, 8'd2};
 
 end
 endmodule

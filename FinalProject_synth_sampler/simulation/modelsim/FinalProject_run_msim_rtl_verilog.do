@@ -13,6 +13,7 @@ vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/Fi
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/clock_divider_MCLK.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/clock_divider_sample.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/Synchronizers.sv}
+vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/reg_16.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/Address_Incrementer.sv}
@@ -21,7 +22,6 @@ vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/Fi
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/samplerAddressControl.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/MUX4.sv}
-vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/SELECTOR.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/addressAdder.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv}

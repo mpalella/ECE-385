@@ -15,6 +15,28 @@ begin
 			note_addr = 20'd2; //dummy variable
 			invalid_note = 1'b0;
 		end
+		
+		256'd3: //Tab
+		begin
+			note_addr = 20'd3; //dummy variable
+			invalid_note = 1'b0;
+		end
+		
+		256'd4: //Tab
+		begin
+			note_addr = 20'd4; //dummy variable
+			invalid_note = 1'b0;
+		end
+		
+		256'd5: //Tab
+		begin
+			note_addr = 20'd5; //dummy variable
+			invalid_note = 1'b0;
+		end
+		
+		
+		
+		
 			
 		256'd43: //Tab
 		begin

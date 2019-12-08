@@ -27,28 +27,28 @@ task memory_contents(output logic[15:0] mem_array[0:size-1]);
 // Note that if you do this, remember to turn "init_external" in test_memory.sv to 1 for 
 // any of your modifications to take effect.
 
-   mem_array[   0 ] =    opCLR(R0)                ;       // Clear the register so it can be used as a base
-   mem_array[   1 ] =    opLDR(R1, R0, inSW)      ;       // Load switches
-   mem_array[   2 ] =    opJMP(R1)                ;       // Jump to the start of a program
+   mem_array[   0 ] =    16'd3               ;       // Clear the register so it can be used as a base
+   mem_array[   1 ] =    16'd3         ;       // Load switches
+   mem_array[   2 ] =    16'd3                   ;       // Jump to the start of a program
    
                                                           // Basic I/O test 1
-   mem_array[   3 ] =    opLDR(R1, R0, inSW)      ;       // Load switches
-   mem_array[   4 ] =    opSTR(R1, R0, outHEX)    ;       // Output
-   mem_array[   5 ] =    opBR(nzp, -3)            ;       // Repeat
+   mem_array[   3 ] =    16'd3        ;       // Load switches
+   mem_array[   4 ] =    16'd3       ;       // Output
+   mem_array[   5 ] =    16'd3             ;       // Repeat
                                       
                                                           // Basic I/O test 2
-   mem_array[   6 ] =    opPSE(12'h801)           ;       // Checkpoint 1 - prepare to input
-   mem_array[   7 ] =    opLDR(R1, R0, inSW)      ;       // Load switches
-   mem_array[   8 ] =    opSTR(R1, R0, outHEX)    ;       // Output
-   mem_array[   9 ] =    opPSE(12'hC02)           ;       // Checkpoint 2 - read output, prepare to input
-   mem_array[  10 ] =    opBR(nzp, -4)            ;       // Repeat
+   mem_array[   6 ] =    16'd3             ;       // Checkpoint 1 - prepare to input
+   mem_array[   7 ] =    16'd3        ;       // Load switches
+   mem_array[   8 ] =    16'd3     ;       // Output
+   mem_array[   9 ] =    16'd3         ;       // Checkpoint 2 - read output, prepare to input
+   mem_array[  10 ] =    16'd3             ;       // Repeat
                                           
                                                           // Basic I/O test 3 (Self-modifying code)
-   mem_array[  11 ] =    opPSE(12'h801)           ;       // Checkpoint 1 - prepare to input
-   mem_array[  12 ] =    opJSR(0)                 ;       // Get PC address
-   mem_array[  13 ] =    opLDR(R2,R7,3)           ;       // Load pause instruction as data
-   mem_array[  14 ] =    opLDR(R1, R0, inSW)      ;       // Load switches
-   mem_array[  15 ] =    opSTR(R1, R0, outHEX)    ;       // Output
+   mem_array[  11 ] =   16'd3             ;       // Checkpoint 1 - prepare to input
+   mem_array[  12 ] =    16'd3              ;       // Get PC address
+   mem_array[  13 ] =    16'd3            ;       // Load pause instruction as data
+   mem_array[  14 ] =    16'd3        ;       // Load switches
+   mem_array[  15 ] =    16'd3      ;       // Output
    mem_array[  16 ] =    opPSE(12'hC02)           ;       // Checkpoint 2 - read output, prepare to input
    mem_array[  17 ] =    opINC(R2)                ;       // Increment checkpoint number
    mem_array[  18 ] =    opSTR(R2,R7,3)           ;       // Store new checkpoint instruction (self-modifying code)

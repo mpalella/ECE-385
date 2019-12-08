@@ -9,21 +9,20 @@ module NoteProducer(
 
 );
 
-logic done1, done2, done3, done4, MAR_LD, MDR_LD1, MDR_LD2, MDR_LD3, MDR_LD4;
+logic MAR_LD, MDR_LD1, MDR_LD2, MDR_LD3, MDR_LD4;
 logic [1:0] select;
 logic [15:0] MDR_in1, MDR_in2, MDR_in3, MDR_in4, MDR_out1, MDR_out2, MDR_out3, MDR_out4;
 logic [19:0] note1_addr, note2_addr, note3_addr, note4_addr, MAR_in;
 
 
 addressAdder					adder(.addr1(MDR_out1), .addr2(MDR_out2), .addr3(MDR_out3), .addr4(MDR_out4), .note_out(audio_data));
-MultinoteController			Control(.Clk(Clk), .Reset(Reset), .sample_clk(sample_clk), .init(init), .done1(done1), .done2(done2), .done3(done3), .done4(done4), .MAR_LD(MAR_LD), .MDR_LD1(MDR_LD1), .MDR_LD2(MDR_LD2), .MDR_LD3(MDR_LD3), .MDR_LD4(MDR_LD4), .OE(OE), .select(select));
-SELECTOR							DATA_SEL(.select(select), .out1(MDR_in1), .out2(MDR_in2), .out3(MDR_in3), .out4(MDR_in4), .Addr_in(sram_data));
+MultinoteController			Control(.Clk(Clk), .Reset(Reset), .sample_clk(sample_clk), .init(init), .MAR_LD(MAR_LD), .MDR_LD1(MDR_LD1), .MDR_LD2(MDR_LD2), .MDR_LD3(MDR_LD3), .MDR_LD4(MDR_LD4), .OE(OE), .select(select));
 MUX4								ADDR_SEL(.select(select), .addr1(note1_addr), .addr2(note2_addr), .addr3(note3_addr), .addr4(note4_addr), .addr_out(MAR_in));
 
-reg_16							MDR1(.Clk(Clk), .Reset(Reset), .Load(MDR_LD1), .D(MDR_in1), .Data_Out(MDR_out1));
-reg_16							MDR2(.Clk(Clk), .Reset(Reset), .Load(MDR_LD2), .D(MDR_in2), .Data_Out(MDR_out2));
-reg_16							MDR3(.Clk(Clk), .Reset(Reset), .Load(MDR_LD3), .D(MDR_in3), .Data_Out(MDR_out3));
-reg_16							MDR4(.Clk(Clk), .Reset(Reset), .Load(MDR_LD4), .D(MDR_in4), .Data_Out(MDR_out4));
+reg_16							MDR1(.Clk(Clk), .Reset(Reset), .Load(MDR_LD1), .D(sram_data), .Data_Out(MDR_out1));
+reg_16							MDR2(.Clk(Clk), .Reset(Reset), .Load(MDR_LD2), .D(sram_data), .Data_Out(MDR_out2));
+reg_16							MDR3(.Clk(Clk), .Reset(Reset), .Load(MDR_LD3), .D(sram_data), .Data_Out(MDR_out3));
+reg_16							MDR4(.Clk(Clk), .Reset(Reset), .Load(MDR_LD4), .D(sram_data), .Data_Out(MDR_out4));
 
 
 reg_20							MAR(.Clk(Clk), .Reset(Reset), .Load(MAR_LD), .D(MAR_in), .Data_Out(sram_address));

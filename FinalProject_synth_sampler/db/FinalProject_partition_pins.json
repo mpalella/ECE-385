@@ -88,15 +88,67 @@
 					"strict" : false
 				},
 				{
-					"name" : "keycode[3]",
+					"name" : "keycode[16]",
 					"strict" : false
 				},
 				{
-					"name" : "keycode[1]",
+					"name" : "keycode[17]",
 					"strict" : false
 				},
 				{
-					"name" : "keycode[5]",
+					"name" : "keycode[18]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[19]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[20]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[21]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[22]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[23]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[8]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[9]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[10]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[11]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[12]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[13]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[14]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[15]",
 					"strict" : false
 				},
 				{
@@ -104,11 +156,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "keycode[4]",
+					"name" : "keycode[1]",
 					"strict" : false
 				},
 				{
 					"name" : "keycode[2]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[3]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[4]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[5]",
 					"strict" : false
 				},
 				{
@@ -117,6 +181,38 @@
 				},
 				{
 					"name" : "keycode[7]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[24]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[25]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[26]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[27]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[28]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[29]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[30]",
+					"strict" : false
+				},
+				{
+					"name" : "keycode[31]",
 					"strict" : false
 				},
 				{

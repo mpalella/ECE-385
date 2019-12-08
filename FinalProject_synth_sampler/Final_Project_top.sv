@@ -1,6 +1,6 @@
 module Final_Project_top( input               CLOCK_50,
              input        [3:0]  KEY,          //bit 0 is set up as Reset
-             output logic [6:0]  HEX0, HEX1,
+             output logic [6:0]  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7,
              // VGA Interface 
              output logic [7:0]  VGA_R,        //VGA Red
                                  VGA_G,        //VGA Green
@@ -48,14 +48,14 @@ module Final_Project_top( input               CLOCK_50,
 				output logic [19:0] SRAM_ADDR,
 				output logic SRAM_CE_N, SRAM_UB_N, SRAM_LB_N, SRAM_OE_N, SRAM_WE_N,
 
-				//input logic [7:0] keycode,
+				//input logic [31:0] keycode,
 				//input logic start
 				
                     );
     
     logic Reset_h, Clk;
 	 logic OE;
-    logic [7:0] keycode;
+    logic [31:0] keycode;
 	 //logic [9:0] DrawX, DrawY;
 
     
@@ -128,8 +128,9 @@ module Final_Project_top( input               CLOCK_50,
 	 logic init_done, init, chip_sel, program_start, data_over, sample_clk;
 	 logic [15:0] Data_to_SRAM, Data_from_SRAM;
 	 logic start;
-	 logic [23:0] frequency;
-	 logic [15:0] data_out;
+	 logic choose_prog;
+	 logic [1:0] function_select;
+	 logic [15:0] data_out, data_out_synth, data_to_dac;
     
 	//modules for synthesizer
     vga_clk vga_clk_instance(.inclk0(Clk), .c0(VGA_CLK));
@@ -137,12 +138,17 @@ module Final_Project_top( input               CLOCK_50,
 	 
 	 //controller and driver for audio interface platform
 	 controller 					control(.Clk(Clk), .Reset(Reset_h), .init_finish(start), .start(program_start), .init(init), .CS(chip_sel));
-	 audio_interface_plat      audio_transmit(.Clk(Clk), .Reset(Reset_h), .INIT(init), .DATA(data_out), .INIT_FINISH(start), .I2C_SDAT(I2C_SDAT), .I2C_SCLK(I2C_SCLK), .AUD_BCLK(AUD_BCLK), .AUD_DACLRCK(AUD_DACLRCK), .AUD_DACDAT(AUD_DACDAT), .data_over(data_over));
+	 audio_interface_plat      audio_transmit(.Clk(Clk), .Reset(Reset_h), .INIT(init), .DATA(data_to_dac), .INIT_FINISH(start), .I2C_SDAT(I2C_SDAT), .I2C_SCLK(I2C_SCLK), .AUD_BCLK(AUD_BCLK), .AUD_DACLRCK(AUD_DACLRCK), .AUD_DACDAT(AUD_DACDAT), .data_over(data_over));
 	 
-	 //wavetable_synthesizer 		sine_synth1(.Clk(Clk), .Reset(Reset_h), .CS(chip_sel), .freq(frequency), .out(data_out), .sample_Clk(sample_clk)); 
-	 //KeyMapper   					Mapper1(.keyboard_in(keycode), .note_out(frequency));
+	 //creates polyphonic sine synth
+	 multiple_wavetable_module 		sine_synth1(.Clk(Clk), .keycode[7:0]), .Reset(Reset_h), .CS(chip_sel), .data_out(data_out_synth), .sample_clk(sample_clk)); 
     
-	 sync          				butt_sync(.Clk(Clk), .d(~KEY[3]), .q(program_start));
+	 //synchronizers for buttons
+	 sync          				butt_sync(.Clk(Clk), .d(~KEY[3]), .q(program_start));  //Key 3 starts program
+	 sync          				butt_sync(.Clk(Clk), .d(~KEY[2]), .q(choose_prog));	//Key 2 changes data output/function
+	 
+	 button_select				   BUTT_SEL(.Clk(Clk), .Reset(Reset), .button(choose_prog), .function_select(function_select));
+	 MUX4_DATA						DATA_MUX(.in1(data_out), .in2(data_out_synth), .in3(data_out), .in4(data_out), .out(data_to_dac), .select(function_select));
 	 
 	 
 	 //clock dividers
@@ -151,12 +157,21 @@ module Final_Project_top( input               CLOCK_50,
 	 
 	 
 	 //note sampler
-	 NoteProducer  NOTE(.keycode({24'b0, keycode[7:0]}), .sram_data(Data_from_SRAM), .Clk(Clk), .Reset(Reset_h), .sample_clk(sample_clk), .init(start), .OE(OE), .sram_address(SRAM_ADDR), .audio_data(data_out));
+	 NoteProducer  NOTE(.keycode(keycode), .sram_data(Data_from_SRAM), .Clk(Clk), .Reset(Reset_h), .sample_clk(sample_clk), .init(start), .OE(OE), .sram_address(SRAM_ADDR), .audio_data(data_out));
 	 
 	 
-    // Display keycode on hex display
-    HexDriver hex_inst_0 (keycode[3:0], HEX0);
-    HexDriver hex_inst_1 (keycode[7:4], HEX1);
+    // Display SRAM ADDRESS on hex display
+    HexDriver hex_inst_0 (SRAM_ADDR[3:0], HEX0);
+    HexDriver hex_inst_1 (SRAM_ADDR[7:4], HEX1);
+	 HexDriver hex_inst_2 (SRAM_ADDR[11:8], HEX2);
+    HexDriver hex_inst_3 (SRAM_ADDR[15:12], HEX3);
+	 
+	 // Display SRAM ADDRESS on hex display
+    HexDriver hex_inst_4 (keycode[3:0], HEX4);
+    HexDriver hex_inst_5 (keycode[7:4], HEX5);
+	 HexDriver hex_inst_6 (keycode[11:8], HEX6);
+    HexDriver hex_inst_7 (keycode[15:12], HEX7);
+	 
 	 
 	 
 	 // The tri-state buffer serves as the interface between Mem2IO and SRAM

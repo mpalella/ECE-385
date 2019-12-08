@@ -1,7 +1,7 @@
 module memoryTestingTopLevel(
 input logic Clk, init,
 input logic [3:0] KEY,
-input logic [7:0] keycode,
+input logic [31:0] keycode,
 output logic [19:0] A,
 inout wire[15:0] Data //data 
 );

@@ -14,8 +14,7 @@ WAIT_SCLK_HIGH,
 INCREMENT,
 COUNT_INCREMENT,
 WAIT_SCLK_LOW,
-CHECK_NOTE_DONE,
-SEND_DONE
+CHECK_NOTE_DONE
 
 }   curr_state, next_state;
 
@@ -47,7 +46,7 @@ always_comb
 												
 					INCREMENT         : next_state = COUNT_INCREMENT;
 					
-					COUNT_INCREMENT	: next_state = SEND_DONE;
+					COUNT_INCREMENT	: next_state = CHECK_NOTE_DONE;
 					
 					CHECK_NOTE_DONE   : 
 											 begin
@@ -59,8 +58,6 @@ always_comb
 												
 											 end
 											 
-											 
-					SEND_DONE			:  next_state = CHECK_NOTE_DONE;
 					
 					WAIT_SCLK_LOW     : if(~sample_clk)
 												next_state = INCREMENT;
@@ -76,13 +73,7 @@ always_comb
 				Done = 1'b0;
 				count_inc = 1'b0;
 			end
-			
-			SEND_DONE :
-			begin
-				increment = 1'b0;
-				Done = 1'b1;
-				count_inc = 1'b0;
-			end
+		
 			
 			INCREMENT :
 			begin

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProject
-Sat Dec 07 13:45:52 2019
+Sun Dec 08 13:01:53 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -20,29 +20,36 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  12. State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|incrementControl:CONTROL|curr_state
  13. State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control|curr_state
  14. Registers Removed During Synthesis
- 15. Removed Registers Triggering Further Register Optimizations
- 16. General Register Statistics
- 17. Multiplexer Restructuring Statistics (Restructuring Performed)
- 18. Parameter Settings for User Entity Instance: test_memory:test
- 19. Parameter Settings for User Entity Instance: test_memory:test|memory_parser:parser
- 20. Parameter Settings for User Entity Instance: Final_Project_top:top|vga_clk:vga_clk_instance|altpll:altpll_component
- 21. Parameter Settings for User Entity Instance: Final_Project_top:top|clock_divider_sample:SCLK
- 22. Parameter Settings for User Entity Instance: Final_Project_top:top|clock_divider_MCLK:MCLK
- 23. Parameter Settings for User Entity Instance: Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|noteCounter:COUNTER
- 24. Parameter Settings for User Entity Instance: Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|noteCounter:COUNTER
- 25. Parameter Settings for User Entity Instance: Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|noteCounter:COUNTER
- 26. Parameter Settings for User Entity Instance: Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|noteCounter:COUNTER
- 27. Parameter Settings for User Entity Instance: Final_Project_top:top|tristate:tr0
- 28. altpll Parameter Settings by Entity Instance
- 29. Port Connectivity Checks: "Final_Project_top:top|tristate:tr0"
- 30. Port Connectivity Checks: "Final_Project_top:top|NoteProducer:NOTE"
- 31. Port Connectivity Checks: "Final_Project_top:top|clock_divider_MCLK:MCLK"
- 32. Port Connectivity Checks: "Final_Project_top:top|sync:butt_sync"
- 33. Port Connectivity Checks: "Final_Project_top:top|vga_clk:vga_clk_instance"
- 34. Post-Synthesis Netlist Statistics for Top Partition
- 35. Elapsed Time Per Partition
- 36. Analysis & Synthesis Messages
- 37. Analysis & Synthesis Suppressed Messages
+ 15. General Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Parameter Settings for User Entity Instance: test_memory:test
+ 18. Parameter Settings for User Entity Instance: test_memory:test|memory_parser:parser
+ 19. Parameter Settings for User Entity Instance: Final_Project_top:top|vga_clk:vga_clk_instance|altpll:altpll_component
+ 20. Parameter Settings for User Entity Instance: Final_Project_top:top|clock_divider_sample:SCLK
+ 21. Parameter Settings for User Entity Instance: Final_Project_top:top|clock_divider_MCLK:MCLK
+ 22. Parameter Settings for User Entity Instance: Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|noteCounter:COUNTER
+ 23. Parameter Settings for User Entity Instance: Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|noteCounter:COUNTER
+ 24. Parameter Settings for User Entity Instance: Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|noteCounter:COUNTER
+ 25. Parameter Settings for User Entity Instance: Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|noteCounter:COUNTER
+ 26. Parameter Settings for User Entity Instance: Final_Project_top:top|tristate:tr0
+ 27. altpll Parameter Settings by Entity Instance
+ 28. Port Connectivity Checks: "Final_Project_top:top|tristate:tr0"
+ 29. Port Connectivity Checks: "Final_Project_top:top|HexDriver:hex_inst_3"
+ 30. Port Connectivity Checks: "Final_Project_top:top|HexDriver:hex_inst_2"
+ 31. Port Connectivity Checks: "Final_Project_top:top|HexDriver:hex_inst_1"
+ 32. Port Connectivity Checks: "Final_Project_top:top|HexDriver:hex_inst_0"
+ 33. Port Connectivity Checks: "Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4"
+ 34. Port Connectivity Checks: "Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3"
+ 35. Port Connectivity Checks: "Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2"
+ 36. Port Connectivity Checks: "Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1"
+ 37. Port Connectivity Checks: "Final_Project_top:top|NoteProducer:NOTE"
+ 38. Port Connectivity Checks: "Final_Project_top:top|clock_divider_MCLK:MCLK"
+ 39. Port Connectivity Checks: "Final_Project_top:top|sync:butt_sync"
+ 40. Port Connectivity Checks: "Final_Project_top:top|vga_clk:vga_clk_instance"
+ 41. Post-Synthesis Netlist Statistics for Top Partition
+ 42. Elapsed Time Per Partition
+ 43. Analysis & Synthesis Messages
+ 44. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -68,16 +75,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Dec 07 13:45:52 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sun Dec 08 13:01:53 2019       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; FinalProject                                ;
 ; Top-level Entity Name              ; memoryTestingTopLevel                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 235                                         ;
-;     Total combinational functions  ; 235                                         ;
-;     Dedicated logic registers      ; 114                                         ;
-; Total registers                    ; 114                                         ;
-; Total pins                         ; 50                                          ;
+; Total logic elements               ; 763                                         ;
+;     Total combinational functions  ; 763                                         ;
+;     Dedicated logic registers      ; 300                                         ;
+; Total registers                    ; 300                                         ;
+; Total pins                         ; 74                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -184,7 +191,9 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -200,6 +209,7 @@ refer to the applicable agreement for further details.
 ; clock_divider_MCLK.sv            ; yes             ; User SystemVerilog HDL File  ; C:/ECE_385/FinalProject_synth_sampler/clock_divider_MCLK.sv              ;         ;
 ; clock_divider_sample.sv          ; yes             ; User SystemVerilog HDL File  ; C:/ECE_385/FinalProject_synth_sampler/clock_divider_sample.sv            ;         ;
 ; Synchronizers.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/ECE_385/FinalProject_synth_sampler/Synchronizers.sv                   ;         ;
+; HexDriver.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv                       ;         ;
 ; vga_clk.v                        ; yes             ; User Wizard-Generated File   ; C:/ECE_385/FinalProject_synth_sampler/vga_clk.v                          ;         ;
 ; Final_Project_top.sv             ; yes             ; User SystemVerilog HDL File  ; C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv               ;         ;
 ; reg_16.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/ECE_385/FinalProject_synth_sampler/reg_16.sv                          ;         ;
@@ -209,7 +219,6 @@ refer to the applicable agreement for further details.
 ; incrementControl.sv              ; yes             ; User SystemVerilog HDL File  ; C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv                ;         ;
 ; samplerAddressControl.sv         ; yes             ; User SystemVerilog HDL File  ; C:/ECE_385/FinalProject_synth_sampler/samplerAddressControl.sv           ;         ;
 ; MUX4.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/ECE_385/FinalProject_synth_sampler/MUX4.sv                            ;         ;
-; SELECTOR.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/ECE_385/FinalProject_synth_sampler/SELECTOR.sv                        ;         ;
 ; MultinoteController.sv           ; yes             ; User SystemVerilog HDL File  ; C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv             ;         ;
 ; addressAdder.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/ECE_385/FinalProject_synth_sampler/addressAdder.sv                    ;         ;
 ; NoteProducer.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv                    ;         ;
@@ -229,30 +238,30 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 235       ;
+; Estimated Total logic elements              ; 763       ;
 ;                                             ;           ;
-; Total combinational functions               ; 235       ;
+; Total combinational functions               ; 763       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 87        ;
-;     -- 3 input functions                    ; 41        ;
-;     -- <=2 input functions                  ; 107       ;
+;     -- 4 input functions                    ; 357       ;
+;     -- 3 input functions                    ; 158       ;
+;     -- <=2 input functions                  ; 248       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 175       ;
-;     -- arithmetic mode                      ; 60        ;
+;     -- normal mode                          ; 604       ;
+;     -- arithmetic mode                      ; 159       ;
 ;                                             ;           ;
-; Total registers                             ; 114       ;
-;     -- Dedicated logic registers            ; 114       ;
+; Total registers                             ; 300       ;
+;     -- Dedicated logic registers            ; 300       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 50        ;
+; I/O pins                                    ; 74        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clk~input ;
-; Maximum fan-out                             ; 114       ;
-; Total fan-out                               ; 1110      ;
-; Average fan-out                             ; 2.39      ;
+; Maximum fan-out                             ; 300       ;
+; Total fan-out                               ; 3439      ;
+; Average fan-out                             ; 2.80      ;
 +---------------------------------------------+-----------+
 
 
@@ -261,16 +270,31 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                       ; Entity Name           ; Library Name ;
 +-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |memoryTestingTopLevel                        ; 235 (0)             ; 114 (0)                   ; 0           ; 0            ; 0       ; 0         ; 50   ; 0            ; |memoryTestingTopLevel                                                                                                    ; memoryTestingTopLevel ; work         ;
-;    |Final_Project_top:top|                    ; 235 (1)             ; 114 (1)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top                                                                              ; Final_Project_top     ; work         ;
-;       |NoteProducer:NOTE|                     ; 195 (0)             ; 85 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE                                                            ; NoteProducer          ; work         ;
-;          |MultinoteController:Control|        ; 13 (13)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control                                ; MultinoteController   ; work         ;
-;          |reg_20:MAR|                         ; 21 (21)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|reg_20:MAR                                                 ; reg_20                ; work         ;
-;          |samplerAddressControl:SAC1|         ; 161 (0)             ; 57 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1                                 ; samplerAddressControl ; work         ;
-;             |Address_Incrementer:INCREMENTER| ; 68 (68)             ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|Address_Incrementer:INCREMENTER ; Address_Incrementer   ; work         ;
-;             |SamplerKeymapper:MAPPER|         ; 51 (51)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|SamplerKeymapper:MAPPER         ; SamplerKeymapper      ; work         ;
-;             |incrementControl:CONTROL|        ; 17 (17)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|incrementControl:CONTROL        ; incrementControl      ; work         ;
+; |memoryTestingTopLevel                        ; 763 (0)             ; 300 (0)                   ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |memoryTestingTopLevel                                                                                                    ; memoryTestingTopLevel ; work         ;
+;    |Final_Project_top:top|                    ; 763 (1)             ; 300 (1)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top                                                                              ; Final_Project_top     ; work         ;
+;       |NoteProducer:NOTE|                     ; 723 (0)             ; 271 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE                                                            ; NoteProducer          ; work         ;
+;          |MultinoteController:Control|        ; 28 (28)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control                                ; MultinoteController   ; work         ;
+;          |reg_20:MAR|                         ; 42 (42)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|reg_20:MAR                                                 ; reg_20                ; work         ;
+;          |samplerAddressControl:SAC1|         ; 165 (0)             ; 58 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1                                 ; samplerAddressControl ; work         ;
+;             |Address_Incrementer:INCREMENTER| ; 72 (72)             ; 36 (36)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|Address_Incrementer:INCREMENTER ; Address_Incrementer   ; work         ;
+;             |SamplerKeymapper:MAPPER|         ; 52 (52)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|SamplerKeymapper:MAPPER         ; SamplerKeymapper      ; work         ;
+;             |incrementControl:CONTROL|        ; 16 (16)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|incrementControl:CONTROL        ; incrementControl      ; work         ;
 ;             |noteCounter:COUNTER|             ; 25 (25)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|noteCounter:COUNTER             ; noteCounter           ; work         ;
+;          |samplerAddressControl:SAC2|         ; 163 (0)             ; 58 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2                                 ; samplerAddressControl ; work         ;
+;             |Address_Incrementer:INCREMENTER| ; 71 (71)             ; 36 (36)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|Address_Incrementer:INCREMENTER ; Address_Incrementer   ; work         ;
+;             |SamplerKeymapper:MAPPER|         ; 51 (51)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|SamplerKeymapper:MAPPER         ; SamplerKeymapper      ; work         ;
+;             |incrementControl:CONTROL|        ; 16 (16)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL        ; incrementControl      ; work         ;
+;             |noteCounter:COUNTER|             ; 25 (25)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|noteCounter:COUNTER             ; noteCounter           ; work         ;
+;          |samplerAddressControl:SAC3|         ; 163 (0)             ; 58 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3                                 ; samplerAddressControl ; work         ;
+;             |Address_Incrementer:INCREMENTER| ; 71 (71)             ; 36 (36)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|Address_Incrementer:INCREMENTER ; Address_Incrementer   ; work         ;
+;             |SamplerKeymapper:MAPPER|         ; 51 (51)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|SamplerKeymapper:MAPPER         ; SamplerKeymapper      ; work         ;
+;             |incrementControl:CONTROL|        ; 16 (16)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL        ; incrementControl      ; work         ;
+;             |noteCounter:COUNTER|             ; 25 (25)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|noteCounter:COUNTER             ; noteCounter           ; work         ;
+;          |samplerAddressControl:SAC4|         ; 162 (0)             ; 58 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4                                 ; samplerAddressControl ; work         ;
+;             |Address_Incrementer:INCREMENTER| ; 70 (70)             ; 36 (36)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|Address_Incrementer:INCREMENTER ; Address_Incrementer   ; work         ;
+;             |SamplerKeymapper:MAPPER|         ; 51 (51)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|SamplerKeymapper:MAPPER         ; SamplerKeymapper      ; work         ;
+;             |incrementControl:CONTROL|        ; 16 (16)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL        ; incrementControl      ; work         ;
+;             |noteCounter:COUNTER|             ; 25 (25)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|noteCounter:COUNTER             ; noteCounter           ; work         ;
 ;       |clock_divider_sample:SCLK|             ; 39 (39)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memoryTestingTopLevel|Final_Project_top:top|clock_divider_sample:SCLK                                                    ; clock_divider_sample  ; work         ;
 +-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -286,185 +310,127 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state                                                                                            ;
-+----------------------------+----------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
-; Name                       ; curr_state.SEND_DONE ; curr_state.CHECK_NOTE_DONE ; curr_state.WAIT_SCLK_LOW ; curr_state.COUNT_INCREMENT ; curr_state.INCREMENT ; curr_state.WAIT_SCLK_HIGH ; curr_state.NOTE_DONE ; curr_state.WAIT_START ;
-+----------------------------+----------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
-; curr_state.WAIT_START      ; 0                    ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 0                     ;
-; curr_state.NOTE_DONE       ; 0                    ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 1                    ; 1                     ;
-; curr_state.WAIT_SCLK_HIGH  ; 0                    ; 0                          ; 0                        ; 0                          ; 0                    ; 1                         ; 0                    ; 1                     ;
-; curr_state.INCREMENT       ; 0                    ; 0                          ; 0                        ; 0                          ; 1                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.COUNT_INCREMENT ; 0                    ; 0                          ; 0                        ; 1                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.WAIT_SCLK_LOW   ; 0                    ; 0                          ; 1                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.CHECK_NOTE_DONE ; 0                    ; 1                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.SEND_DONE       ; 1                    ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-+----------------------------+----------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state                                                                     ;
++----------------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
+; Name                       ; curr_state.CHECK_NOTE_DONE ; curr_state.WAIT_SCLK_LOW ; curr_state.COUNT_INCREMENT ; curr_state.INCREMENT ; curr_state.WAIT_SCLK_HIGH ; curr_state.NOTE_DONE ; curr_state.WAIT_START ;
++----------------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
+; curr_state.WAIT_START      ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 0                     ;
+; curr_state.NOTE_DONE       ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 1                    ; 1                     ;
+; curr_state.WAIT_SCLK_HIGH  ; 0                          ; 0                        ; 0                          ; 0                    ; 1                         ; 0                    ; 1                     ;
+; curr_state.INCREMENT       ; 0                          ; 0                        ; 0                          ; 1                    ; 0                         ; 0                    ; 1                     ;
+; curr_state.COUNT_INCREMENT ; 0                          ; 0                        ; 1                          ; 0                    ; 0                         ; 0                    ; 1                     ;
+; curr_state.WAIT_SCLK_LOW   ; 0                          ; 1                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
+; curr_state.CHECK_NOTE_DONE ; 1                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
++----------------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state                                                                                            ;
-+----------------------------+----------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
-; Name                       ; curr_state.SEND_DONE ; curr_state.CHECK_NOTE_DONE ; curr_state.WAIT_SCLK_LOW ; curr_state.COUNT_INCREMENT ; curr_state.INCREMENT ; curr_state.WAIT_SCLK_HIGH ; curr_state.NOTE_DONE ; curr_state.WAIT_START ;
-+----------------------------+----------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
-; curr_state.WAIT_START      ; 0                    ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 0                     ;
-; curr_state.NOTE_DONE       ; 0                    ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 1                    ; 1                     ;
-; curr_state.WAIT_SCLK_HIGH  ; 0                    ; 0                          ; 0                        ; 0                          ; 0                    ; 1                         ; 0                    ; 1                     ;
-; curr_state.INCREMENT       ; 0                    ; 0                          ; 0                        ; 0                          ; 1                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.COUNT_INCREMENT ; 0                    ; 0                          ; 0                        ; 1                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.WAIT_SCLK_LOW   ; 0                    ; 0                          ; 1                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.CHECK_NOTE_DONE ; 0                    ; 1                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.SEND_DONE       ; 1                    ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-+----------------------------+----------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state                                                                     ;
++----------------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
+; Name                       ; curr_state.CHECK_NOTE_DONE ; curr_state.WAIT_SCLK_LOW ; curr_state.COUNT_INCREMENT ; curr_state.INCREMENT ; curr_state.WAIT_SCLK_HIGH ; curr_state.NOTE_DONE ; curr_state.WAIT_START ;
++----------------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
+; curr_state.WAIT_START      ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 0                     ;
+; curr_state.NOTE_DONE       ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 1                    ; 1                     ;
+; curr_state.WAIT_SCLK_HIGH  ; 0                          ; 0                        ; 0                          ; 0                    ; 1                         ; 0                    ; 1                     ;
+; curr_state.INCREMENT       ; 0                          ; 0                        ; 0                          ; 1                    ; 0                         ; 0                    ; 1                     ;
+; curr_state.COUNT_INCREMENT ; 0                          ; 0                        ; 1                          ; 0                    ; 0                         ; 0                    ; 1                     ;
+; curr_state.WAIT_SCLK_LOW   ; 0                          ; 1                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
+; curr_state.CHECK_NOTE_DONE ; 1                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
++----------------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state                                                                                            ;
-+----------------------------+----------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
-; Name                       ; curr_state.SEND_DONE ; curr_state.CHECK_NOTE_DONE ; curr_state.WAIT_SCLK_LOW ; curr_state.COUNT_INCREMENT ; curr_state.INCREMENT ; curr_state.WAIT_SCLK_HIGH ; curr_state.NOTE_DONE ; curr_state.WAIT_START ;
-+----------------------------+----------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
-; curr_state.WAIT_START      ; 0                    ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 0                     ;
-; curr_state.NOTE_DONE       ; 0                    ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 1                    ; 1                     ;
-; curr_state.WAIT_SCLK_HIGH  ; 0                    ; 0                          ; 0                        ; 0                          ; 0                    ; 1                         ; 0                    ; 1                     ;
-; curr_state.INCREMENT       ; 0                    ; 0                          ; 0                        ; 0                          ; 1                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.COUNT_INCREMENT ; 0                    ; 0                          ; 0                        ; 1                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.WAIT_SCLK_LOW   ; 0                    ; 0                          ; 1                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.CHECK_NOTE_DONE ; 0                    ; 1                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.SEND_DONE       ; 1                    ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-+----------------------------+----------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state                                                                     ;
++----------------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
+; Name                       ; curr_state.CHECK_NOTE_DONE ; curr_state.WAIT_SCLK_LOW ; curr_state.COUNT_INCREMENT ; curr_state.INCREMENT ; curr_state.WAIT_SCLK_HIGH ; curr_state.NOTE_DONE ; curr_state.WAIT_START ;
++----------------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
+; curr_state.WAIT_START      ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 0                     ;
+; curr_state.NOTE_DONE       ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 1                    ; 1                     ;
+; curr_state.WAIT_SCLK_HIGH  ; 0                          ; 0                        ; 0                          ; 0                    ; 1                         ; 0                    ; 1                     ;
+; curr_state.INCREMENT       ; 0                          ; 0                        ; 0                          ; 1                    ; 0                         ; 0                    ; 1                     ;
+; curr_state.COUNT_INCREMENT ; 0                          ; 0                        ; 1                          ; 0                    ; 0                         ; 0                    ; 1                     ;
+; curr_state.WAIT_SCLK_LOW   ; 0                          ; 1                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
+; curr_state.CHECK_NOTE_DONE ; 1                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
++----------------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|incrementControl:CONTROL|curr_state                                                                                            ;
-+----------------------------+----------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
-; Name                       ; curr_state.SEND_DONE ; curr_state.CHECK_NOTE_DONE ; curr_state.WAIT_SCLK_LOW ; curr_state.COUNT_INCREMENT ; curr_state.INCREMENT ; curr_state.WAIT_SCLK_HIGH ; curr_state.NOTE_DONE ; curr_state.WAIT_START ;
-+----------------------------+----------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
-; curr_state.WAIT_START      ; 0                    ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 0                     ;
-; curr_state.NOTE_DONE       ; 0                    ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 1                    ; 1                     ;
-; curr_state.WAIT_SCLK_HIGH  ; 0                    ; 0                          ; 0                        ; 0                          ; 0                    ; 1                         ; 0                    ; 1                     ;
-; curr_state.INCREMENT       ; 0                    ; 0                          ; 0                        ; 0                          ; 1                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.COUNT_INCREMENT ; 0                    ; 0                          ; 0                        ; 1                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.WAIT_SCLK_LOW   ; 0                    ; 0                          ; 1                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.CHECK_NOTE_DONE ; 0                    ; 1                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-; curr_state.SEND_DONE       ; 1                    ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
-+----------------------------+----------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|incrementControl:CONTROL|curr_state                                                                     ;
++----------------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
+; Name                       ; curr_state.CHECK_NOTE_DONE ; curr_state.WAIT_SCLK_LOW ; curr_state.COUNT_INCREMENT ; curr_state.INCREMENT ; curr_state.WAIT_SCLK_HIGH ; curr_state.NOTE_DONE ; curr_state.WAIT_START ;
++----------------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
+; curr_state.WAIT_START      ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 0                     ;
+; curr_state.NOTE_DONE       ; 0                          ; 0                        ; 0                          ; 0                    ; 0                         ; 1                    ; 1                     ;
+; curr_state.WAIT_SCLK_HIGH  ; 0                          ; 0                        ; 0                          ; 0                    ; 1                         ; 0                    ; 1                     ;
+; curr_state.INCREMENT       ; 0                          ; 0                        ; 0                          ; 1                    ; 0                         ; 0                    ; 1                     ;
+; curr_state.COUNT_INCREMENT ; 0                          ; 0                        ; 1                          ; 0                    ; 0                         ; 0                    ; 1                     ;
+; curr_state.WAIT_SCLK_LOW   ; 0                          ; 1                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
+; curr_state.CHECK_NOTE_DONE ; 1                          ; 0                        ; 0                          ; 0                    ; 0                         ; 0                    ; 1                     ;
++----------------------------+----------------------------+--------------------------+----------------------------+----------------------+---------------------------+----------------------+-----------------------+
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control|curr_state                                                                                                             ;
-+---------------------------+-----------------------+------------------------+------------------------+----------------------+-----------------------+--------------------------+---------------------------+-----------------------+
-; Name                      ; curr_state.STORE_MDR1 ; curr_state.RAM_WAIT1_2 ; curr_state.RAM_WAIT1_1 ; curr_state.LOAD_MAR1 ; curr_state.SANC1_WAIT ; curr_state.WAIT_SCLK_LOW ; curr_state.WAIT_SCLK_HIGH ; curr_state.WAIT_START ;
-+---------------------------+-----------------------+------------------------+------------------------+----------------------+-----------------------+--------------------------+---------------------------+-----------------------+
-; curr_state.WAIT_START     ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                        ; 0                         ; 0                     ;
-; curr_state.WAIT_SCLK_HIGH ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                        ; 1                         ; 1                     ;
-; curr_state.WAIT_SCLK_LOW  ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 1                        ; 0                         ; 1                     ;
-; curr_state.SANC1_WAIT     ; 0                     ; 0                      ; 0                      ; 0                    ; 1                     ; 0                        ; 0                         ; 1                     ;
-; curr_state.LOAD_MAR1      ; 0                     ; 0                      ; 0                      ; 1                    ; 0                     ; 0                        ; 0                         ; 1                     ;
-; curr_state.RAM_WAIT1_1    ; 0                     ; 0                      ; 1                      ; 0                    ; 0                     ; 0                        ; 0                         ; 1                     ;
-; curr_state.RAM_WAIT1_2    ; 0                     ; 1                      ; 0                      ; 0                    ; 0                     ; 0                        ; 0                         ; 1                     ;
-; curr_state.STORE_MDR1     ; 1                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                        ; 0                         ; 1                     ;
-+---------------------------+-----------------------+------------------------+------------------------+----------------------+-----------------------+--------------------------+---------------------------+-----------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control|curr_state                                                                                                                                                                                                                                                                                                                                                                                        ;
++---------------------------+-----------------------+------------------------+------------------------+----------------------+-----------------------+------------------------+------------------------+----------------------+-----------------------+------------------------+------------------------+----------------------+-----------------------+------------------------+------------------------+----------------------+--------------------------+---------------------------+-----------------------+
+; Name                      ; curr_state.STORE_MDR4 ; curr_state.RAM_WAIT4_2 ; curr_state.RAM_WAIT4_1 ; curr_state.LOAD_MAR4 ; curr_state.STORE_MDR3 ; curr_state.RAM_WAIT3_2 ; curr_state.RAM_WAIT3_1 ; curr_state.LOAD_MAR3 ; curr_state.STORE_MDR2 ; curr_state.RAM_WAIT2_2 ; curr_state.RAM_WAIT2_1 ; curr_state.LOAD_MAR2 ; curr_state.STORE_MDR1 ; curr_state.RAM_WAIT1_2 ; curr_state.RAM_WAIT1_1 ; curr_state.LOAD_MAR1 ; curr_state.WAIT_SCLK_LOW ; curr_state.WAIT_SCLK_HIGH ; curr_state.WAIT_START ;
++---------------------------+-----------------------+------------------------+------------------------+----------------------+-----------------------+------------------------+------------------------+----------------------+-----------------------+------------------------+------------------------+----------------------+-----------------------+------------------------+------------------------+----------------------+--------------------------+---------------------------+-----------------------+
+; curr_state.WAIT_START     ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                        ; 0                         ; 0                     ;
+; curr_state.WAIT_SCLK_HIGH ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                        ; 1                         ; 1                     ;
+; curr_state.WAIT_SCLK_LOW  ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 1                        ; 0                         ; 1                     ;
+; curr_state.LOAD_MAR1      ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 1                    ; 0                        ; 0                         ; 1                     ;
+; curr_state.RAM_WAIT1_1    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 1                      ; 0                    ; 0                        ; 0                         ; 1                     ;
+; curr_state.RAM_WAIT1_2    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 1                      ; 0                      ; 0                    ; 0                        ; 0                         ; 1                     ;
+; curr_state.STORE_MDR1     ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 1                     ; 0                      ; 0                      ; 0                    ; 0                        ; 0                         ; 1                     ;
+; curr_state.LOAD_MAR2      ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 1                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                        ; 0                         ; 1                     ;
+; curr_state.RAM_WAIT2_1    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 1                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                        ; 0                         ; 1                     ;
+; curr_state.RAM_WAIT2_2    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 1                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                        ; 0                         ; 1                     ;
+; curr_state.STORE_MDR2     ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 1                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                        ; 0                         ; 1                     ;
+; curr_state.LOAD_MAR3      ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 1                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                        ; 0                         ; 1                     ;
+; curr_state.RAM_WAIT3_1    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 1                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                        ; 0                         ; 1                     ;
+; curr_state.RAM_WAIT3_2    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 1                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                        ; 0                         ; 1                     ;
+; curr_state.STORE_MDR3     ; 0                     ; 0                      ; 0                      ; 0                    ; 1                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                        ; 0                         ; 1                     ;
+; curr_state.LOAD_MAR4      ; 0                     ; 0                      ; 0                      ; 1                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                        ; 0                         ; 1                     ;
+; curr_state.RAM_WAIT4_1    ; 0                     ; 0                      ; 1                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                        ; 0                         ; 1                     ;
+; curr_state.RAM_WAIT4_2    ; 0                     ; 1                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                        ; 0                         ; 1                     ;
+; curr_state.STORE_MDR4     ; 1                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                     ; 0                      ; 0                      ; 0                    ; 0                        ; 0                         ; 1                     ;
++---------------------------+-----------------------+------------------------+------------------------+----------------------+-----------------------+------------------------+------------------------+----------------------+-----------------------+------------------------+------------------------+----------------------+-----------------------+------------------------+------------------------+----------------------+--------------------------+---------------------------+-----------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                   ;
-+-----------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
-; Register name                                                                                                               ; Reason for Removal                     ;
-+-----------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
-; Final_Project_top:top|tristate:tr0|Data_write_buffer[0..15]                                                                 ; Stuck at GND due to stuck port data_in ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|Address_Incrementer:INCREMENTER|curr_addr[19]            ; Stuck at GND due to stuck port data_in ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|Address_Incrementer:INCREMENTER|curr_addr[0..18]         ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|Address_Incrementer:INCREMENTER|curr_addr[19]            ; Stuck at GND due to stuck port data_in ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|Address_Incrementer:INCREMENTER|curr_addr[0..18]         ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|Address_Incrementer:INCREMENTER|curr_addr[19]            ; Stuck at GND due to stuck port data_in ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|Address_Incrementer:INCREMENTER|curr_addr[0..18]         ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|Address_Incrementer:INCREMENTER|curr_addr[0,2,12..14,19] ; Stuck at GND due to stuck port data_in ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|Address_Incrementer:INCREMENTER|next_Address[0..19]      ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|Address_Incrementer:INCREMENTER|next_Address[0..19]      ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|Address_Incrementer:INCREMENTER|next_Address[0..19]      ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state~2                    ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state~3                    ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state~4                    ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state~2                    ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state~3                    ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state~4                    ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state~2                    ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state~3                    ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state~4                    ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|incrementControl:CONTROL|curr_state~2                    ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|incrementControl:CONTROL|curr_state~3                    ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|incrementControl:CONTROL|curr_state~4                    ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control|curr_state~2                                            ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control|curr_state~3                                            ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control|curr_state~4                                            ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|noteCounter:COUNTER|counter[1..14]                       ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|noteCounter:COUNTER|counter[1..14]                       ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|noteCounter:COUNTER|counter[1..14]                       ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|noteCounter:COUNTER|counter[0]                           ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|noteCounter:COUNTER|counter[0]                           ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|noteCounter:COUNTER|counter[0]                           ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state.WAIT_START           ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state.NOTE_DONE            ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state.WAIT_SCLK_HIGH       ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state.INCREMENT            ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state.COUNT_INCREMENT      ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state.WAIT_SCLK_LOW        ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state.CHECK_NOTE_DONE      ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state.SEND_DONE            ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state.WAIT_START           ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state.NOTE_DONE            ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state.WAIT_SCLK_HIGH       ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state.INCREMENT            ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state.COUNT_INCREMENT      ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state.WAIT_SCLK_LOW        ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state.CHECK_NOTE_DONE      ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state.SEND_DONE            ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state.WAIT_START           ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state.NOTE_DONE            ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state.WAIT_SCLK_HIGH       ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state.INCREMENT            ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state.COUNT_INCREMENT      ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state.WAIT_SCLK_LOW        ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state.CHECK_NOTE_DONE      ; Lost fanout                            ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state.SEND_DONE            ; Lost fanout                            ;
-; Total Number of Removed Registers = 226                                                                                     ;                                        ;
-+-----------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                                             ;
-+----------------------------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------------------------------------+
-; Register name                                                                                            ; Reason for Removal ; Registers Removed due to This Register                                                                                  ;
-+----------------------------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------------------------------------+
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state~3 ; Lost Fanouts       ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|noteCounter:COUNTER|counter[14],                     ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|noteCounter:COUNTER|counter[13],                     ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|noteCounter:COUNTER|counter[12],                     ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|noteCounter:COUNTER|counter[11],                     ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state.SEND_DONE        ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state~3 ; Lost Fanouts       ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|noteCounter:COUNTER|counter[14],                     ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|noteCounter:COUNTER|counter[13],                     ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|noteCounter:COUNTER|counter[12],                     ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|noteCounter:COUNTER|counter[11],                     ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state.SEND_DONE        ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state~3 ; Lost Fanouts       ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|noteCounter:COUNTER|counter[14],                     ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|noteCounter:COUNTER|counter[13],                     ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|noteCounter:COUNTER|counter[12],                     ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|noteCounter:COUNTER|counter[11],                     ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state.SEND_DONE        ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state~2 ; Lost Fanouts       ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state.INCREMENT,       ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state.COUNT_INCREMENT, ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state.WAIT_SCLK_LOW    ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state~2 ; Lost Fanouts       ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state.INCREMENT,       ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state.COUNT_INCREMENT, ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state.WAIT_SCLK_LOW    ;
-; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state~2 ; Lost Fanouts       ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state.INCREMENT,       ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state.COUNT_INCREMENT, ;
-;                                                                                                          ;                    ; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state.WAIT_SCLK_LOW    ;
-+----------------------------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                               ;
++-------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                                                           ; Reason for Removal                     ;
++-------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
+; Final_Project_top:top|tristate:tr0|Data_write_buffer[0..15]                                                             ; Stuck at GND due to stuck port data_in ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|Address_Incrementer:INCREMENTER|curr_addr[12..14,19] ; Stuck at GND due to stuck port data_in ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|Address_Incrementer:INCREMENTER|curr_addr[12..14,19] ; Stuck at GND due to stuck port data_in ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|Address_Incrementer:INCREMENTER|curr_addr[12..14,19] ; Stuck at GND due to stuck port data_in ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|Address_Incrementer:INCREMENTER|curr_addr[12..14,19] ; Stuck at GND due to stuck port data_in ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state~2                ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state~3                ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state~4                ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state~2                ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state~3                ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state~4                ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state~2                ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state~3                ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state~4                ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|incrementControl:CONTROL|curr_state~2                ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|incrementControl:CONTROL|curr_state~3                ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|incrementControl:CONTROL|curr_state~4                ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control|curr_state~2                                        ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control|curr_state~3                                        ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control|curr_state~4                                        ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control|curr_state~5                                        ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control|curr_state~6                                        ; Lost fanout                            ;
+; Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control|curr_state~7                                        ; Lost fanout                            ;
+; Total Number of Removed Registers = 50                                                                                  ;                                        ;
++-------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -472,12 +438,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 114   ;
-; Number of registers using Synchronous Clear  ; 60    ;
+; Total registers                              ; 300   ;
+; Number of registers using Synchronous Clear  ; 181   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 55    ;
+; Number of registers using Clock Enable       ; 160   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -487,22 +453,28 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|reg_20:MAR|Data_Out[14]                                                     ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|clock_divider_sample:SCLK|counter[5]                                                          ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|Address_Incrementer:INCREMENTER|next_Address[19] ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|Address_Incrementer:INCREMENTER|next_Address[18] ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|noteCounter:COUNTER|counter[5]                   ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|noteCounter:COUNTER|counter[10]                  ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|noteCounter:COUNTER|counter[5]                   ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|noteCounter:COUNTER|counter[11]                  ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state              ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state              ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state              ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control|curr_state                                      ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state              ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state              ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state              ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|clock_divider_sample:SCLK|counter[18]                                                         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|Address_Incrementer:INCREMENTER|next_Address[14] ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|Address_Incrementer:INCREMENTER|next_Address[4]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|Address_Incrementer:INCREMENTER|next_Address[14] ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|Address_Incrementer:INCREMENTER|next_Address[18] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|Address_Incrementer:INCREMENTER|next_Address[14] ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|Address_Incrementer:INCREMENTER|next_Address[15] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|Address_Incrementer:INCREMENTER|next_Address[12] ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|Address_Incrementer:INCREMENTER|next_Address[1]  ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|noteCounter:COUNTER|counter[9]                   ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|noteCounter:COUNTER|counter[14]                  ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|noteCounter:COUNTER|counter[3]                   ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|noteCounter:COUNTER|counter[4]                   ;
+; 6:1                ; 20 bits   ; 80 LEs        ; 60 LEs               ; 20 LEs                 ; Yes        ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|reg_20:MAR|Data_Out[6]                                                      ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control|curr_state                                      ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state              ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state              ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state              ;
 ; 10:1               ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|incrementControl:CONTROL|curr_state              ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4|incrementControl:CONTROL|curr_state              ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3|incrementControl:CONTROL|curr_state              ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2|incrementControl:CONTROL|curr_state              ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; No         ; |memoryTestingTopLevel|Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|incrementControl:CONTROL|curr_state              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -998,14 +970,89 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+-------+----------+--------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Final_Project_top:top|NoteProducer:NOTE"                                                      ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; keycode[31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; audio_data     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Final_Project_top:top|HexDriver:hex_inst_3"                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Out0 ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "Out0[6..1]" have no fanouts ;
+; Out0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Final_Project_top:top|HexDriver:hex_inst_2"                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Out0 ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "Out0[6..1]" have no fanouts ;
+; Out0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Final_Project_top:top|HexDriver:hex_inst_1"                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Out0 ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "Out0[6..1]" have no fanouts ;
+; Out0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Final_Project_top:top|HexDriver:hex_inst_0"                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Out0 ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "Out0[6..1]" have no fanouts ;
+; Out0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC4"                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC3"                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC2"                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1"                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Final_Project_top:top|NoteProducer:NOTE"                                                  ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; audio_data ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -1040,24 +1087,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 50                          ;
-; cycloneiii_ff         ; 114                         ;
-;     ENA               ; 26                          ;
-;     ENA SCLR          ; 29                          ;
-;     SCLR              ; 31                          ;
-;     plain             ; 28                          ;
+; boundary_port         ; 74                          ;
+; cycloneiii_ff         ; 300                         ;
+;     ENA               ; 16                          ;
+;     ENA SCLR          ; 144                         ;
+;     SCLR              ; 37                          ;
+;     plain             ; 103                         ;
 ; cycloneiii_io_obuf    ; 16                          ;
-; cycloneiii_lcell_comb ; 235                         ;
-;     arith             ; 60                          ;
-;         2 data inputs ; 60                          ;
-;     normal            ; 175                         ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 43                          ;
-;         3 data inputs ; 41                          ;
-;         4 data inputs ; 87                          ;
+; cycloneiii_lcell_comb ; 763                         ;
+;     arith             ; 159                         ;
+;         2 data inputs ; 159                         ;
+;     normal            ; 604                         ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 79                          ;
+;         3 data inputs ; 158                         ;
+;         4 data inputs ; 357                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 4.01                        ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 5.05                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1066,7 +1113,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1076,7 +1123,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sat Dec 07 13:45:37 2019
+    Info: Processing started: Sun Dec 08 13:01:36 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1254,8 +1301,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file sampler
     Info (12023): Found entity 1: samplerAddressControl File: C:/ECE_385/FinalProject_synth_sampler/samplerAddressControl.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4.sv
     Info (12023): Found entity 1: MUX4 File: C:/ECE_385/FinalProject_synth_sampler/MUX4.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file selector.sv
-    Info (12023): Found entity 1: SELECTOR File: C:/ECE_385/FinalProject_synth_sampler/SELECTOR.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file multinotecontroller.sv
     Info (12023): Found entity 1: MultinoteController File: C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file addressadder.sv
@@ -1268,6 +1313,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file memoryt
     Info (12023): Found entity 1: memoryTestingTopLevel File: C:/ECE_385/FinalProject_synth_sampler/memoryTestingTopLevel.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at Final_Project_top.sv(135): created implicit net for "VGA_CLK" File: C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv Line: 135
 Warning (10236): Verilog HDL Implicit Net warning at Final_Project_top.sv(150): created implicit net for "AUD_XCK" File: C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv Line: 150
+Warning (10236): Verilog HDL Implicit Net warning at Final_Project_top.sv(158): created implicit net for "HEX0" File: C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv Line: 158
+Warning (10236): Verilog HDL Implicit Net warning at Final_Project_top.sv(159): created implicit net for "HEX1" File: C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv Line: 159
+Warning (10236): Verilog HDL Implicit Net warning at Final_Project_top.sv(160): created implicit net for "HEX2" File: C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv Line: 160
+Warning (10236): Verilog HDL Implicit Net warning at Final_Project_top.sv(161): created implicit net for "HEX3" File: C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv Line: 161
+Warning (10236): Verilog HDL Implicit Net warning at NoteProducer.sv(30): created implicit net for "done1" File: C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at NoteProducer.sv(31): created implicit net for "done2" File: C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv Line: 31
+Warning (10236): Verilog HDL Implicit Net warning at NoteProducer.sv(32): created implicit net for "done3" File: C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv Line: 32
+Warning (10236): Verilog HDL Implicit Net warning at NoteProducer.sv(33): created implicit net for "done4" File: C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv Line: 33
 Warning (10236): Verilog HDL Implicit Net warning at memoryTestingTopLevel.sv(12): created implicit net for "Reset" File: C:/ECE_385/FinalProject_synth_sampler/memoryTestingTopLevel.sv Line: 12
 Warning (10037): Verilog HDL or VHDL warning at nios_system_sdram.v(318): conditional expression evaluates to a constant File: C:/ECE_385/FinalProject_synth_sampler/nios_system/synthesis/submodules/nios_system_sdram.v Line: 318
 Warning (10037): Verilog HDL or VHDL warning at nios_system_sdram.v(328): conditional expression evaluates to a constant File: C:/ECE_385/FinalProject_synth_sampler/nios_system/synthesis/submodules/nios_system_sdram.v Line: 328
@@ -1345,22 +1398,23 @@ Info (12128): Elaborating entity "clock_divider_MCLK" for hierarchy "Final_Proje
 Info (12128): Elaborating entity "NoteProducer" for hierarchy "Final_Project_top:top|NoteProducer:NOTE" File: C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv Line: 154
 Info (12128): Elaborating entity "addressAdder" for hierarchy "Final_Project_top:top|NoteProducer:NOTE|addressAdder:adder" File: C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv Line: 18
 Info (12128): Elaborating entity "MultinoteController" for hierarchy "Final_Project_top:top|NoteProducer:NOTE|MultinoteController:Control" File: C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv Line: 19
-Info (12128): Elaborating entity "SELECTOR" for hierarchy "Final_Project_top:top|NoteProducer:NOTE|SELECTOR:DATA_SEL" File: C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv Line: 20
-Info (12128): Elaborating entity "MUX4" for hierarchy "Final_Project_top:top|NoteProducer:NOTE|MUX4:ADDR_SEL" File: C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv Line: 21
-Info (12128): Elaborating entity "reg_16" for hierarchy "Final_Project_top:top|NoteProducer:NOTE|reg_16:MDR1" File: C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv Line: 23
-Info (12128): Elaborating entity "reg_20" for hierarchy "Final_Project_top:top|NoteProducer:NOTE|reg_20:MAR" File: C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv Line: 29
-Info (12128): Elaborating entity "samplerAddressControl" for hierarchy "Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1" File: C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv Line: 31
+Info (12128): Elaborating entity "MUX4" for hierarchy "Final_Project_top:top|NoteProducer:NOTE|MUX4:ADDR_SEL" File: C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv Line: 20
+Info (12128): Elaborating entity "reg_16" for hierarchy "Final_Project_top:top|NoteProducer:NOTE|reg_16:MDR1" File: C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv Line: 22
+Info (12128): Elaborating entity "reg_20" for hierarchy "Final_Project_top:top|NoteProducer:NOTE|reg_20:MAR" File: C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv Line: 28
+Info (12128): Elaborating entity "samplerAddressControl" for hierarchy "Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1" File: C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv Line: 30
 Info (12128): Elaborating entity "incrementControl" for hierarchy "Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|incrementControl:CONTROL" File: C:/ECE_385/FinalProject_synth_sampler/samplerAddressControl.sv Line: 15
 Info (12128): Elaborating entity "SamplerKeymapper" for hierarchy "Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|SamplerKeymapper:MAPPER" File: C:/ECE_385/FinalProject_synth_sampler/samplerAddressControl.sv Line: 16
 Info (12128): Elaborating entity "Address_Incrementer" for hierarchy "Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|Address_Incrementer:INCREMENTER" File: C:/ECE_385/FinalProject_synth_sampler/samplerAddressControl.sv Line: 17
 Warning (10230): Verilog HDL assignment warning at Address_Incrementer.sv(45): truncated value with size 32 to match size of target (20) File: C:/ECE_385/FinalProject_synth_sampler/Address_Incrementer.sv Line: 45
 Info (12128): Elaborating entity "noteCounter" for hierarchy "Final_Project_top:top|NoteProducer:NOTE|samplerAddressControl:SAC1|noteCounter:COUNTER" File: C:/ECE_385/FinalProject_synth_sampler/samplerAddressControl.sv Line: 18
-Info (12128): Elaborating entity "tristate" for hierarchy "Final_Project_top:top|tristate:tr0" File: C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv Line: 165
+Info (12128): Elaborating entity "HexDriver" for hierarchy "Final_Project_top:top|HexDriver:hex_inst_0" File: C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv Line: 158
+Info (12128): Elaborating entity "tristate" for hierarchy "Final_Project_top:top|tristate:tr0" File: C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv Line: 174
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following PLL node(s):
         Warning (14320): Synthesized away node "Final_Project_top:top|vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll:auto_generated|wire_pll1_clk[0]" File: C:/ECE_385/FinalProject_synth_sampler/db/vga_clk_altpll.v Line: 77
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 201 registers lost all their fanouts during netlist optimizations.
+Info (17049): 18 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 23 assignments for entity "altera_avalon_sc_fifo" -- entity does not exist in design
 Warning (20013): Ignored 23 assignments for entity "altera_avalon_st_handshake_clock_crosser" -- entity does not exist in design
 Warning (20013): Ignored 64 assignments for entity "altera_merlin_master_agent" -- entity does not exist in design
@@ -1402,16 +1456,16 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: C:/ECE_385/FinalProject_synth_sampler/memoryTestingTopLevel.sv Line: 3
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/ECE_385/FinalProject_synth_sampler/memoryTestingTopLevel.sv Line: 3
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/ECE_385/FinalProject_synth_sampler/memoryTestingTopLevel.sv Line: 3
-Info (21057): Implemented 285 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 14 input pins
+Info (21057): Implemented 837 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 38 input pins
     Info (21059): Implemented 20 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 235 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info (21061): Implemented 763 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
     Info: Peak virtual memory: 4844 megabytes
-    Info: Processing ended: Sat Dec 07 13:45:52 2019
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Processing ended: Sun Dec 08 13:01:53 2019
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +------------------------------------------+

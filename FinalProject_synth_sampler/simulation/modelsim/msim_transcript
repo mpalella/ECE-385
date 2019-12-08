@@ -12,77 +12,77 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/vga_clk.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:03 on Dec 07,2019
+# Start time: 13:02:11 on Dec 08,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/vga_clk.v 
 # -- Compiling module vga_clk
 # 
 # Top level modules:
 # 	vga_clk
-# End time: 13:46:03 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:11 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/ECE_385/FinalProject_synth_sampler/db {C:/ECE_385/FinalProject_synth_sampler/db/vga_clk_altpll.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:04 on Dec 07,2019
+# Start time: 13:02:12 on Dec 08,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler/db" C:/ECE_385/FinalProject_synth_sampler/db/vga_clk_altpll.v 
 # -- Compiling module vga_clk_altpll
 # 
 # Top level modules:
 # 	vga_clk_altpll
-# End time: 13:46:04 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:12 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/SLC3_2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:04 on Dec 07,2019
+# Start time: 13:02:12 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/SLC3_2.sv 
 # -- Compiling package SLC3_2
 # 
 # Top level modules:
 # 	--none--
-# End time: 13:46:04 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:12 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/test_memory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:04 on Dec 07,2019
+# Start time: 13:02:13 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/test_memory.sv 
 # -- Compiling module test_memory
 # 
 # Top level modules:
 # 	test_memory
-# End time: 13:46:04 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:13 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/tristate.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:04 on Dec 07,2019
+# Start time: 13:02:13 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/tristate.sv 
 # -- Compiling module tristate
 # 
 # Top level modules:
 # 	tristate
-# End time: 13:46:04 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:13 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/clock_divider_MCLK.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:04 on Dec 07,2019
+# Start time: 13:02:13 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/clock_divider_MCLK.sv 
 # -- Compiling module clock_divider_MCLK
 # 
 # Top level modules:
 # 	clock_divider_MCLK
-# End time: 13:46:04 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:13 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/clock_divider_sample.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:04 on Dec 07,2019
+# Start time: 13:02:13 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/clock_divider_sample.sv 
 # -- Compiling module clock_divider_sample
 # 
 # Top level modules:
 # 	clock_divider_sample
-# End time: 13:46:04 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:13 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/Synchronizers.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:04 on Dec 07,2019
+# Start time: 13:02:19 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/Synchronizers.sv 
 # -- Compiling module sync
 # -- Compiling module sync_r0
@@ -92,151 +92,151 @@
 # 	sync
 # 	sync_r0
 # 	sync_r1
-# End time: 13:46:04 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:19 on Dec 08,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:02:19 on Dec 08,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 13:02:19 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:04 on Dec 07,2019
+# Start time: 13:02:20 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv 
 # -- Compiling module Final_Project_top
 # 
 # Top level modules:
 # 	Final_Project_top
-# End time: 13:46:04 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:20 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/reg_16.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:04 on Dec 07,2019
+# Start time: 13:02:20 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/reg_16.sv 
 # -- Compiling module reg_16
 # 
 # Top level modules:
 # 	reg_16
-# End time: 13:46:05 on Dec 07,2019, Elapsed time: 0:00:01
+# End time: 13:02:20 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/Address_Incrementer.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:05 on Dec 07,2019
+# Start time: 13:02:20 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/Address_Incrementer.sv 
 # -- Compiling module Address_Incrementer
 # 
 # Top level modules:
 # 	Address_Incrementer
-# End time: 13:46:05 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:20 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/SamplerKeymapper.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:05 on Dec 07,2019
+# Start time: 13:02:20 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/SamplerKeymapper.sv 
 # -- Compiling module SamplerKeymapper
 # 
 # Top level modules:
 # 	SamplerKeymapper
-# End time: 13:46:05 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:20 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/noteCounter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:05 on Dec 07,2019
+# Start time: 13:02:20 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/noteCounter.sv 
 # -- Compiling module noteCounter
 # 
 # Top level modules:
 # 	noteCounter
-# End time: 13:46:05 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:20 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:05 on Dec 07,2019
+# Start time: 13:02:20 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv 
 # -- Compiling module incrementControl
 # 
 # Top level modules:
 # 	incrementControl
-# End time: 13:46:05 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:20 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/samplerAddressControl.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:05 on Dec 07,2019
+# Start time: 13:02:20 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/samplerAddressControl.sv 
 # -- Compiling module samplerAddressControl
 # 
 # Top level modules:
 # 	samplerAddressControl
-# End time: 13:46:05 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:20 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/MUX4.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:05 on Dec 07,2019
+# Start time: 13:02:20 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/MUX4.sv 
 # -- Compiling module MUX4
 # 
 # Top level modules:
 # 	MUX4
-# End time: 13:46:05 on Dec 07,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/SELECTOR.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:05 on Dec 07,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/SELECTOR.sv 
-# -- Compiling module SELECTOR
-# 
-# Top level modules:
-# 	SELECTOR
-# End time: 13:46:05 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:20 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:06 on Dec 07,2019
+# Start time: 13:02:20 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv 
 # -- Compiling module MultinoteController
 # 
 # Top level modules:
 # 	MultinoteController
-# End time: 13:46:06 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:21 on Dec 08,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/addressAdder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:06 on Dec 07,2019
+# Start time: 13:02:21 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/addressAdder.sv 
 # -- Compiling module addressAdder
 # 
 # Top level modules:
 # 	addressAdder
-# End time: 13:46:06 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:21 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:06 on Dec 07,2019
+# Start time: 13:02:21 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv 
 # -- Compiling module NoteProducer
 # 
 # Top level modules:
 # 	NoteProducer
-# End time: 13:46:06 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:21 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/reg_20.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:06 on Dec 07,2019
+# Start time: 13:02:21 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/reg_20.sv 
 # -- Compiling module reg_20
 # 
 # Top level modules:
 # 	reg_20
-# End time: 13:46:06 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:21 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/memoryTestingTopLevel.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:06 on Dec 07,2019
+# Start time: 13:02:21 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/memoryTestingTopLevel.sv 
 # -- Compiling module memoryTestingTopLevel
 # 
 # Top level modules:
 # 	memoryTestingTopLevel
-# End time: 13:46:06 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:21 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/memory_contents.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:06 on Dec 07,2019
+# Start time: 13:02:21 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/memory_contents.sv 
 # -- Compiling package memory_contents_sv_unit
 # -- Importing package SLC3_2
@@ -244,7 +244,7 @@
 # 
 # Top level modules:
 # 	memory_parser
-# End time: 13:46:06 on Dec 07,2019, Elapsed time: 0:00:00
+# End time: 13:02:21 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlib nios_system
 # ** Warning: (vlib-34) Library already exists at "nios_system".
@@ -255,18 +255,18 @@
 # 
 # vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/testbench.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:46:06 on Dec 07,2019
+# Start time: 13:02:21 on Dec 08,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/ECE_385/FinalProject_synth_sampler" C:/ECE_385/FinalProject_synth_sampler/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 13:46:07 on Dec 07,2019, Elapsed time: 0:00:01
+# End time: 13:02:21 on Dec 08,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L nios_system -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L nios_system -voptargs=""+acc"" testbench 
-# Start time: 13:46:07 on Dec 07,2019
+# Start time: 13:02:22 on Dec 08,2019
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.memoryTestingTopLevel
@@ -285,7 +285,6 @@
 # Loading work.NoteProducer
 # Loading work.addressAdder
 # Loading work.MultinoteController
-# Loading work.SELECTOR
 # Loading work.MUX4
 # Loading work.reg_16
 # Loading work.reg_20
@@ -294,95 +293,108 @@
 # Loading work.SamplerKeymapper
 # Loading work.Address_Incrementer
 # Loading work.noteCounter
+# Loading work.HexDriver
 # Loading work.tristate
 # Loading altera_mf_ver.MF_cycloneiii_pll
 # Loading altera_mf_ver.cda_m_cntr
 # Loading altera_mf_ver.cda_n_cntr
 # Loading altera_mf_ver.cda_scale_cntr
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(158): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_0 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(159): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_1 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(160): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_2 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(161): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_3 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: palella2  Hostname: ECEB-2076-07  ProcessID: 14488
+#           Attempting to use alternate WLF file "./wlftr9s02h".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftr9s02h
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/NOTE/SAC4/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/NOTE/SAC3/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/NOTE/SAC2/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/NOTE/SAC1/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv(36): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv(50): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/NOTE/Control
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv(36): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv(50): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 1  Instance: /testbench/TEST/top/NOTE/Control
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 1  Instance: /testbench/TEST/top/NOTE/SAC1/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 1  Instance: /testbench/TEST/top/NOTE/SAC2/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 1  Instance: /testbench/TEST/top/NOTE/SAC3/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 1  Instance: /testbench/TEST/top/NOTE/SAC4/CONTROL
 #  Note : Cyclone IV E PLL locked to incoming clock
 # Time: 90000  Instance: testbench.TEST.top.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
-add wave -position end  sim:/testbench/TEST/top/NOTE/audio_data
+add wave -position end  sim:/testbench/TEST/top/NOTE/adder/note_out
 # Break key hit
 # Simulation stop requested.
 restart -f
-run -all
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/NOTE/SAC4/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/NOTE/SAC3/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/NOTE/SAC2/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/NOTE/SAC1/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv(36): No condition is true in the unique/priority if/case statement.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/NOTE/Control
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv(36): No condition is true in the unique/priority if/case statement.
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/TEST/top/NOTE/Control
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/TEST/top/NOTE/SAC1/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/TEST/top/NOTE/SAC2/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/TEST/top/NOTE/SAC3/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/TEST/top/NOTE/SAC4/CONTROL
-#  Note : Cyclone IV E PLL locked to incoming clock
-# Time: 90000  Instance: testbench.TEST.top.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
-# Break key hit
-# Simulation stop requested.
-add wave -position end  sim:/testbench/TEST/top/SCLK/clock_out
-add wave -position end  sim:/testbench/TEST/top/MCLK/clock_out
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(158): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_0 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(159): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_1 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(160): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_2 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(161): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_3 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
 restart -f
+restart -f
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(158): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_0 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(159): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_1 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(160): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_2 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(161): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_3 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(158): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_0 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(159): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_1 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(160): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_2 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
+# ** Warning: (vsim-3015) C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv(161): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/hex_inst_3 File: C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
 run -all
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/NOTE/SAC4/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/NOTE/SAC3/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/NOTE/SAC2/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/NOTE/SAC1/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv(36): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv(50): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/TEST/top/NOTE/Control
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv(36): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv(50): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 1  Instance: /testbench/TEST/top/NOTE/Control
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 1  Instance: /testbench/TEST/top/NOTE/SAC1/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 1  Instance: /testbench/TEST/top/NOTE/SAC2/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 1  Instance: /testbench/TEST/top/NOTE/SAC3/CONTROL
-# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(38): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv(37): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 1  Instance: /testbench/TEST/top/NOTE/SAC4/CONTROL
 #  Note : Cyclone IV E PLL locked to incoming clock
 # Time: 90000  Instance: testbench.TEST.top.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
 # Break key hit
 # Simulation stop requested.
-run -all
+# End time: 13:03:18 on Dec 08,2019, Elapsed time: 0:00:56
+# Errors: 0, Warnings: 38
