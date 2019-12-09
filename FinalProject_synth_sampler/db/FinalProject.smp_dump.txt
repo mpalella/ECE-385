@@ -61,6 +61,17 @@ curr_state.RAM_WAIT4_1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
 curr_state.RAM_WAIT4_2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 curr_state.STORE_MDR4 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
+State Machine - |Final_Project_top|button_select:BUTT_SEL|curr_state
+Name curr_state.FUNCTION_3_HIGH curr_state.FUNCTION_3_LOW curr_state.FUNCTION_2_HIGH curr_state.FUNCTION_2_LOW curr_state.FUNCTION_1_HIGH curr_state.FUNCTION_1_LOW curr_state.FUNCTION_0_HIGH curr_state.FUNCTION_0_LOW 
+curr_state.FUNCTION_0_LOW 0 0 0 0 0 0 0 0 
+curr_state.FUNCTION_0_HIGH 0 0 0 0 0 0 1 1 
+curr_state.FUNCTION_1_LOW 0 0 0 0 0 1 0 1 
+curr_state.FUNCTION_1_HIGH 0 0 0 0 1 0 0 1 
+curr_state.FUNCTION_2_LOW 0 0 0 1 0 0 0 1 
+curr_state.FUNCTION_2_HIGH 0 0 1 0 0 0 0 1 
+curr_state.FUNCTION_3_LOW 0 1 0 0 0 0 0 1 
+curr_state.FUNCTION_3_HIGH 1 0 0 0 0 0 0 1 
+
 State Machine - |Final_Project_top|audio_interface_plat:audio_transmit|audio_interface:A1|state
 Name state.b_end state.b_stop1 state.b_stop0 state.d_ack state.d7 state.d6 state.d5 state.d4 state.d3 state.d2 state.d1 state.d0 state.a_ack state.a7 state.a6 state.a5 state.a4 state.a3 state.a2 state.a1 state.a0 state.b_ack state.b7 state.b6 state.b5 state.b4 state.b3 state.b2 state.b1 state.b0 state.start state.initialize 
 state.initialize 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
