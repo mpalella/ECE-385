@@ -16,10 +16,15 @@ else
 begin
 
 if(button)
+
 	function_select <= function_select + 2'b01;
+	
+
 
 if(function_select > 2'd4)
 	function_select <= 2'b0;
+
+
 
 end
 

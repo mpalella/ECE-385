@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=D\:\\Documents\\ECE-385\\FinalProject_synth_sampler\\software\\FinalProject
-newSoftwareExampleWizardPage.sopcinfoFile=D\:\\Documents\\ECE-385\\FinalProject_synth_sampler\\nios_system.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=D\:\\Documents\\ECE-385\\FinalProject_synth_sampler\\software\\FinalProject_bsp
+newSoftwareExampleWizardPage.defaultLocation=C\:\\ECE_385\\FinalProject_synth_sampler\\software\\final_project
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\ECE_385\\FinalProject_synth_sampler\\nios_system.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\ECE_385\\FinalProject_synth_sampler\\software\\final_project_bsp

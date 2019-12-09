@@ -33,7 +33,19 @@ timeprecision 1ns;
 //#128 AUD_DACLRCK = ~AUD_DACLRCK;
 //end
 
+//for button_select
 
+logic Clk = 0;
+logic Reset, button;
+logic [1:0] function_select;
+
+initial begin: CLOCK_INITIALIZATION
+    Clk = 0;
+end 
+
+always begin : CLOCK_GENERATION
+#1 Clk = ~Clk;
+end
 
 
 
@@ -89,23 +101,23 @@ timeprecision 1ns;
 
 
 //testing SRAM communication
-logic Clk = 0;
-logic init;
-logic [3:0] KEY;
-logic [31:0] keycode;
-wire [15:0] Data;
-logic [19:0] A;
-
-memoryTestingTopLevel	TEST(.*);
-
-
-initial begin: CLOCK_INITIALIZATION
-    Clk = 0;
-end 
-
-always begin : CLOCK_GENERATION
-#1 Clk = ~Clk;
-end
+//logic Clk = 0;
+//logic init;
+//logic [3:0] KEY;
+//logic [31:0] keycode;
+//wire [15:0] Data;
+//logic [19:0] A;
+//
+//memoryTestingTopLevel	TEST(.*);
+//
+//
+//initial begin: CLOCK_INITIALIZATION
+//    Clk = 0;
+//end 
+//
+//always begin : CLOCK_GENERATION
+//#1 Clk = ~Clk;
+//end
 
 
 
@@ -173,6 +185,19 @@ end
 
 
 initial begin: TEST_VECTORS
+//button_select
+Reset = 0;
+button = 0;
+
+#2 Reset = 1;
+#2 Reset = 0;
+
+#2 button = 1;
+#8 button = 0;
+
+#2 button = 1;
+#8 button = 0;
+
 
 //for top level
 //KEY = 4'b1111;
@@ -268,20 +293,20 @@ initial begin: TEST_VECTORS
 
 
 //testing sram communication
-init = 0;
-KEY = 4'b1111;
-keycode = {8'd2, 8'd3, 8'd4, 8'd5};
-
-
-#2 KEY[0] = 0;
-#2 KEY[0] = 1;
-
-#4 init = 1;
-#4 init = 0;
-
-#4 keycode = 32'd0;
-#4 keycode = {8'd5, 8'd0, 8'd0, 8'd2};
-#20 keycode = {8'd0, 8'd4, 8'd3, 8'd2};
+//init = 0;
+//KEY = 4'b1111;
+//keycode = {8'd2, 8'd3, 8'd4, 8'd5};
+//
+//
+//#2 KEY[0] = 0;
+//#2 KEY[0] = 1;
+//
+//#4 init = 1;
+//#4 init = 0;
+//
+//#4 keycode = 32'd0;
+//#4 keycode = {8'd5, 8'd0, 8'd0, 8'd2};
+//#20 keycode = {8'd0, 8'd4, 8'd3, 8'd2};
 
 end
 endmodule
