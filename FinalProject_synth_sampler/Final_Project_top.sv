@@ -46,7 +46,7 @@ module Final_Project_top( input               CLOCK_50,
 				//SRAM Interface
 				inout wire [15:0] SRAM_DQ,
 				output logic [19:0] SRAM_ADDR,
-				output logic SRAM_CE_N, SRAM_UB_N, SRAM_LB_N, SRAM_OE_N, SRAM_WE_N,
+				output logic SRAM_CE_N, SRAM_UB_N, SRAM_LB_N, SRAM_OE_N, SRAM_WE_N
 
 				//input logic [31:0] keycode,
 				//input logic start
@@ -138,17 +138,17 @@ module Final_Project_top( input               CLOCK_50,
 	 
 	 //controller and driver for audio interface platform
 	 controller 					control(.Clk(Clk), .Reset(Reset_h), .init_finish(start), .start(program_start), .init(init), .CS(chip_sel));
-	 audio_interface_plat      audio_transmit(.Clk(Clk), .Reset(Reset_h), .INIT(init), .DATA(data_to_dac), .INIT_FINISH(start), .I2C_SDAT(I2C_SDAT), .I2C_SCLK(I2C_SCLK), .AUD_BCLK(AUD_BCLK), .AUD_DACLRCK(AUD_DACLRCK), .AUD_DACDAT(AUD_DACDAT), .data_over(data_over));
+	 audio_interface_plat      audio_transmit(.Clk(Clk), .Reset(Reset_h), .INIT(init), .DATA(data_out), .INIT_FINISH(start), .I2C_SDAT(I2C_SDAT), .I2C_SCLK(I2C_SCLK), .AUD_BCLK(AUD_BCLK), .AUD_DACLRCK(AUD_DACLRCK), .AUD_DACDAT(AUD_DACDAT), .data_over(data_over));
 	 
 	 //creates polyphonic sine synth
-	 multiple_wavetable_module 		sine_synth1(.Clk(Clk), .keycode[7:0]), .Reset(Reset_h), .CS(chip_sel), .data_out(data_out_synth), .sample_clk(sample_clk)); 
+	 //multiple_wavetable_module 		sine_synth1(.Clk(Clk), .keycode[7:0]), .Reset(Reset_h), .CS(chip_sel), .data_out(data_out_synth), .sample_clk(sample_clk)); 
     
 	 //synchronizers for buttons
 	 sync          				butt_sync(.Clk(Clk), .d(~KEY[3]), .q(program_start));  //Key 3 starts program
-	 sync          				butt_sync(.Clk(Clk), .d(~KEY[2]), .q(choose_prog));	//Key 2 changes data output/function
+	 //sync          				butt_sync(.Clk(Clk), .d(~KEY[2]), .q(choose_prog));	//Key 2 changes data output/function
 	 
-	 button_select				   BUTT_SEL(.Clk(Clk), .Reset(Reset), .button(choose_prog), .function_select(function_select));
-	 MUX4_DATA						DATA_MUX(.in1(data_out), .in2(data_out_synth), .in3(data_out), .in4(data_out), .out(data_to_dac), .select(function_select));
+	 //button_select				   BUTT_SEL(.Clk(Clk), .Reset(Reset), .button(choose_prog), .function_select(function_select));
+	 //MUX4_DATA						DATA_MUX(.in1(data_out), .in2(data_out_synth), .in3(data_out), .in4(data_out), .out(data_to_dac), .select(function_select));
 	 
 	 
 	 //clock dividers

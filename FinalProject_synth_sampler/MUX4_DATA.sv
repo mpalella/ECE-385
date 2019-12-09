@@ -1,4 +1,4 @@
-module MUX4 (
+module MUX4_DATA (
 
 input logic [15:0] in1, in2, in3, in4,
 input logic [1:0] select,
