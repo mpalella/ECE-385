@@ -17,7 +17,7 @@ logic [19:0] note1_addr, note2_addr, note3_addr, note4_addr, MAR_in;
 
 
 addressAdder					adder(.addr1(MDR_out1), .addr2(MDR_out2), .addr3(MDR_out3), .addr4(MDR_out4), .note_out(audio_data));
-MultinoteController			Control(.Clk(Clk), .Reset(Reset), .sample_clk(sample_clk), .init(init), .MAR_LD(MAR_LD), .MDR_LD1(MDR_LD1), .MDR_LD2(MDR_LD2), .MDR_LD3(MDR_LD3), .MDR_LD4(MDR_LD4), .OE(OE), .select(select));
+MultinoteController			Control(.Clk(Clk), .Reset(Reset), .sample_clk(sample_clk), .addr_sel(addr_sel), .init(init), .MAR_LD(MAR_LD), .MDR_LD1(MDR_LD1), .MDR_LD2(MDR_LD2), .MDR_LD3(MDR_LD3), .MDR_LD4(MDR_LD4), .OE(OE), .select(select));
 MUX4								ADDR_SEL(.select(select), .addr1(note1_addr), .addr2(note2_addr), .addr3(note3_addr), .addr4(note4_addr), .addr_out(MAR_in));
 
 reg_16							MDR1(.Clk(Clk), .Reset(Reset), .Load(MDR_LD1), .D(sram_data), .Data_Out(MDR_out1));

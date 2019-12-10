@@ -73,31 +73,37 @@ timeprecision 1ns;
 
 
 
+//wavetable
+//logic Clk = 0;
+//logic sample_clk = 0;
+//logic CS, Reset, 
+
+
 
 //for multi note control
-logic Clk = 0;
-logic sample_clk = 0;
-logic init, Reset, OE;
-logic [1:0] addr_sel;
-logic [31:0] keycode;
-logic [19:0] sram_address;
-logic [15:0] sram_data, audio_data;
-
-
-NoteProducer  MULTI(.*);
-
-initial begin: CLOCK_INITIALIZATION
-    Clk = 0;
-	 sample_clk = 0;
-end 
-
-always begin : CLOCK_GENERATION
-#1 Clk = ~Clk;
-end
-
-always begin : BCLK_GENERATE   //set bit clock to run 8 times slower than FPGA Clock
-#50 sample_clk = ~sample_clk;
-end
+//logic Clk = 0;
+//logic sample_clk = 0;
+//logic init, Reset, OE;
+//logic [1:0] addr_sel;
+//logic [31:0] keycode;
+//logic [19:0] sram_address;
+//logic [15:0] sram_data, audio_data;
+//
+//
+//NoteProducer  MULTI(.*);
+//
+//initial begin: CLOCK_INITIALIZATION
+//    Clk = 0;
+//	 sample_clk = 0;
+//end 
+//
+//always begin : CLOCK_GENERATION
+//#1 Clk = ~Clk;
+//end
+//
+//always begin : BCLK_GENERATE   //set bit clock to run 8 times slower than FPGA Clock
+//#50 sample_clk = ~sample_clk;
+//end
 
 
 
@@ -275,22 +281,22 @@ initial begin: TEST_VECTORS
 
 
 //for multi_note control
-Reset = 0;
-init = 0;
-keycode = {24'b0, 8'd20};
-addr_sel = 0;
-
-#2 Reset = 1;
-#2 Reset  = 0;
-
-#2 init = 1;
-#2 init = 0;
-
-#2 keycode = {24'b0, 8'd0};
-#2 keycode = {8'd20, 8'd20, 8'd20, 8'd20};
-
-#400 addr_sel = 2'd1;
-#400 addr_sel = 2'd2;
+//Reset = 0;
+//init = 0;
+//keycode = {24'b0, 8'd20};
+//addr_sel = 0;
+//
+//#2 Reset = 1;
+//#2 Reset  = 0;
+//
+//#2 init = 1;
+//#2 init = 0;
+//
+//#2 keycode = {24'b0, 8'd0};
+//#2 keycode = {8'd20, 8'd20, 8'd20, 8'd20};
+//
+//#400 addr_sel = 2'd1;
+//#400 addr_sel = 2'd2;
 
 
 //testing sram communication
@@ -308,6 +314,11 @@ addr_sel = 0;
 //#4 keycode = 32'd0;
 //#4 keycode = {8'd5, 8'd0, 8'd0, 8'd2};
 //#20 keycode = {8'd0, 8'd4, 8'd3, 8'd2};
+
+
+
+//wavetable
+
 
 end
 endmodule

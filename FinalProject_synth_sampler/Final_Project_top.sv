@@ -147,8 +147,16 @@ module Final_Project_top( input               CLOCK_50,
 	 sync          				butt_sync1(.Clk(Clk), .d(~KEY[3]), .q(program_start));  //Key 3 starts program
 	 sync          				butt_sync2 (.Clk(Clk), .d(~KEY[2]), .q(choose_prog));	//Key 2 changes data output/function
 	 
-	 button_select				   BUTT_SEL(.Clk(Clk), .Reset(Reset), .button(choose_prog), .function_select(function_select));
-	 MUX4_DATA						DATA_MUX(.in1(data_out), .in2(data_out), .in3(data_out_synth), .in4(16'b0), .out(data_to_dac), .select(function_select));
+	 
+	 //controls mode
+	 
+	 //MODE 1: Piano-single note
+	 //MODE 2: Piano-polyphonic
+	 //MODE 3: Drum Sampler
+	 //MODE 4: Wavetable Synth
+	 
+	 button_select				   BUTT_SEL(.Clk(Clk), .Reset(Reset_h), .button(choose_prog), .function_select(function_select));
+	 MUX4_DATA						DATA_MUX(.in1(data_out), .in2(data_out), .in3(data_out), .in4(data_out_synth), .out(data_to_dac), .select(function_select));
 	 
 	 
 	 //clock dividers
@@ -157,7 +165,7 @@ module Final_Project_top( input               CLOCK_50,
 	 
 	 
 	 //note sampler
-	 NoteProducer  NOTE(.keycode(keycode), .sram_data(Data_from_SRAM), .Clk(Clk), .Reset(Reset_h), .addr_sel(function_select), .sample_clk(sample_clk), .init(start), .OE(OE), .sram_address(SRAM_ADDR), .audio_data(data_out));
+	 NoteProducer  NOTE(.keycode(keycode), .sram_data(Data_from_SRAM), .Clk(Clk), .Reset(Reset_h), .addr_sel(function_select), .sample_clk(sample_clk), .init(chip_sel), .OE(OE), .sram_address(SRAM_ADDR), .audio_data(data_out));
 	 
 	 
     // Display SRAM ADDRESS on hex display
@@ -168,6 +176,9 @@ module Final_Project_top( input               CLOCK_50,
 	 
 	 // Display SRAM ADDRESS on hex display
     HexDriver hex_inst_4 ({2'b0, function_select[1:0]}, HEX4);
+	 HexDriver hex_inst_5 (4'b0, HEX5);
+	 HexDriver hex_inst_6 (4'b0, HEX6);
+	 HexDriver hex_inst_7 (4'b0, HEX7);
 
 	 
 	 
