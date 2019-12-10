@@ -5,16 +5,6 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/vga_clk.v}
-vlog -vlog01compat -work work +incdir+C:/ECE_385/FinalProject_synth_sampler/db {C:/ECE_385/FinalProject_synth_sampler/db/vga_clk_altpll.v}
-vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/SLC3_2.sv}
-vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/test_memory.sv}
-vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/tristate.sv}
-vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/clock_divider_MCLK.sv}
-vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/clock_divider_sample.sv}
-vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/Synchronizers.sv}
-vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv}
-vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/reg_16.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/Address_Incrementer.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/SamplerKeymapper.sv}
@@ -26,8 +16,8 @@ vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/Fi
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/addressAdder.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv}
 vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/reg_20.sv}
-vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/memoryTestingTopLevel.sv}
-vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/memory_contents.sv}
+vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/SamplerKeymapper_drum.sv}
+vlog -sv -work work +incdir+C:/ECE_385/FinalProject_synth_sampler {C:/ECE_385/FinalProject_synth_sampler/MUX4_1bit.sv}
 vlib nios_system
 vmap nios_system nios_system
 

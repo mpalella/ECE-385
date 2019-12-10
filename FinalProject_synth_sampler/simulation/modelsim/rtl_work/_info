@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/ECE_385/FinalProject_synth_sampler/simulation/modelsim
 vAddress_Incrementer
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1575831740
+Z2 !s110 1575937539
 !i10b 1
 !s100 KE<ihdEbjbdVf?l:9:6YG2
 IXHWj3Bk@7dKeDi9?Bn]`32
@@ -26,7 +26,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1575831740.000000
+Z6 !s108 1575937539.000000
 !s107 C:/ECE_385/FinalProject_synth_sampler/Address_Incrementer.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/Address_Incrementer.sv|
 !i113 1
@@ -36,7 +36,7 @@ Z9 tCvgOpt 0
 n@address_@incrementer
 vaddressAdder
 R1
-Z10 !s110 1575831741
+Z10 !s110 1575937540
 !i10b 1
 !s100 =Gc:gUKjDmom`^GiVVoE`1
 Ig=de6@=9UM9S30IG?lkGT2
@@ -52,7 +52,7 @@ R5
 r1
 !s85 0
 31
-Z11 !s108 1575831741.000000
+Z11 !s108 1575937540.000000
 !s107 C:/ECE_385/FinalProject_synth_sampler/addressAdder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/addressAdder.sv|
 !i113 1
@@ -60,112 +60,9 @@ R7
 R8
 R9
 naddress@adder
-vclock_divider_MCLK
-R1
-Z12 !s110 1575831733
-!i10b 1
-!s100 0MJKaY;32l1X^;L8iRfig3
-I@Ml3F=GTYlP3ZPVY9A_A?2
-R3
-!s105 clock_divider_MCLK_sv_unit
-S1
-R0
-R4
-8C:/ECE_385/FinalProject_synth_sampler/clock_divider_MCLK.sv
-FC:/ECE_385/FinalProject_synth_sampler/clock_divider_MCLK.sv
-L0 1
-R5
-r1
-!s85 0
-31
-Z13 !s108 1575831733.000000
-!s107 C:/ECE_385/FinalProject_synth_sampler/clock_divider_MCLK.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/clock_divider_MCLK.sv|
-!i113 1
-R7
-R8
-R9
-nclock_divider_@m@c@l@k
-vclock_divider_sample
-R1
-R12
-!i10b 1
-!s100 Balc^02H2a`h7kgz=@]h?2
-I_KWV]RgCj]K@EUZJQ3[8U2
-R3
-!s105 clock_divider_sample_sv_unit
-S1
-R0
-R4
-8C:/ECE_385/FinalProject_synth_sampler/clock_divider_sample.sv
-FC:/ECE_385/FinalProject_synth_sampler/clock_divider_sample.sv
-L0 1
-R5
-r1
-!s85 0
-31
-R13
-!s107 C:/ECE_385/FinalProject_synth_sampler/clock_divider_sample.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/clock_divider_sample.sv|
-!i113 1
-R7
-R8
-R9
-vFinal_Project_top
-R1
-R2
-!i10b 1
-!s100 5WU>zcVF_Pd3cjeoIWTez1
-IHk=k6S1YE6ia_3<<G4cH:1
-R3
-!s105 Final_Project_top_sv_unit
-S1
-R0
-w1575767086
-8C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv
-FC:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv
-L0 1
-R5
-r1
-!s85 0
-31
-R6
-!s107 C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/Final_Project_top.sv|
-!i113 1
-R7
-R8
-R9
-n@final_@project_top
-vHexDriver
-R1
-Z14 !s110 1575831739
-!i10b 1
-!s100 hKBo4zbCRmY3[Ac9JZP;<0
-I=Y?cDnFNZ@=VfAIf9@@DA2
-R3
-!s105 HexDriver_sv_unit
-S1
-R0
-R4
-8C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
-FC:/ECE_385/FinalProject_synth_sampler/HexDriver.sv
-L0 1
-R5
-r1
-!s85 0
-31
-Z15 !s108 1575831739.000000
-!s107 C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/HexDriver.sv|
-!i113 1
-R7
-R8
-R9
-n@hex@driver
 vincrementControl
 R1
-R2
+R10
 !i10b 1
 !s100 ;<1IGbHhQ6Yh>ll_Vg9c20
 IG8269;hjbS>5nf]GJ`GJI2
@@ -181,7 +78,7 @@ R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/incrementControl.sv|
 !i113 1
@@ -189,83 +86,6 @@ R7
 R8
 R9
 nincrement@control
-Xmemory_contents_sv_unit
-R1
-Z16 DXx4 work 6 SLC3_2 0 22 6Lfi_A_G4bHS=RS7e3A4:1
-VPaZbZ^I8oKUH_USAefl7_2
-r1
-!s85 0
-31
-!i10b 1
-!s100 c2m7WKcaV<L[XVf`30RGj3
-IPaZbZ^I8oKUH_USAefl7_2
-!i103 1
-S1
-R0
-Z17 w1575831238
-Z18 8C:/ECE_385/FinalProject_synth_sampler/memory_contents.sv
-Z19 FC:/ECE_385/FinalProject_synth_sampler/memory_contents.sv
-L0 14
-R5
-R11
-Z20 !s107 C:/ECE_385/FinalProject_synth_sampler/memory_contents.sv|
-Z21 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/memory_contents.sv|
-!i113 1
-R7
-R8
-R9
-vmemory_parser
-R1
-R16
-DXx4 work 23 memory_contents_sv_unit 0 22 PaZbZ^I8oKUH_USAefl7_2
-R3
-r1
-!s85 0
-31
-!i10b 1
-!s100 6]Da5F;7Dc^odKMMcY9Ge2
-I8n<n^czEf]bM6kOgCzb7f0
-!s105 memory_contents_sv_unit
-S1
-R0
-R17
-R18
-R19
-L0 16
-R5
-R11
-R20
-R21
-!i113 1
-R7
-R8
-R9
-vmemoryTestingTopLevel
-R1
-R10
-!i10b 1
-!s100 5:J^0O8e=CCGcQdn0z]kP3
-I`Kjofe9oKchnAo:H9Q:Z>3
-R3
-!s105 memoryTestingTopLevel_sv_unit
-S1
-R0
-w1575767142
-8C:/ECE_385/FinalProject_synth_sampler/memoryTestingTopLevel.sv
-FC:/ECE_385/FinalProject_synth_sampler/memoryTestingTopLevel.sv
-L0 1
-R5
-r1
-!s85 0
-31
-R11
-!s107 C:/ECE_385/FinalProject_synth_sampler/memoryTestingTopLevel.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/memoryTestingTopLevel.sv|
-!i113 1
-R7
-R8
-R9
-nmemory@testing@top@level
 vMultinoteController
 R1
 R10
@@ -284,7 +104,7 @@ R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/MultinoteController.sv|
 !i113 1
@@ -294,7 +114,7 @@ R9
 n@multinote@controller
 vMUX4
 R1
-R2
+R10
 !i10b 1
 !s100 ;^[N3cRlcI:7?G;N?L7aO1
 IMG6IdU9LNi`mBjDI1XZKH2
@@ -302,7 +122,7 @@ R3
 !s105 MUX4_sv_unit
 S1
 R0
-R4
+w1575832448
 8C:/ECE_385/FinalProject_synth_sampler/MUX4.sv
 FC:/ECE_385/FinalProject_synth_sampler/MUX4.sv
 L0 1
@@ -310,7 +130,7 @@ R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 C:/ECE_385/FinalProject_synth_sampler/MUX4.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/MUX4.sv|
 !i113 1
@@ -318,9 +138,35 @@ R7
 R8
 R9
 n@m@u@x4
+vMUX4_1bit
+R1
+Z12 !s110 1575937541
+!i10b 1
+!s100 ecTaJ9]MA`zXnFL3^Oakd3
+IW@GEJODXL560f^<V>:Pg20
+R3
+!s105 MUX4_1bit_sv_unit
+S1
+R0
+w1575935488
+8C:/ECE_385/FinalProject_synth_sampler/MUX4_1bit.sv
+FC:/ECE_385/FinalProject_synth_sampler/MUX4_1bit.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z13 !s108 1575937541.000000
+!s107 C:/ECE_385/FinalProject_synth_sampler/MUX4_1bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/MUX4_1bit.sv|
+!i113 1
+R7
+R8
+R9
+n@m@u@x4_1bit
 vnoteCounter
 R1
-R2
+R10
 !i10b 1
 !s100 oOBKP^zFJQ;Z;]hB_DQ>12
 IlkmAl992F7:5z6ECMYH`Y3
@@ -336,7 +182,7 @@ R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 C:/ECE_385/FinalProject_synth_sampler/noteCounter.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/noteCounter.sv|
 !i113 1
@@ -348,13 +194,13 @@ vNoteProducer
 R1
 R10
 !i10b 1
-!s100 PM6_R5I>ZQf_Vj``cXo]O1
-If?aPQ6S;IDh8O^HHkeFm_0
+!s100 N[`6lXSZTi?EHQAZgZ=M93
+I^3R_HP4:E_c:UJBf9e>@?1
 R3
 !s105 NoteProducer_sv_unit
 S1
 R0
-w1575830891
+w1575935645
 8C:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv
 FC:/ECE_385/FinalProject_synth_sampler/NoteProducer.sv
 L0 1
@@ -422,15 +268,15 @@ R8
 R9
 vsamplerAddressControl
 R1
-R2
+R10
 !i10b 1
-!s100 _L6dW[2UaP:M>LX?Of][e1
-IdBY:7V[8Y17INBUnWUnRo3
+!s100 ]N20:@CgV5d<:eH0[?9OI2
+I0EnBzj0H5^eId6dmkYA[c3
 R3
 !s105 samplerAddressControl_sv_unit
 S1
 R0
-R4
+w1575937202
 8C:/ECE_385/FinalProject_synth_sampler/samplerAddressControl.sv
 FC:/ECE_385/FinalProject_synth_sampler/samplerAddressControl.sv
 L0 1
@@ -438,7 +284,7 @@ R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 C:/ECE_385/FinalProject_synth_sampler/samplerAddressControl.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/samplerAddressControl.sv|
 !i113 1
@@ -446,17 +292,43 @@ R7
 R8
 R9
 nsampler@address@control
-vSamplerKeymapper
+vSamplerKeymapper_drum
 R1
-R2
+R12
 !i10b 1
-!s100 9I8^g@=^9m;8jN1l<a4fC1
-I]bci=hH_3>73dF^lDh92f3
+!s100 RgaBLHOkFj9hK@g[aT8;I1
+ITbZ>?Lhm]oWTeQ=Nb`8fN2
+R3
+!s105 SamplerKeymapper_drum_sv_unit
+S1
+R0
+w1575934905
+8C:/ECE_385/FinalProject_synth_sampler/SamplerKeymapper_drum.sv
+FC:/ECE_385/FinalProject_synth_sampler/SamplerKeymapper_drum.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/ECE_385/FinalProject_synth_sampler/SamplerKeymapper_drum.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/SamplerKeymapper_drum.sv|
+!i113 1
+R7
+R8
+R9
+n@sampler@keymapper_drum
+vSamplerKeymapper_keyboard
+R1
+R10
+!i10b 1
+!s100 fN?ZhRcCE761HkUcXdAID3
+IkGjbY7?E[VEN>;:VMKW>`3
 R3
 !s105 SamplerKeymapper_sv_unit
 S1
 R0
-w1575830380
+w1575934516
 8C:/ECE_385/FinalProject_synth_sampler/SamplerKeymapper.sv
 FC:/ECE_385/FinalProject_synth_sampler/SamplerKeymapper.sv
 L0 1
@@ -464,150 +336,25 @@ R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 C:/ECE_385/FinalProject_synth_sampler/SamplerKeymapper.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/SamplerKeymapper.sv|
 !i113 1
 R7
 R8
 R9
-n@sampler@keymapper
-XSLC3_2
-R1
-Z22 !s110 1575831732
-!i10b 1
-!s100 Cz8_^@QRefP31?j=Zf>lj0
-I6Lfi_A_G4bHS=RS7e3A4:1
-V6Lfi_A_G4bHS=RS7e3A4:1
-S1
-R0
-R4
-8C:/ECE_385/FinalProject_synth_sampler/SLC3_2.sv
-FC:/ECE_385/FinalProject_synth_sampler/SLC3_2.sv
-L0 24
-R5
-r1
-!s85 0
-31
-Z23 !s108 1575831732.000000
-!s107 C:/ECE_385/FinalProject_synth_sampler/SLC3_2.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/SLC3_2.sv|
-!i113 1
-R7
-R8
-R9
-n@s@l@c3_2
-vsync
-R1
-R14
-!i10b 1
-!s100 2W5Vz0:F6ckE2`eJOTK5l1
-IzggCPJOY8l2683DdleTVY0
-R3
-Z24 !s105 Synchronizers_sv_unit
-S1
-R0
-R4
-Z25 8C:/ECE_385/FinalProject_synth_sampler/Synchronizers.sv
-Z26 FC:/ECE_385/FinalProject_synth_sampler/Synchronizers.sv
-L0 4
-R5
-r1
-!s85 0
-31
-R15
-Z27 !s107 C:/ECE_385/FinalProject_synth_sampler/Synchronizers.sv|
-Z28 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/Synchronizers.sv|
-!i113 1
-R7
-R8
-R9
-vsync_r0
-R1
-R14
-!i10b 1
-!s100 IGd9f_F;JNjVBLQ@DAnD10
-IEbW<Z`Q7`;nN`B6MlS@^70
-R3
-R24
-S1
-R0
-R4
-R25
-R26
-L0 18
-R5
-r1
-!s85 0
-31
-R15
-R27
-R28
-!i113 1
-R7
-R8
-R9
-vsync_r1
-R1
-R14
-!i10b 1
-!s100 1CXiH1DYDbAUS69Ee2j060
-Iic9b;UD<S65CNbD]o51S80
-R3
-R24
-S1
-R0
-R4
-R25
-R26
-L0 39
-R5
-r1
-!s85 0
-31
-R15
-R27
-R28
-!i113 1
-R7
-R8
-R9
-vtest_memory
+n@sampler@keymapper_keyboard
+vtestbench
 R1
 R12
 !i10b 1
-!s100 AZAU7PQT4]][EEHo>57W43
-IKMU5Zc@E4F?S8aDHK>>]B3
-R3
-!s105 test_memory_sv_unit
-S1
-R0
-Z29 w1575764247
-8C:/ECE_385/FinalProject_synth_sampler/test_memory.sv
-FC:/ECE_385/FinalProject_synth_sampler/test_memory.sv
-L0 22
-R5
-r1
-!s85 0
-31
-R13
-!s107 C:/ECE_385/FinalProject_synth_sampler/test_memory.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/test_memory.sv|
-!i113 1
-R7
-R8
-R9
-vtestbench
-R1
-R10
-!i10b 1
-!s100 QbP@5HGFhoO5R??a54a373
-IV`]SXgdDj_;dYbNVNDzRg2
+!s100 :D2XD085ninaOd57[b7S]2
+I;3=]_fHH[FLfWE3z`HE<d1
 R3
 !s105 testbench_sv_unit
 S1
 R0
-w1575830053
+w1575937480
 8C:/ECE_385/FinalProject_synth_sampler/testbench.sv
 FC:/ECE_385/FinalProject_synth_sampler/testbench.sv
 L0 1
@@ -615,79 +362,10 @@ R5
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/ECE_385/FinalProject_synth_sampler/testbench.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/testbench.sv|
 !i113 1
 R7
 R8
-R9
-vtristate
-R1
-R12
-!i10b 1
-!s100 @4U2:[EMW0WPIZj?R814`2
-Ib]HgeEO;7ECG;^m0=DEd<0
-R3
-!s105 tristate_sv_unit
-S1
-R0
-R29
-8C:/ECE_385/FinalProject_synth_sampler/tristate.sv
-FC:/ECE_385/FinalProject_synth_sampler/tristate.sv
-L0 3
-R5
-r1
-!s85 0
-31
-R13
-!s107 C:/ECE_385/FinalProject_synth_sampler/tristate.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/tristate.sv|
-!i113 1
-R7
-R8
-R9
-vvga_clk
-!s110 1575831731
-!i10b 1
-!s100 OGlLO8;N^^k^>BA7[_bgn1
-IUN19`;M6AezOa1YC@B4@32
-R3
-R0
-R29
-8C:/ECE_385/FinalProject_synth_sampler/vga_clk.v
-FC:/ECE_385/FinalProject_synth_sampler/vga_clk.v
-L0 40
-R5
-r1
-!s85 0
-31
-!s108 1575831731.000000
-!s107 C:/ECE_385/FinalProject_synth_sampler/vga_clk.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler|C:/ECE_385/FinalProject_synth_sampler/vga_clk.v|
-!i113 1
-Z30 o-vlog01compat -work work
-!s92 -vlog01compat -work work +incdir+C:/ECE_385/FinalProject_synth_sampler
-R9
-vvga_clk_altpll
-R22
-!i10b 1
-!s100 M:z4m=8?iG0fP6=5PXSTl1
-I4Sj^:;SB:LDGE8ef[naR:1
-R3
-R0
-R4
-8C:/ECE_385/FinalProject_synth_sampler/db/vga_clk_altpll.v
-FC:/ECE_385/FinalProject_synth_sampler/db/vga_clk_altpll.v
-L0 29
-R5
-r1
-!s85 0
-31
-R23
-!s107 C:/ECE_385/FinalProject_synth_sampler/db/vga_clk_altpll.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ECE_385/FinalProject_synth_sampler/db|C:/ECE_385/FinalProject_synth_sampler/db/vga_clk_altpll.v|
-!i113 1
-R30
-!s92 -vlog01compat -work work +incdir+C:/ECE_385/FinalProject_synth_sampler/db
 R9

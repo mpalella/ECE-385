@@ -35,17 +35,17 @@ timeprecision 1ns;
 
 //for button_select
 
-logic Clk = 0;
-logic Reset, button;
-logic [1:0] function_select;
-
-initial begin: CLOCK_INITIALIZATION
-    Clk = 0;
-end 
-
-always begin : CLOCK_GENERATION
-#1 Clk = ~Clk;
-end
+//logic Clk = 0;
+//logic Reset, button;
+//logic [1:0] function_select;
+//
+//initial begin: CLOCK_INITIALIZATION
+//    Clk = 0;
+//end 
+//
+//always begin : CLOCK_GENERATION
+//#1 Clk = ~Clk;
+//end
 
 
 
@@ -75,28 +75,29 @@ end
 
 
 //for multi note control
-//logic Clk = 0;
-//logic sample_clk = 0;
-//logic init, Reset, OE;
-//logic [31:0] keycode;
-//logic [19:0] sram_address;
-//logic [15:0] sram_data, audio_data;
-//
-//
-//NoteProducer  MULTI(.*);
-//
-//initial begin: CLOCK_INITIALIZATION
-//    Clk = 0;
-//	 sample_clk = 0;
-//end 
-//
-//always begin : CLOCK_GENERATION
-//#1 Clk = ~Clk;
-//end
-//
-//always begin : BCLK_GENERATE   //set bit clock to run 8 times slower than FPGA Clock
-//#50 sample_clk = ~sample_clk;
-//end
+logic Clk = 0;
+logic sample_clk = 0;
+logic init, Reset, OE;
+logic [1:0] addr_sel;
+logic [31:0] keycode;
+logic [19:0] sram_address;
+logic [15:0] sram_data, audio_data;
+
+
+NoteProducer  MULTI(.*);
+
+initial begin: CLOCK_INITIALIZATION
+    Clk = 0;
+	 sample_clk = 0;
+end 
+
+always begin : CLOCK_GENERATION
+#1 Clk = ~Clk;
+end
+
+always begin : BCLK_GENERATE   //set bit clock to run 8 times slower than FPGA Clock
+#50 sample_clk = ~sample_clk;
+end
 
 
 
@@ -186,17 +187,17 @@ end
 
 initial begin: TEST_VECTORS
 //button_select
-Reset = 0;
-button = 0;
-
-#2 Reset = 1;
-#2 Reset = 0;
-
-#2 button = 1;
-#8 button = 0;
-
-#2 button = 1;
-#8 button = 0;
+//Reset = 0;
+//button = 0;
+//
+//#2 Reset = 1;
+//#2 Reset = 0;
+//
+//#2 button = 1;
+//#8 button = 0;
+//
+//#2 button = 1;
+//#8 button = 0;
 
 
 //for top level
@@ -274,22 +275,22 @@ button = 0;
 
 
 //for multi_note control
-//Reset = 0;
-//init = 0;
-//keycode = {24'b0, 8'd20};
-//
-//#2 Reset = 1;
-//#2 Reset  = 0;
-//
-//#2 init = 1;
-//#2 init = 0;
-//
-//#2 keycode = {24'b0, 8'd0};
-//#2 keycode = {24'b0, 8'd20};
-//
-//#20 sram_data = 16'h32;
-//
-//#2 sram_data = 16'h32;
+Reset = 0;
+init = 0;
+keycode = {24'b0, 8'd20};
+addr_sel = 0;
+
+#2 Reset = 1;
+#2 Reset  = 0;
+
+#2 init = 1;
+#2 init = 0;
+
+#2 keycode = {24'b0, 8'd0};
+#2 keycode = {8'd20, 8'd20, 8'd20, 8'd20};
+
+#400 addr_sel = 2'd1;
+#400 addr_sel = 2'd2;
 
 
 //testing sram communication

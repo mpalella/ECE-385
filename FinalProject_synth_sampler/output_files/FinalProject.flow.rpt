@@ -1,5 +1,5 @@
 Flow report for FinalProject
-Mon Dec 09 13:49:13 2019
+Mon Dec 09 18:25:09 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,22 +40,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Dec 09 13:49:13 2019       ;
+; Flow Status                        ; Successful - Mon Dec 09 18:25:09 2019       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; FinalProject                                ;
-; Top-level Entity Name              ; Final_Project_top                           ;
+; Top-level Entity Name              ; NoteProducer                                ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 5,430                                       ;
-;     Total combinational functions  ; 4,358                                       ;
-;     Dedicated logic registers      ; 2,704                                       ;
-; Total registers                    ; 2704                                        ;
-; Total pins                         ; 218                                         ;
+; Total logic elements               ; 976                                         ;
+;     Total combinational functions  ; 928                                         ;
+;     Dedicated logic registers      ; 331                                         ;
+; Total registers                    ; 331                                         ;
+; Total pins                         ; 91                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 20,608                                      ;
+; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 2                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -64,46 +64,46 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/09/2019 13:48:18 ;
+; Start date & time ; 12/09/2019 18:24:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FinalProject        ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                          ;
-+--------------------------------------+---------------------------------------------------------------+---------------+-------------------+----------------+
-; Assignment Name                      ; Value                                                         ; Default Value ; Entity Name       ; Section Id     ;
-+--------------------------------------+---------------------------------------------------------------+---------------+-------------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 176527414928108.157592089711024                               ; --            ; --                ; --             ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                                            ; --            ; --                ; testbench      ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                                                     ; --            ; --                ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                   ; --            ; --                ; eda_simulation ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                     ; <None>        ; --                ; --             ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                               ; --            ; --                ; eda_simulation ;
-; EDA_TEST_BENCH_FILE                  ; testbench.sv                                                  ; --            ; --                ; testbench      ;
-; EDA_TEST_BENCH_MODULE_NAME           ; testbench                                                     ; --            ; --                ; testbench      ;
-; EDA_TEST_BENCH_NAME                  ; testbench                                                     ; --            ; --                ; eda_simulation ;
-; EDA_TIME_SCALE                       ; 1 ps                                                          ; --            ; --                ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                                            ; --            ; --                ; --             ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                                             ; --            ; --                ; --             ;
-; MISC_FILE                            ; nios_system/synthesis/../nios_system.cmp                      ; --            ; --                ; --             ;
-; MISC_FILE                            ; nios_system/synthesis/../../nios_system.qsys                  ; --            ; --                ; --             ;
-; MISC_FILE                            ; vga_clk.ppf                                                   ; --            ; --                ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                                          ; --            ; --                ; --             ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family)                        ; --            ; Final_Project_top ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)                        ; --            ; Final_Project_top ; Top            ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)                        ; --            ; Final_Project_top ; Top            ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                                           ; --            ; --                ; --             ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                         ; --            ; --                ; --             ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                                                  ; --            ; --                ; --             ;
-; SLD_FILE                             ; nios_system/synthesis/nios_system.regmap                      ; --            ; --                ; --             ;
-; SLD_FILE                             ; nios_system/synthesis/nios_system.debuginfo                   ; --            ; --                ; --             ;
-; SLD_INFO                             ; QSYS_NAME nios_system HAS_SOPCINFO 1 GENERATION_ID 1575856875 ; --            ; nios_system       ; --             ;
-; SOPCINFO_FILE                        ; nios_system/synthesis/../../nios_system.sopcinfo              ; --            ; --                ; --             ;
-; SYNTHESIS_ONLY_QIP                   ; On                                                            ; --            ; --                ; --             ;
-; TOP_LEVEL_ENTITY                     ; Final_Project_top                                             ; FinalProject  ; --                ; --             ;
-+--------------------------------------+---------------------------------------------------------------+---------------+-------------------+----------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                     ;
++--------------------------------------+---------------------------------------------------------------+---------------+--------------+----------------+
+; Assignment Name                      ; Value                                                         ; Default Value ; Entity Name  ; Section Id     ;
++--------------------------------------+---------------------------------------------------------------+---------------+--------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 176527414928108.157593749402588                               ; --            ; --           ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                            ; --            ; --           ; testbench      ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                                                     ; --            ; --           ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                   ; --            ; --           ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                     ; <None>        ; --           ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                               ; --            ; --           ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; testbench.sv                                                  ; --            ; --           ; testbench      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; testbench                                                     ; --            ; --           ; testbench      ;
+; EDA_TEST_BENCH_NAME                  ; testbench                                                     ; --            ; --           ; eda_simulation ;
+; EDA_TIME_SCALE                       ; 1 ps                                                          ; --            ; --           ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                                            ; --            ; --           ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                                             ; --            ; --           ; --             ;
+; MISC_FILE                            ; nios_system/synthesis/../nios_system.cmp                      ; --            ; --           ; --             ;
+; MISC_FILE                            ; nios_system/synthesis/../../nios_system.qsys                  ; --            ; --           ; --             ;
+; MISC_FILE                            ; vga_clk.ppf                                                   ; --            ; --           ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                                          ; --            ; --           ; --             ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)                        ; --            ; NoteProducer ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)                        ; --            ; NoteProducer ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)                        ; --            ; NoteProducer ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                                           ; --            ; --           ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                         ; --            ; --           ; --             ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                                                  ; --            ; --           ; --             ;
+; SLD_FILE                             ; nios_system/synthesis/nios_system.regmap                      ; --            ; --           ; --             ;
+; SLD_FILE                             ; nios_system/synthesis/nios_system.debuginfo                   ; --            ; --           ; --             ;
+; SLD_INFO                             ; QSYS_NAME nios_system HAS_SOPCINFO 1 GENERATION_ID 1575856875 ; --            ; nios_system  ; --             ;
+; SOPCINFO_FILE                        ; nios_system/synthesis/../../nios_system.sopcinfo              ; --            ; --           ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                            ; --            ; --           ; --             ;
+; TOP_LEVEL_ENTITY                     ; NoteProducer                                                  ; FinalProject  ; --           ; --             ;
++--------------------------------------+---------------------------------------------------------------+---------------+--------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -111,8 +111,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:51     ; 1.0                     ; 4964 MB             ; 00:01:09                           ;
-; Total                ; 00:00:51     ; --                      ; --                  ; 00:01:09                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4838 MB             ; 00:00:25                           ;
+; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:25                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
