@@ -33,6 +33,29 @@ timeprecision 1ns;
 //#128 AUD_DACLRCK = ~AUD_DACLRCK;
 //end
 
+
+
+
+//for keycode_check
+//logic Clk = 0;
+//logic Reset;
+//logic [31:0] keycode;
+//logic [31:0] keycode_adjusted;
+//
+//
+//keycode_check  KEYCHECK(.*);
+//
+//initial begin: CLOCK_INITIALIZATION
+//    Clk = 0;
+//end 
+//
+//always begin : CLOCK_GENERATION
+//#1 Clk = ~Clk;
+//end
+
+
+
+
 //for button_select
 
 //logic Clk = 0;
@@ -317,7 +340,7 @@ initial begin: TEST_VECTORS
 
 
 
-//wavetable
+//keycode_check
 
 
 end

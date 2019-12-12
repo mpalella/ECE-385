@@ -54,6 +54,8 @@ int main(void)
 	int keycode1 = 0;
 	int keycode2 = 0;
 	int keycode = 0;
+	int keycode_vals_prev[4] = {};
+	int keycode_vals[4] = {};
 	alt_u8 toggle = 0;
 	alt_u8 data_size;
 	alt_u8 hot_plug_count;
@@ -555,6 +557,8 @@ int main(void)
 		keycode2 = UsbRead(0x0520)& 0xffff;
 
 		keycode = ((keycode2 << 16)|keycode1);
+
+
 		printf("\nkeycode values are %08x",keycode);
 		// We only need the first keycode, which is at the lower byte of keycode.
 		// Send the keycode to hardware via PIO.

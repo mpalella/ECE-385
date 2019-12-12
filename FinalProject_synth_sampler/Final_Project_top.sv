@@ -56,7 +56,10 @@ module Final_Project_top( input               CLOCK_50,
     logic Reset_h, Clk;
 	 logic OE;
     logic [31:0] keycode;
-	 //logic [9:0] DrawX, DrawY;
+	 logic [3:0] highlight_on, highlight_on1, highlight_on2, highlight_on3;
+	 logic [3:0] is_rec;
+	 logic [4:0] is_sprite;
+	 logic [9:0] DrawX, DrawY;
 
     
 		assign Clk = CLOCK_50;
@@ -135,6 +138,8 @@ module Final_Project_top( input               CLOCK_50,
 	//modules for synthesizer
     vga_clk vga_clk_instance(.inclk0(Clk), .c0(VGA_CLK));
 	 
+	 VGA_controller vga_controller_instance(.Clk(Clk), .Reset(Reset_h), .VGA_HS(VGA_HS), .VGA_VS(VGA_VS), .VGA_CLK(VGA_CLK), .VGA_BLANK_N(VGA_BLANK_N), .VGA_SYNC_N(VGA_SYNC_N), .DrawX(DrawX), .DrawY(DrawY));
+	 
 	 
 	 //controller and driver for audio interface platform
 	 controller 					control(.Clk(Clk), .Reset(Reset_h), .init_finish(start), .start(program_start), .init(init), .CS(chip_sel));
@@ -162,6 +167,21 @@ module Final_Project_top( input               CLOCK_50,
 	 //clock dividers
 	 clock_divider_sample		SCLK(.Reset(Reset_h), .clock_in(Clk), .clock_out(sample_clk));
 	 clock_divider_MCLK        MCLK(.Reset(Reset_h), .clock_in(Clk), .clock_out(AUD_XCK));
+	 
+	 //VGA modules
+	 KeyMapper_ key_mapper_instance(.keyboard_in(keycode[7:0]), .highlight_on(highlight_on));
+	
+	 KeyMapper_ key_mapper_instance1(.keyboard_in(keycode[15:8]), .highlight_on(highlight_on1));
+	 
+	 KeyMapper_ key_mapper_instance2(.keyboard_in(keycode[23:16]), .highlight_on(highlight_on2));
+	 
+	 KeyMapper_ key_mapper_instance3(.keyboard_in(keycode[31:24]), .highlight_on(highlight_on3));
+	 
+	 keyboard keyboard_instance(.Clk(Clk), .Reset(Reset_h), .frame_clk(VGA_VS), .highlighter_(highlight_on), .highlighter_1(highlight_on1), .highlighter_2(highlight_on2), .highlighter_3(highlight_on3), .DrawX(DrawX), .DrawY(DrawY), .is_rec(is_rec));
+    
+    Sprite_Color_Mapper Sprite_Color_Mapper_instance(.key_highlight(highlight_on), .function_mode(function_select), .DrawX(DrawX), .DrawY(DrawY), .is_sprite(is_sprite));
+	 
+	 color_mapper color_instance(.is_rec(is_rec), .sprite_on(is_sprite), .DrawX(DrawX), .DrawY(DrawY), .VGA_R(VGA_R), .VGA_G(VGA_G), .VGA_B(VGA_B));
 	 
 	 
 	 //note sampler
